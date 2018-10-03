@@ -21,17 +21,18 @@ class ViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                 if user != nil {
                     // sign in successful
-            self.performSegue(withIdentifier: "segue", sender: self)
-                    print("successful")
+                    self.performSegue(withIdentifier: "segue", sender: self.logInButton)
                 }
                 else {
-                    if let myError = error?.localizedDescription {
-                        print(myError)
-                    }else{
-                        print("ERROR")
-                    }
+                    let alert = UIAlertController(title: "Error", message: "Incorrect Username or Password", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    present(alert, animated: true, completion: nil)
                 }
             }
+        }else{
+            let alert = UIAlertController(title: "Error", message: "Please enter Username or Password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -45,7 +46,4 @@ class ViewController: UIViewController {
         emailText.placeholder = "Email";
         passwordText.placeholder = "Password";
     }
-
-
 }
-
