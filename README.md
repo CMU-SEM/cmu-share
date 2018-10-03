@@ -12,9 +12,7 @@ Please open the cmu-share.xcworkspace instead of choosing the cmu-share folder i
 
 to install all the pod dependencies
 
-3. Naming convention for segue:
-
-<starting page>To<ending page>
+3. Naming convention for segue: startingPageToEndingPage
   
   eg. signUpTosignInSegue
   
