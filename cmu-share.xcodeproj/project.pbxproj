@@ -11,8 +11,8 @@
 		4701E7CACCB94B0ECB93929D /* Pods_cmu_shareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */; };
 		52380207216538DE00F15C44 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52380206216538DE00F15C44 /* ViewController2.swift */; };
 		52380209216559EB00F15C44 /* ViewControllerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52380208216559EB00F15C44 /* ViewControllerSignUp.swift */; };
-		526ED65821649A2400FB24FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ED65721649A2400FB24FB /* GoogleService-Info.plist */; };
 		52868DB9DA50BE761E84528C /* Pods_cmu_shareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6C2B54F76C4A55F9E08439 /* Pods_cmu_shareUITests.framework */; };
+		623C6E3E21656CA90099C1F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 623C6E3D21656CA90099C1F9 /* GoogleService-Info.plist */; };
 		6278DBCE2162D66200D75581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBCD2162D66200D75581 /* AppDelegate.swift */; };
 		6278DBD02162D66200D75581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBCF2162D66200D75581 /* ViewController.swift */; };
 		6278DBD32162D66200D75581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6278DBD12162D66200D75581 /* Main.storyboard */; };
@@ -44,8 +44,8 @@
 		50A392C103AC9ECB6E1588B3 /* Pods-cmu-share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-share.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share.debug.xcconfig"; sourceTree = "<group>"; };
 		52380206216538DE00F15C44 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		52380208216559EB00F15C44 /* ViewControllerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSignUp.swift; sourceTree = "<group>"; };
-		526ED65721649A2400FB24FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60EA678F1FD8696F207DB899 /* Pods_cmu_share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		623C6E3D21656CA90099C1F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6278DBCA2162D66200D75581 /* cmu-share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cmu-share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBCD2162D66200D75581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6278DBCF2162D66200D75581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		6278DBCC2162D66200D75581 /* cmu-share */ = {
 			isa = PBXGroup;
 			children = (
-				526ED65721649A2400FB24FB /* GoogleService-Info.plist */,
+				623C6E3D21656CA90099C1F9 /* GoogleService-Info.plist */,
 				6278DBCD2162D66200D75581 /* AppDelegate.swift */,
 				6278DBCF2162D66200D75581 /* ViewController.swift */,
 				52380206216538DE00F15C44 /* ViewController2.swift */,
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6278DBD82162D66300D75581 /* LaunchScreen.storyboard in Resources */,
-				526ED65821649A2400FB24FB /* GoogleService-Info.plist in Resources */,
+				623C6E3E21656CA90099C1F9 /* GoogleService-Info.plist in Resources */,
 				6278DBD52162D66300D75581 /* Assets.xcassets in Resources */,
 				6278DBD32162D66200D75581 /* Main.storyboard in Resources */,
 			);
