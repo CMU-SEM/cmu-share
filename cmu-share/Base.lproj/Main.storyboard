@@ -116,6 +116,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-kx-C8H">
                                 <rect key="frame" x="100" y="60" width="175" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="kMy-D8-O3X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -176,6 +179,7 @@
                         <constraints>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="wP3-63-Ko6" secondAttribute="trailing" constant="70" id="0I6-WV-RrZ"/>
                             <constraint firstItem="wP3-63-Ko6" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="9Uf-Us-deW"/>
+                            <constraint firstItem="4aR-kx-C8H" firstAttribute="centerX" secondItem="o41-dA-AEP" secondAttribute="centerX" id="9bj-O2-laZ"/>
                             <constraint firstItem="4aR-kx-C8H" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="40" id="BCf-Xv-WZa"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="pua-wX-Sdt" secondAttribute="trailing" constant="70" id="DqH-E0-jn1"/>
                             <constraint firstItem="Leu-It-bxL" firstAttribute="top" secondItem="JL1-N8-vt8" secondAttribute="bottom" constant="20" id="G8Z-cw-QvT"/>
@@ -196,8 +200,6 @@
                             <constraint firstItem="fBw-5e-lJP" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="132" id="gME-Cg-dVf"/>
                             <constraint firstItem="J9z-da-L0Q" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="gWx-xw-5fM"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="BKc-dA-SWS" secondAttribute="trailing" constant="70" id="mPb-v9-zIr"/>
-                            <constraint firstItem="4aR-kx-C8H" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="100" id="wjA-GL-WMT"/>
-                            <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="4aR-kx-C8H" secondAttribute="trailing" constant="100" id="wsu-SB-wR7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o41-dA-AEP"/>
                     </view>
@@ -247,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ObL-k6-d6t"/>
+        <segue reference="01J-jx-X1N"/>
     </inferredMetricsTieBreakers>
 </document>
