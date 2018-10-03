@@ -36,11 +36,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "signUpSegue", sender: self)
         if emailText.text != "" && passwordText.text != ""{
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
                 if authResult != nil {
                     // sign up successful
-                    self.performSegue(withIdentifier: "segue", sender: self)
+                    self.performSegue(withIdentifier: "signUpSegue", sender: self)
                 }
                 else {
                     if let myError = error?.localizedDescription {
