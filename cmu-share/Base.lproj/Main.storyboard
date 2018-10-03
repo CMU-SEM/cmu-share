@@ -28,7 +28,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS2-gU-mP5">
                                 <rect key="frame" x="251" y="622" width="54" height="30"/>
@@ -96,23 +96,37 @@
                         <outlet property="logInButton" destination="crP-ps-q8v" id="Zeh-kT-Szv"/>
                         <outlet property="passwordText" destination="Rl3-s6-bCH" id="zCM-cV-Ta0"/>
                         <outlet property="signUpButton" destination="dS2-gU-mP5" id="xTb-hI-kUH"/>
-                        <segue destination="oI7-sk-A1S" kind="show" id="c5C-Zx-yDp"/>
+                        <segue destination="oI7-sk-A1S" kind="show" identifier="segue" id="c5C-Zx-yDp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="m9c-Lh-guF">
             <objects>
-                <viewController id="oI7-sk-A1S" sceneMemberID="viewController">
+                <viewController id="oI7-sk-A1S" customClass="ViewController2" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ush-yM-zxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-gt-9EF">
+                                <rect key="frame" x="159" y="264" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Off"/>
+                                <connections>
+                                    <action selector="signOffAction:" destination="oI7-sk-A1S" eventType="touchUpInside" id="j3q-Nc-FKY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="n8b-Cd-GZu"/>
                     </view>
+                    <connections>
+                        <outlet property="signOffButton" destination="KaO-gt-9EF" id="qCM-mi-tfH"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue2" id="ObL-k6-d6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGC-Os-hb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
