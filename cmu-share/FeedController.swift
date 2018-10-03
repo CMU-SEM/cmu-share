@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class ViewController2: UIViewController {
+class FeedController: UIViewController {
 
     @IBAction func signOffAction(_ sender: UIButton) {
         // sign off
         let firebaseAuth = Auth.auth()
+        let user = firebaseAuth.currentUser?.uid;
+        
         do {
             try firebaseAuth.signOut()
         } catch let signOutError as NSError {

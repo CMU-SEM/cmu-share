@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="937.78110944527748"/>
         </scene>
-        <!--View Controller2-->
+        <!--Feed Controller-->
         <scene sceneID="m9c-Lh-guF">
             <objects>
-                <viewController id="oI7-sk-A1S" customClass="ViewController2" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oI7-sk-A1S" customClass="FeedController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ush-yM-zxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,6 +275,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="01J-jx-X1N"/>
+        <segue reference="ObL-k6-d6t"/>
     </inferredMetricsTieBreakers>
 </document>
