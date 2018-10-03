@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                 else {
                     let alert = UIAlertController(title: "Error", message: "Incorrect Username or Password", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }else{
