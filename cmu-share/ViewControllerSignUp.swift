@@ -7,9 +7,38 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewControllerSignUp: UIViewController {
 
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var confirmPasswordText: UITextField!
+    @IBOutlet weak var firstNameText: UITextField!
+    @IBOutlet weak var lastNameText: UITextField!
+    @IBOutlet weak var mobileText: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    @IBAction func signUpAction(_ sender: UIButton) {
+        if emailText.text != "" && passwordText.text != ""{
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
+                if authResult != nil {
+                    // sign up successful
+                    self.performSegue(withIdentifier: "backToSignInSegue", sender: self)
+                }
+                else {
+                    if let myError = error?.localizedDescription {
+                        print(myError)
+                    }else{
+                        print("ERROR")
+                    }
+                }
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

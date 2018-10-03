@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                 if user != nil {
                     // sign in successful
-                    self.performSegue(withIdentifier: "segue", sender: self)
+            self.performSegue(withIdentifier: "segue", sender: self)
                     print("successful")
                 }
                 else {
@@ -37,26 +37,13 @@ class ViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
-        if emailText.text != "" && passwordText.text != ""{
-            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
-                if authResult != nil {
-                    // sign up successful
-                    self.performSegue(withIdentifier: "signUpSegue", sender: self)
-                }
-                else {
-                    if let myError = error?.localizedDescription {
-                        print(myError)
-                    }else{
-                        print("ERROR")
-                    }
-                }
-            }
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        emailText.placeholder = "Email";
+        passwordText.placeholder = "Password";
     }
 
 

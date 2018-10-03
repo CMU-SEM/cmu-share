@@ -21,7 +21,7 @@ class ViewController2: UIViewController {
         }
         
         // sign off successful
-        self.performSegue(withIdentifier: "segue2", sender: self)
+        self.performSegue(withIdentifier: "logInSegue", sender: self)
     }
     @IBOutlet weak var signOffButton: UIButton!
     override func viewDidLoad() {
