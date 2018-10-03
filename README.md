@@ -4,16 +4,16 @@ Please open the cmu-share.xcworkspace instead of choosing the cmu-share folder i
 
 1. To install pod:
 
-% sudo gem install cocoapods
+    % sudo gem install cocoapods
 
 2. If extra dependencies are added to the project, pull the project and run
 
-% pod install
+    % pod install
 
-to install all the pod dependencies
+    to install all the pod dependencies
 
 3. Naming convention for segue: startingPageToEndingPage
   
-  eg. signUpTosignInSegue
+    eg. signUpTosignInSegue
   
 
