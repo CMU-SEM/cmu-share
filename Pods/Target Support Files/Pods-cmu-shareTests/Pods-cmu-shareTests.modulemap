@@ -1,0 +1,6 @@
+framework module Pods_cmu_shareTests {
+  umbrella header "Pods-cmu-shareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

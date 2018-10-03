@@ -1,0 +1,6 @@
+framework module Pods_cmu_share {
+  umbrella header "Pods-cmu-share-umbrella.h"
+
+  export *
+  module * { export * }
+}
