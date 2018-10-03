@@ -19,7 +19,11 @@ class ViewControllerSignUp: UIViewController {
     @IBOutlet weak var mobileText: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var logInButton: UIButton!
     
+    @IBAction func logInAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "backToSignInSegue", sender: self)
+    }
     @IBAction func signUpAction(_ sender: UIButton) {
         if emailText.text != "" && passwordText.text != ""{
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
@@ -42,6 +46,13 @@ class ViewControllerSignUp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailText.placeholder = "Email";
+        passwordText.placeholder = "Password";
+        confirmPasswordText.placeholder = "Confirm Password"
+        firstNameText.placeholder = "First Name"
+        lastNameText.placeholder = "Last Name"
+        mobileText.placeholder = "Mobile No."
+        
         // Do any additional setup after loading the view.
     }
     
