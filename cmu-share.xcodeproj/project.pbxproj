@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C6827DEE052EE21508D45BA /* Pods_cmu_share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EA678F1FD8696F207DB899 /* Pods_cmu_share.framework */; };
+		4701E7CACCB94B0ECB93929D /* Pods_cmu_shareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */; };
+		526ED65821649A2400FB24FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526ED65721649A2400FB24FB /* GoogleService-Info.plist */; };
+		52868DB9DA50BE761E84528C /* Pods_cmu_shareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6C2B54F76C4A55F9E08439 /* Pods_cmu_shareUITests.framework */; };
 		6278DBCE2162D66200D75581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBCD2162D66200D75581 /* AppDelegate.swift */; };
 		6278DBD02162D66200D75581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBCF2162D66200D75581 /* ViewController.swift */; };
 		6278DBD32162D66200D75581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6278DBD12162D66200D75581 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18903EA2711F0BA9929BC929 /* Pods-cmu-shareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareUITests/Pods-cmu-shareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50A392C103AC9ECB6E1588B3 /* Pods-cmu-share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-share.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share.debug.xcconfig"; sourceTree = "<group>"; };
+		526ED65721649A2400FB24FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60EA678F1FD8696F207DB899 /* Pods_cmu_share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBCA2162D66200D75581 /* cmu-share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cmu-share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBCD2162D66200D75581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6278DBCF2162D66200D75581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,12 @@
 		6278DBE92162D66300D75581 /* cmu-shareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cmu-shareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBED2162D66300D75581 /* cmu_shareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmu_shareUITests.swift; sourceTree = "<group>"; };
 		6278DBEF2162D66300D75581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D716C97DE0387DBD18136BB /* Pods-cmu-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share.release.xcconfig"; sourceTree = "<group>"; };
+		CAF6DF4B1F1CAE128C63D163 /* Pods-cmu-shareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareTests/Pods-cmu-shareTests.release.xcconfig"; sourceTree = "<group>"; };
+		D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_shareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA53E02BE005B2E68B0E766E /* Pods-cmu-shareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareUITests/Pods-cmu-shareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE8BE2AD0FD42BF23B33DB27 /* Pods-cmu-shareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareTests/Pods-cmu-shareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF6C2B54F76C4A55F9E08439 /* Pods_cmu_shareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_shareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6827DEE052EE21508D45BA /* Pods_cmu_share.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4701E7CACCB94B0ECB93929D /* Pods_cmu_shareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52868DB9DA50BE761E84528C /* Pods_cmu_shareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6E55D85E321B52FA671F36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60EA678F1FD8696F207DB899 /* Pods_cmu_share.framework */,
+				D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */,
+				FF6C2B54F76C4A55F9E08439 /* Pods_cmu_shareUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6278DBC12162D66200D75581 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,8 @@
 				6278DBE12162D66300D75581 /* cmu-shareTests */,
 				6278DBEC2162D66300D75581 /* cmu-shareUITests */,
 				6278DBCB2162D66200D75581 /* Products */,
+				8C8687F0574B60F823A5A9BB /* Pods */,
+				3D6E55D85E321B52FA671F36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +126,7 @@
 		6278DBCC2162D66200D75581 /* cmu-share */ = {
 			isa = PBXGroup;
 			children = (
+				526ED65721649A2400FB24FB /* GoogleService-Info.plist */,
 				6278DBCD2162D66200D75581 /* AppDelegate.swift */,
 				6278DBCF2162D66200D75581 /* ViewController.swift */,
 				6278DBD12162D66200D75581 /* Main.storyboard */,
@@ -125,6 +155,19 @@
 			path = "cmu-shareUITests";
 			sourceTree = "<group>";
 		};
+		8C8687F0574B60F823A5A9BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50A392C103AC9ECB6E1588B3 /* Pods-cmu-share.debug.xcconfig */,
+				9D716C97DE0387DBD18136BB /* Pods-cmu-share.release.xcconfig */,
+				FE8BE2AD0FD42BF23B33DB27 /* Pods-cmu-shareTests.debug.xcconfig */,
+				CAF6DF4B1F1CAE128C63D163 /* Pods-cmu-shareTests.release.xcconfig */,
+				18903EA2711F0BA9929BC929 /* Pods-cmu-shareUITests.debug.xcconfig */,
+				DA53E02BE005B2E68B0E766E /* Pods-cmu-shareUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6278DBF22162D66300D75581 /* Build configuration list for PBXNativeTarget "cmu-share" */;
 			buildPhases = (
+				78A99135DB8D0C493E3E362A /* [CP] Check Pods Manifest.lock */,
 				6278DBC62162D66200D75581 /* Sources */,
 				6278DBC72162D66200D75581 /* Frameworks */,
 				6278DBC82162D66200D75581 /* Resources */,
+				EF3A0833CAE75AAEC5C56C82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6278DBF52162D66300D75581 /* Build configuration list for PBXNativeTarget "cmu-shareTests" */;
 			buildPhases = (
+				891397A4417A45536368487A /* [CP] Check Pods Manifest.lock */,
 				6278DBDA2162D66300D75581 /* Sources */,
 				6278DBDB2162D66300D75581 /* Frameworks */,
 				6278DBDC2162D66300D75581 /* Resources */,
@@ -167,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6278DBF82162D66300D75581 /* Build configuration list for PBXNativeTarget "cmu-shareUITests" */;
 			buildPhases = (
+				98E28DD96BD330347FE88C02 /* [CP] Check Pods Manifest.lock */,
 				6278DBE52162D66300D75581 /* Sources */,
 				6278DBE62162D66300D75581 /* Frameworks */,
 				6278DBE72162D66300D75581 /* Resources */,
@@ -230,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6278DBD82162D66300D75581 /* LaunchScreen.storyboard in Resources */,
+				526ED65821649A2400FB24FB /* GoogleService-Info.plist in Resources */,
 				6278DBD52162D66300D75581 /* Assets.xcassets in Resources */,
 				6278DBD32162D66200D75581 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +298,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78A99135DB8D0C493E3E362A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cmu-share-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		891397A4417A45536368487A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cmu-shareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98E28DD96BD330347FE88C02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cmu-shareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF3A0833CAE75AAEC5C56C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6278DBC62162D66200D75581 /* Sources */ = {
@@ -430,6 +571,7 @@
 		};
 		6278DBF32162D66300D75581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A392C103AC9ECB6E1588B3 /* Pods-cmu-share.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +590,7 @@
 		};
 		6278DBF42162D66300D75581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D716C97DE0387DBD18136BB /* Pods-cmu-share.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +609,7 @@
 		};
 		6278DBF62162D66300D75581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8BE2AD0FD42BF23B33DB27 /* Pods-cmu-shareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +631,7 @@
 		};
 		6278DBF72162D66300D75581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF6DF4B1F1CAE128C63D163 /* Pods-cmu-shareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +653,7 @@
 		};
 		6278DBF92162D66300D75581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18903EA2711F0BA9929BC929 /* Pods-cmu-shareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +674,7 @@
 		};
 		6278DBFA2162D66300D75581 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA53E02BE005B2E68B0E766E /* Pods-cmu-shareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
