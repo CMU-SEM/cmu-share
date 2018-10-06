@@ -22,6 +22,7 @@
 		6278DBEE2162D66300D75581 /* cmu_shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBED2162D66300D75581 /* cmu_shareUITests.swift */; };
 		6299AB41216964C700749972 /* RealtimeDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299AB40216964C700749972 /* RealtimeDBViewController.swift */; };
 		62C49E02216971C50063E091 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49E01216971C50063E091 /* Order.swift */; };
+		62C49E042169735D0063E091 /* RealtimeDBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C49E032169735D0063E091 /* RealtimeDBTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6278DBEF2162D66300D75581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6299AB40216964C700749972 /* RealtimeDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDBViewController.swift; sourceTree = "<group>"; };
 		62C49E01216971C50063E091 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		62C49E032169735D0063E091 /* RealtimeDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDBTableViewCell.swift; sourceTree = "<group>"; };
 		9D716C97DE0387DBD18136BB /* Pods-cmu-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share.release.xcconfig"; sourceTree = "<group>"; };
 		CAF6DF4B1F1CAE128C63D163 /* Pods-cmu-shareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareTests/Pods-cmu-shareTests.release.xcconfig"; sourceTree = "<group>"; };
 		D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_shareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				6299AB40216964C700749972 /* RealtimeDBViewController.swift */,
+				62C49E032169735D0063E091 /* RealtimeDBTableViewCell.swift */,
 			);
 			path = RealtimeDB;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				6278DBCE2162D66200D75581 /* AppDelegate.swift in Sources */,
 				52380209216559EB00F15C44 /* ViewControllerSignUp.swift in Sources */,
 				52380207216538DE00F15C44 /* FeedController.swift in Sources */,
+				62C49E042169735D0063E091 /* RealtimeDBTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
