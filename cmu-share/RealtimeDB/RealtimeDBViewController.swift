@@ -34,9 +34,7 @@ class RealtimeDBViewController: UIViewController {
         
         orderRef.setValue(orderObj) { (error, ref) in
             print("error")
-        }
-        
-        
+        }        
     }
     
     /*
