@@ -35,6 +35,16 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             self.tableView.reloadData()
         }
+        
+        ref.child("orders").observe(DataEventType.childChanged) { (snapshot) in
+            self.orderList = []
+            let postDic = snapshot.value as? [String: AnyObject]
+            for (uid, item) in postDic! {
+                let order = Order(name: item["restaurantName"] as! String, detail: item["detail"] as! String )
+                self.orderList.append(order);
+            }
+            self.tableView.reloadData()
+        }
       
     }
 
