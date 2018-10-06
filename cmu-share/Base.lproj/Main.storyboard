@@ -317,6 +317,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-ss-GiV">
                                 <rect key="frame" x="172.5" y="195" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addRestaurant:" destination="fqz-je-NGN" eventType="touchUpInside" id="JPV-wE-GBh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,6 +336,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eZx-mC-fPv"/>
                     </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="DJa-4F-Zhs" id="cUX-Bf-gkc"/>
+                        <outlet property="nameLabel" destination="xvM-UA-q4v" id="Wfu-g7-jr8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmD-kO-jAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
