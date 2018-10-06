@@ -260,6 +260,14 @@
                                     <action selector="signOffAction:" destination="oI7-sk-A1S" eventType="touchUpInside" id="j3q-Nc-FKY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WW-TW-Ukt">
+                                <rect key="frame" x="75" y="336" width="214" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Research Firebase Realtime DB"/>
+                                <connections>
+                                    <segue destination="fqz-je-NGN" kind="show" id="GRs-YR-duB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="n8b-Cd-GZu"/>
@@ -272,6 +280,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGC-Os-hb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="873" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iXX-tX-sdM">
+            <objects>
+                <viewController id="fqz-je-NGN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wGC-kL-4iM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZKk-JG-leP">
+                                <rect key="frame" x="35" y="243" width="305" height="359"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="Ajb-dy-J4w"/>
+                                </constraints>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvM-UA-q4v">
+                                <rect key="frame" x="87.5" y="64" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ox6-q3-yHl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-4F-Zhs">
+                                <rect key="frame" x="87.5" y="132" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ohC-tX-SCN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-ss-GiV">
+                                <rect key="frame" x="172.5" y="195" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DJa-4F-Zhs" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="4mS-L9-RY4"/>
+                            <constraint firstItem="DJa-4F-Zhs" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="112" id="B5s-PL-T7G"/>
+                            <constraint firstItem="eZx-mC-fPv" firstAttribute="bottom" secondItem="ZKk-JG-leP" secondAttribute="bottom" constant="65" id="D3o-pg-nuH"/>
+                            <constraint firstItem="ZKk-JG-leP" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="TCU-Kd-Kud"/>
+                            <constraint firstItem="xvM-UA-q4v" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="44" id="URV-dk-pxp"/>
+                            <constraint firstItem="RVL-ss-GiV" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="175" id="VYH-8n-PdL"/>
+                            <constraint firstItem="xvM-UA-q4v" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="ous-4n-ceW"/>
+                            <constraint firstItem="ZKk-JG-leP" firstAttribute="top" secondItem="RVL-ss-GiV" secondAttribute="bottom" constant="18" id="t5g-7f-fdT"/>
+                            <constraint firstItem="RVL-ss-GiV" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="yFK-eW-key"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eZx-mC-fPv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmD-kO-jAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
