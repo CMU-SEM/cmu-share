@@ -281,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="873" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--RealtimeDB View Controller-->
         <scene sceneID="iXX-tX-sdM">
             <objects>
-                <viewController id="fqz-je-NGN" sceneMemberID="viewController">
+                <viewController id="fqz-je-NGN" customClass="RealtimeDBViewController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wGC-kL-4iM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

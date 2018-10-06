@@ -20,6 +20,7 @@
 		6278DBD82162D66300D75581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6278DBD62162D66300D75581 /* LaunchScreen.storyboard */; };
 		6278DBE32162D66300D75581 /* cmu_shareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBE22162D66300D75581 /* cmu_shareTests.swift */; };
 		6278DBEE2162D66300D75581 /* cmu_shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBED2162D66300D75581 /* cmu_shareUITests.swift */; };
+		6299AB41216964C700749972 /* RealtimeDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299AB40216964C700749972 /* RealtimeDBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		6278DBE92162D66300D75581 /* cmu-shareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cmu-shareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBED2162D66300D75581 /* cmu_shareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmu_shareUITests.swift; sourceTree = "<group>"; };
 		6278DBEF2162D66300D75581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6299AB40216964C700749972 /* RealtimeDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDBViewController.swift; sourceTree = "<group>"; };
 		9D716C97DE0387DBD18136BB /* Pods-cmu-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-share/Pods-cmu-share.release.xcconfig"; sourceTree = "<group>"; };
 		CAF6DF4B1F1CAE128C63D163 /* Pods-cmu-shareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmu-shareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cmu-shareTests/Pods-cmu-shareTests.release.xcconfig"; sourceTree = "<group>"; };
 		D17C3B1CB143D87A3C640C9A /* Pods_cmu_shareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_shareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		6278DBCC2162D66200D75581 /* cmu-share */ = {
 			isa = PBXGroup;
 			children = (
+				6299AB3F2169649E00749972 /* RealtimeDB */,
 				623C6E3D21656CA90099C1F9 /* GoogleService-Info.plist */,
 				6278DBCD2162D66200D75581 /* AppDelegate.swift */,
 				6278DBCF2162D66200D75581 /* ViewController.swift */,
@@ -159,6 +162,14 @@
 				6278DBEF2162D66300D75581 /* Info.plist */,
 			);
 			path = "cmu-shareUITests";
+			sourceTree = "<group>";
+		};
+		6299AB3F2169649E00749972 /* RealtimeDB */ = {
+			isa = PBXGroup;
+			children = (
+				6299AB40216964C700749972 /* RealtimeDBViewController.swift */,
+			);
+			path = RealtimeDB;
 			sourceTree = "<group>";
 		};
 		8C8687F0574B60F823A5A9BB /* Pods */ = {
@@ -408,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6278DBD02162D66200D75581 /* ViewController.swift in Sources */,
+				6299AB41216964C700749972 /* RealtimeDBViewController.swift in Sources */,
 				6278DBCE2162D66200D75581 /* AppDelegate.swift in Sources */,
 				52380209216559EB00F15C44 /* ViewControllerSignUp.swift in Sources */,
 				52380207216538DE00F15C44 /* FeedController.swift in Sources */,
