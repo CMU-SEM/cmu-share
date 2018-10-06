@@ -26,11 +26,16 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func loadOrders() {
-        let order1 = Order(name: "Mc", detail: "Eiei")
-        orderList.append(order1)
-        let order2 = Order(name: "Mc", detail: "Eiei")
-        orderList.append(order2)
-        tableView.reloadData()
+        ref.child("orders").observe(DataEventType.value) { (snapshot) in
+            self.orderList = []
+            let postDic = snapshot.value as? [String: AnyObject]
+            for (uid, item) in postDic! {
+                let order = Order(name: item["restaurantName"] as! String, detail: item["detail"] as! String )
+                self.orderList.append(order);
+            }
+            self.tableView.reloadData()
+        }
+      
     }
 
     @IBAction func addRestaurant(_ sender: Any) {
