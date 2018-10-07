@@ -90,8 +90,8 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
         let orderRef = Database.database().reference().child("orders").childByAutoId();
         
         let orderObj = [
-            "restaurantName" : nameLabel.text,
-            "detail": detailLabel.text,
+            "restaurantName" : nameLabel.text!,
+            "detail": detailLabel.text!,
             "timestamp": [".sv", "timestamp"]
         ] as [String: Any]
         

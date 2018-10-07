@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller Sign Up-->
+        <!--Sign Up Controller-->
         <scene sceneID="JFg-Rx-77M">
             <objects>
-                <viewController id="clf-kD-UD5" customClass="ViewControllerSignUp" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="clf-kD-UD5" customClass="signUpController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6s-os-ciN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
