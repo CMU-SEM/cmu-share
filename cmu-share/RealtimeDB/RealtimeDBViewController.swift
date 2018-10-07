@@ -26,6 +26,8 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func loadOrders() {
+        // To Do: to observe when the whole list is changed
+        // Response From Google: the new list of orders
         ref.child("orders").observe(DataEventType.value) { (snapshot) in
             self.orderList = []
             var postDic = snapshot.value as? [String: AnyObject]
@@ -38,6 +40,8 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         
+        // To Do: to observe when the an item is changed
+        // Response From Google: an orders of which properties are changed
         ref.child("orders").observe(DataEventType.childChanged) { (snapshot) in
             self.orderList = []
             let postDic = snapshot.value as? [String: AnyObject]
@@ -54,6 +58,8 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func editRestaurant(_ sender: UIButton) {
+        // To Do: to edit the current item
+        // Response From Google: nothing, it will trigger .childChanged or .value
         ref.child("orders").observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
             var postDic = snapshot.value as? [String: AnyObject]
              if(postDic != nil) {
