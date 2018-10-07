@@ -355,25 +355,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-ss-GiV">
-                                <rect key="frame" x="172.5" y="195" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-ss-GiV">
+                                <rect key="frame" x="110" y="194" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addRestaurant:" destination="fqz-je-NGN" eventType="touchUpInside" id="JPV-wE-GBh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO2-mv-gh9">
+                                <rect key="frame" x="236" y="194" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editRestaurant:" destination="fqz-je-NGN" eventType="touchUpInside" id="Fiv-Dh-te8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DJa-4F-Zhs" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="4mS-L9-RY4"/>
+                            <constraint firstItem="eZx-mC-fPv" firstAttribute="trailing" secondItem="AO2-mv-gh9" secondAttribute="trailing" constant="109" id="7YA-du-sTY"/>
                             <constraint firstItem="DJa-4F-Zhs" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="112" id="B5s-PL-T7G"/>
+                            <constraint firstItem="RVL-ss-GiV" firstAttribute="leading" secondItem="eZx-mC-fPv" secondAttribute="leading" constant="110" id="C8a-fh-yhL"/>
                             <constraint firstItem="eZx-mC-fPv" firstAttribute="bottom" secondItem="ZKk-JG-leP" secondAttribute="bottom" constant="65" id="D3o-pg-nuH"/>
                             <constraint firstItem="ZKk-JG-leP" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="TCU-Kd-Kud"/>
                             <constraint firstItem="xvM-UA-q4v" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="44" id="URV-dk-pxp"/>
                             <constraint firstItem="RVL-ss-GiV" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="175" id="VYH-8n-PdL"/>
                             <constraint firstItem="xvM-UA-q4v" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="ous-4n-ceW"/>
+                            <constraint firstItem="AO2-mv-gh9" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="174" id="pFm-sC-bp9"/>
                             <constraint firstItem="ZKk-JG-leP" firstAttribute="top" secondItem="RVL-ss-GiV" secondAttribute="bottom" constant="18" id="t5g-7f-fdT"/>
-                            <constraint firstItem="RVL-ss-GiV" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="yFK-eW-key"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eZx-mC-fPv"/>
                     </view>

@@ -28,25 +28,57 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
     func loadOrders() {
         ref.child("orders").observe(DataEventType.value) { (snapshot) in
             self.orderList = []
-            let postDic = snapshot.value as? [String: AnyObject]
-            for (uid, item) in postDic! {
-                let order = Order(name: item["restaurantName"] as! String, detail: item["detail"] as! String )
-                self.orderList.append(order);
+            var postDic = snapshot.value as? [String: AnyObject]
+            if(postDic != nil) {
+                for (uid, item) in postDic! {
+                    let order = Order(dict: item as! [String : AnyObject], uid: uid)
+                    self.orderList.append(order);
+                }
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         }
         
         ref.child("orders").observe(DataEventType.childChanged) { (snapshot) in
             self.orderList = []
             let postDic = snapshot.value as? [String: AnyObject]
-            for (uid, item) in postDic! {
-                let order = Order(name: item["restaurantName"] as! String, detail: item["detail"] as! String )
-                self.orderList.append(order);
+            if(postDic != nil) {
+                let order = Order(dict: postDic as! [String : AnyObject], uid: "")
+                let alert = UIAlertController(title: "My Alert", message: "Order: \(order.name) is changed", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
-            self.tableView.reloadData()
+            
         }
       
     }
+    
+    @IBAction func editRestaurant(_ sender: UIButton) {
+        ref.child("orders").observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+            var postDic = snapshot.value as? [String: AnyObject]
+             if(postDic != nil) {
+                var targetItem: Order? = nil;
+                for (uid, item) in postDic! {
+                    let order = Order(dict: item as! [String : AnyObject], uid: uid)
+                    if(self.nameLabel.text?.trimmingCharacters(in: .whitespacesAndNewlines) == order.name.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                        targetItem = order;
+                        break;
+                    }
+                }
+                if(targetItem != nil) {
+                    self.ref.child("orders").child(targetItem!.uid).updateChildValues(["detail" : self.detailLabel.text]) {
+                        (error:Error?, ref:DatabaseReference) in
+                        if let error = error {
+                            print("Data could not be saved: \(error).")
+                        } else {
+                            print("Data saved successfully!")
+                        }
+                    }
+                }
+            }
+        })
+    }
+    
 
     @IBAction func addRestaurant(_ sender: Any) {
         let orderRef = Database.database().reference().child("orders").childByAutoId();
@@ -69,6 +101,9 @@ class RealtimeDBViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellOrder", for: indexPath) as! RealtimeDBTableViewCell
+        if(indexPath.row > orderList.count) {
+            return cell;
+        }
         
         let order = orderList[indexPath.row] as Order
         cell.nameLabel.text = order.name;
