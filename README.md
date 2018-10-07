@@ -16,4 +16,11 @@ Please open the cmu-share.xcworkspace instead of choosing the cmu-share folder i
   
     eg. signUpTosignInSegue
   
+4. Compile Failure resolution:
 
+    1) Quit Xcode
+    2) Delete cmu-share.xcworkspace, Podfile.lock, Pods(folder)
+    3) Run % pod install
+    4) Open cmu-share.xcworkspace
+    5) Compile and run
+    
