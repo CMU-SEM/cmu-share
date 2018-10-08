@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                 if user != nil {
                     // sign in successful
-                    self.performSegue(withIdentifier: "segue", sender: self.logInButton)
+                    self.performSegue(withIdentifier: "SignInToFeedSegue", sender: self.logInButton)
                 }
                 else {
                     let alert = UIAlertController(title: "Error", message: "Incorrect Username or Password", preferredStyle: .alert)
