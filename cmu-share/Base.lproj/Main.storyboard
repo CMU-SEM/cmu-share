@@ -397,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="QV1-0T-sxZ">
             <objects>
                 <viewController id="J2X-2E-6to" sceneMemberID="viewController">
@@ -407,13 +407,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tb4-gJ-0Cv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mvy-gn-Ab1"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="mvy-gn-Ab1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbW-Ss-7ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="1716"/>
         </scene>
-        <!--Item 2-->
+        <!--Order Management-->
         <scene sceneID="uzH-M9-m53">
             <objects>
                 <viewController id="5hZ-f1-SjH" sceneMemberID="viewController">
@@ -423,23 +423,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0m3-XO-QhE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="d3j-27-aLY"/>
+                    <tabBarItem key="tabBarItem" title="Order Management" id="d3j-27-aLY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6K-0l-qDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750" y="1522"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="Xj6-cT-55Q">
             <objects>
                 <viewController id="ZVS-8P-S8A" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Oa-eB-10p">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="5Oa-eB-10p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-eF-93K">
+                                <rect key="frame" x="313" y="575" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z1b-jG-s9M"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="nNp-dH-tAp"/>
+                    <tabBarItem key="tabBarItem" title="Feed" springLoaded="YES" id="nNp-dH-tAp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-oZ-2io" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -453,6 +460,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.2327803201543257" blue="0.21685755747727775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="ZVS-8P-S8A" kind="relationship" relationship="viewControllers" id="I5H-Wy-jGy"/>
