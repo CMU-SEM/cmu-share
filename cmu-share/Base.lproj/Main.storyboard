@@ -408,18 +408,33 @@
         <!--Profile-->
         <scene sceneID="QV1-0T-sxZ">
             <objects>
-                <viewController id="J2X-2E-6to" sceneMemberID="viewController">
+                <viewController id="J2X-2E-6to" customClass="profileController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVE-45-hA4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glE-Jg-zbj">
+                                <rect key="frame" x="153" y="290" width="56" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Off"/>
+                                <connections>
+                                    <action selector="signOffAction:" destination="oI7-sk-A1S" eventType="touchUpInside" id="Mxw-CF-4Bq"/>
+                                    <action selector="signOutAction:" destination="J2X-2E-6to" eventType="touchUpInside" id="l8C-Cc-TUT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tb4-gJ-0Cv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="AccountIcon" id="mvy-gn-Ab1"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="glE-Jg-zbj" id="1jH-P5-IIQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ProfileToSignInSegue" id="4Qy-zI-mkQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbW-Ss-7ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="1716"/>
+            <point key="canvasLocation" x="960.79999999999995" y="1715.8920539730136"/>
         </scene>
         <!--Order Management-->
         <scene sceneID="uzH-M9-m53">
@@ -496,14 +511,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AccountIcon" width="45" height="45"/>
-        <image name="AddIcon" width="100" height="100"/>
-        <image name="CartIcon" width="45" height="43"/>
-        <image name="FeedIcon" width="45" height="45"/>
+        <image name="AccountIcon" width="22" height="22"/>
+        <image name="AddIcon" width="50" height="50"/>
+        <image name="CartIcon" width="22" height="21"/>
+        <image name="FeedIcon" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DUC-cL-AgA"/>
-        <segue reference="MZE-Qe-K6A"/>
-        <segue reference="ObL-k6-d6t"/>
+        <segue reference="GRs-YR-duB"/>
+        <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
 </document>
