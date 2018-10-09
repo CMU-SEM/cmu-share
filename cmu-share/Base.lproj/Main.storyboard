@@ -407,7 +407,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tb4-gJ-0Cv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="mvy-gn-Ab1"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="AccountIcon" id="mvy-gn-Ab1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbW-Ss-7ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +423,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0m3-XO-QhE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Order Management" id="d3j-27-aLY"/>
+                    <tabBarItem key="tabBarItem" title="Order Management" image="CartIcon" id="d3j-27-aLY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6K-0l-qDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,7 +446,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z1b-jG-s9M"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" springLoaded="YES" id="nNp-dH-tAp"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="FeedIcon" id="nNp-dH-tAp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-oZ-2io" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,6 +473,11 @@
             <point key="canvasLocation" x="962" y="1004"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AccountIcon" width="20" height="20"/>
+        <image name="CartIcon" width="20" height="20"/>
+        <image name="FeedIcon" width="20" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ObL-k6-d6t"/>
     </inferredMetricsTieBreakers>
