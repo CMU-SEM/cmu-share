@@ -61,7 +61,7 @@ class signUpController: UIViewController {
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
                 if authResult != nil {
                     // sign up successful
-                    let alert = UIAlertController(title: "Error", message: "Sign up is complete! Now you can Sign In.", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Congrats", message: "Sign up is complete! Now you can Sign In.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
                         action in self.performSegue(withIdentifier: "backToSignInSegue", sender: self)
                         
