@@ -370,9 +370,8 @@
                                     <action selector="editRestaurant:" destination="fqz-je-NGN" eventType="touchUpInside" id="Fiv-Dh-te8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-Du-mLp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-Du-mLp">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="Wab-j6-40E" kind="show" id="DUC-cL-AgA"/>
@@ -389,9 +388,11 @@
                             <constraint firstItem="ZKk-JG-leP" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="TCU-Kd-Kud"/>
                             <constraint firstItem="xvM-UA-q4v" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="44" id="URV-dk-pxp"/>
                             <constraint firstItem="RVL-ss-GiV" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="175" id="VYH-8n-PdL"/>
+                            <constraint firstItem="fSL-Du-mLp" firstAttribute="leading" secondItem="eZx-mC-fPv" secondAttribute="leading" constant="22" id="i4E-nE-4EQ"/>
                             <constraint firstItem="xvM-UA-q4v" firstAttribute="centerX" secondItem="eZx-mC-fPv" secondAttribute="centerX" id="ous-4n-ceW"/>
                             <constraint firstItem="AO2-mv-gh9" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" constant="174" id="pFm-sC-bp9"/>
                             <constraint firstItem="ZKk-JG-leP" firstAttribute="top" secondItem="RVL-ss-GiV" secondAttribute="bottom" constant="18" id="t5g-7f-fdT"/>
+                            <constraint firstItem="fSL-Du-mLp" firstAttribute="top" secondItem="eZx-mC-fPv" secondAttribute="top" id="yBR-v4-Kuz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eZx-mC-fPv"/>
                     </view>
@@ -511,10 +512,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AccountIcon" width="22" height="22"/>
-        <image name="AddIcon" width="50" height="50"/>
-        <image name="CartIcon" width="22" height="21"/>
-        <image name="FeedIcon" width="22" height="22"/>
+        <image name="AccountIcon" width="45" height="45"/>
+        <image name="AddIcon" width="100" height="100"/>
+        <image name="CartIcon" width="45" height="43"/>
+        <image name="FeedIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DUC-cL-AgA"/>
