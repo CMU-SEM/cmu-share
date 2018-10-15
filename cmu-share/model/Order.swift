@@ -16,7 +16,7 @@ class Order: NSObject {
     init(name: String, detail: String, uid: String) {
         self.name = name;
         self.detail = detail;
-        self.uid = uid;
+        self.uid = uid; 
     }
     
     init(dict: [String: AnyObject], uid:String) {
