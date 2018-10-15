@@ -13,13 +13,13 @@ class Order: NSObject {
     var creator: String
     var name: String
     var detail: String
-    var hr: String
-    var min: String
+    var hr: Int
+    var min: Int
     var dollar: Int
     var cent: Int
     var joiner_count: Int
     
-    init(creator: String, name: String, detail: String, uid: String, hr: String, min: String,
+    init(creator: String, name: String, detail: String, uid: String, hr: Int, min: Int,
          dollar: Int, cent: Int, joiner_count: Int) {
         self.uid = uid
         self.creator = creator
@@ -40,8 +40,8 @@ class Order: NSObject {
         self.name = dict["restaurantName"] as! String
         self.detail = dict["detail"] as! String
         self.uid = uid
-        self.hr = dict["hr"] as! String
-        self.min = dict["min"] as! String
+        self.hr = dict["hr"] as! Int
+        self.min = dict["min"] as! Int
         self.dollar = dict["dollar"] as! Int
         self.cent = dict["cent"] as! Int
         self.joiner_count = dict["joiner_count"] as! Int

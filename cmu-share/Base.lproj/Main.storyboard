@@ -436,7 +436,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Click to Prototype page"/>
                                 <connections>
-                                    <segue destination="fqz-je-NGN" kind="show" id="MZE-Qe-K6A"/>
+                                    <action selector="prototypeAction:" destination="ZVS-8P-S8A" eventType="touchUpInside" id="Pau-F2-Ztl"/>
+                                    <segue destination="fqz-je-NGN" kind="show" identifier="FeedToPrototypeSegue" id="MZE-Qe-K6A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -504,6 +505,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKk-fk-hnE"/>
+                                    <action selector="submitAction:" destination="FzY-dd-4nx" eventType="touchUpInside" id="UAG-eN-sRw"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLQ-Zs-kkI">

@@ -70,11 +70,14 @@ class signUpController: UIViewController {
                     
                     // create a new user in the system
                     let userRef = Database.database().reference().child("users").childByAutoId();
+                    let user = Auth.auth().currentUser
+                    let id = user?.uid
                     let userObj = [
                         "email" : self.emailText.text!,
                         "firstName": self.firstNameText.text!,
                         "lastName": self.lastNameText.text!,
-                        "phoneNumber": self.mobileText.text!
+                        "phoneNumber": self.mobileText.text!,
+                        "uid": id!
                         ] as [String: Any]
 
                     userRef.setValue(userObj) { (error, ref) in

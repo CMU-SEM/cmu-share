@@ -15,6 +15,9 @@ class feedController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func prototypeAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "FeedToPrototypeSegue", sender: self)
+    }
     @IBAction func createAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "FeedToCreateSegue", sender: self)
     }
