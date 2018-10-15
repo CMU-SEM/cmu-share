@@ -9,25 +9,25 @@
 import UIKit
 
 class User: NSObject {
+    var uid: String
     var email: String
     var firstName: String
     var lastName: String
     var phoneNumber: String
-    var uid: String
     
-    init(email: String, firstName: String, lastName: String, phoneNumber: String, uid: String) {
-        self.email = email;
-        self.firstName = firstName;
-        self.lastName = lastName;
-        self.phoneNumber = phoneNumber;
-        self.uid = uid;
+    init(uid: String, email: String, firstName: String, lastName: String, phoneNumber: String) {
+        self.uid = uid
+        self.email = email
+        self.firstName = firstName
+        self.lastName = lastName
+        self.phoneNumber = phoneNumber
     }
     
     init(dict: [String: AnyObject], uid:String) {
+        self.uid = uid
         self.email = dict["email"] as! String
         self.firstName = dict["firstName"] as! String
         self.lastName = dict["lastName"] as! String
         self.phoneNumber = dict["phoneNumber"] as! String
-        self.uid = uid
     }
 }
