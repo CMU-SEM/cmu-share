@@ -1,5 +1,5 @@
 //
-//  profileControllerViewController.swift
+//  profileController.swift
 //  cmu-share
 //
 //  Created by Bethany Huang on 10/9/18.
