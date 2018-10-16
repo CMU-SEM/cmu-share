@@ -522,6 +522,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="deliveryFee" destination="uoc-Rp-cOf" id="BA8-Kd-BWu"/>
+                                            <outlet property="numOfPeople" destination="Vna-Ym-zwX" id="g6K-co-jGs"/>
+                                            <outlet property="orderTime" destination="5F3-St-WV9" id="jvA-Yr-WXM"/>
+                                            <outlet property="restaurantName" destination="Y1X-FM-Ox2" id="w2A-Fq-vdl"/>
                                             <outlet property="viewWrapper" destination="XXA-3r-YtQ" id="Ubl-fi-n2c"/>
                                         </connections>
                                     </tableViewCell>

@@ -12,6 +12,10 @@ class FeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var viewWrapper: UIView!
     
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var orderTime: UILabel!
+    @IBOutlet weak var numOfPeople: UILabel!
+    @IBOutlet weak var deliveryFee: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
