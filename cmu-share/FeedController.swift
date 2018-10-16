@@ -23,13 +23,16 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 0;
+       return 1;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellOrder", for: indexPath) as! FeedTableViewCell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellFeed", for: indexPath) as! FeedTableViewCell;
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250.0
+    }
 
 }
