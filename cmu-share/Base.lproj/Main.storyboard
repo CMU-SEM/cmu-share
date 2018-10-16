@@ -422,6 +422,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2TI-Ol-4zi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="Cyh-Jb-lYF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cyh-Jb-lYF" id="j3k-R2-Meg" customClass="FeedTableViewCell" customModule="cmu_share" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZVS-8P-S8A" id="reN-sA-Fkb"/>
+                                    <outlet property="delegate" destination="ZVS-8P-S8A" id="Ds4-bj-ZTL"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-eF-93K">
                                 <rect key="frame" x="271" y="512" width="80" height="79"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
@@ -431,20 +449,17 @@
                                     <action selector="createAction:" destination="ZVS-8P-S8A" eventType="touchUpInside" id="r6d-eK-k7n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owL-QK-Ewy">
-                                <rect key="frame" x="107" y="154" width="161" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click to Prototype page"/>
-                                <connections>
-                                    <action selector="prototypeAction:" destination="ZVS-8P-S8A" eventType="touchUpInside" id="Pau-F2-Ztl"/>
-                                    <segue destination="fqz-je-NGN" kind="show" identifier="FeedToPrototypeSegue" id="MZE-Qe-K6A"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="width" secondItem="Z1b-jG-s9M" secondAttribute="width" id="597-sa-vvB"/>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="trailing" secondItem="Z1b-jG-s9M" secondAttribute="trailing" id="8SC-Oh-7RH"/>
                             <constraint firstItem="Z1b-jG-s9M" firstAttribute="trailing" secondItem="Vc3-eF-93K" secondAttribute="trailing" constant="24" id="AaJ-MP-vdO"/>
                             <constraint firstItem="Z1b-jG-s9M" firstAttribute="bottom" secondItem="Vc3-eF-93K" secondAttribute="bottom" constant="27" id="DVf-2k-3PX"/>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="bottom" secondItem="Z1b-jG-s9M" secondAttribute="bottom" id="DoM-SP-aAv"/>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="height" secondItem="Z1b-jG-s9M" secondAttribute="height" id="er4-i6-ASu"/>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="top" secondItem="Z1b-jG-s9M" secondAttribute="top" id="qBX-I9-z18"/>
+                            <constraint firstItem="2TI-Ol-4zi" firstAttribute="leading" secondItem="Z1b-jG-s9M" secondAttribute="leading" id="wiv-DB-zDU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z1b-jG-s9M"/>
                     </view>
@@ -456,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-oZ-2io" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="134"/>
+            <point key="canvasLocation" x="1792.8" y="133.5832083958021"/>
         </scene>
         <!--Create Order Controller-->
         <scene sceneID="SYY-YR-x3I">
@@ -662,12 +677,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AccountIcon" width="22" height="22"/>
-        <image name="AddIcon" width="50" height="50"/>
-        <image name="CartIcon" width="22" height="21"/>
-        <image name="FeedIcon" width="22" height="22"/>
+        <image name="AccountIcon" width="45" height="45"/>
+        <image name="AddIcon" width="100" height="100"/>
+        <image name="CartIcon" width="45" height="43"/>
+        <image name="FeedIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Vfn-FS-6RK"/>
         <segue reference="neY-bi-aI2"/>
         <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
