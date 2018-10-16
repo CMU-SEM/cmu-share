@@ -20,6 +20,7 @@ class createOrderController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var ref: DatabaseReference!
+    var displayName: String!
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "CreateToFeedSegue", sender: self)
@@ -48,6 +49,7 @@ class createOrderController: UIViewController {
             // create order profile
             let orderObj = [
                 "creator_id" : creator_id!,
+                "creatorName" : displayName!,
                 "restaurantName" : restaurantNameText.text!,
                 "detail" : menuText.text!,
                 "hr" : Int(hourText.text!),
@@ -68,5 +70,20 @@ class createOrderController: UIViewController {
         menuText.placeholder = "Your Menu"
         
         ref = Database.database().reference()
+        updateDisplayName()
+    }
+    
+    func updateDisplayName() {
+        let user = Auth.auth().currentUser
+        let creator_id = user!.uid
+        
+        ref.child("users").child(creator_id).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            self.displayName = value?["firstName"] as? String ?? ""
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }

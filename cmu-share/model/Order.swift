@@ -11,6 +11,7 @@ import UIKit
 class Order: NSObject {
     var uid: String
     var creator: String
+    var creatorName: String
     var name: String
     var detail: String
     var hr: Int
@@ -20,7 +21,7 @@ class Order: NSObject {
     var joinerCount: Int
     
     init(creator: String, name: String, detail: String, uid: String, hr: Int, min: Int,
-         dollar: Int, cent: Int, joiner_count: Int) {
+         dollar: Int, cent: Int, joiner_count: Int, creatorName: String) {
         self.uid = uid
         self.creator = creator
         self.name = name
@@ -30,6 +31,7 @@ class Order: NSObject {
         self.dollar = dollar
         self.cent = cent
         self.joinerCount = joiner_count
+        self.creatorName = creatorName
     }
     
     init(dict: [String: AnyObject], uid:String) {
@@ -45,5 +47,6 @@ class Order: NSObject {
         self.dollar = dict["dollar"] as! Int
         self.cent = dict["cent"] as! Int
         self.joinerCount = dict["joiner_count"] as! Int
+        self.creatorName = dict["creatorName"] as! String
     }
 }

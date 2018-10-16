@@ -522,6 +522,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="creatorName" destination="hSh-jO-wIa" id="AuG-lS-Q1j"/>
                                             <outlet property="deliveryFee" destination="uoc-Rp-cOf" id="BA8-Kd-BWu"/>
                                             <outlet property="numOfPeople" destination="Vna-Ym-zwX" id="g6K-co-jGs"/>
                                             <outlet property="orderTime" destination="5F3-St-WV9" id="jvA-Yr-WXM"/>

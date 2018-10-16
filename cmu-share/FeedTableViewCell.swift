@@ -12,6 +12,7 @@ class FeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var viewWrapper: UIView!
     
+    @IBOutlet weak var creatorName: UILabel!
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var orderTime: UILabel!
     @IBOutlet weak var numOfPeople: UILabel!
