@@ -10,9 +10,11 @@ import UIKit
 
 class feedController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     @IBAction func prototypeAction(_ sender: UIButton) {
