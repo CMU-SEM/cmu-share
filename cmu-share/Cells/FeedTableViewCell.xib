@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-8o-lPA">
-                        <rect key="frame" x="0.0" y="16" width="320" height="191.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="207.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pattarasai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSj-SH-3c9">
                                 <rect key="frame" x="8" y="8" width="76" height="21"/>
@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZaZ-La-HR5" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="43" id="1S3-KN-V2d"/>
                             <constraint firstItem="GSj-SH-3c9" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="8" id="4Uw-ro-nHH"/>
@@ -99,9 +99,11 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="gyz-8o-lPA" secondAttribute="bottom" constant="16" id="8O7-35-QN9"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Aq2-zP-hee"/>
+                    <constraint firstItem="gyz-8o-lPA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M3v-2o-QAz"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NWx-Yp-GNk"/>
                     <constraint firstAttribute="trailing" secondItem="gyz-8o-lPA" secondAttribute="trailing" id="bSn-Mr-Kqi"/>
                 </constraints>
@@ -109,10 +111,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="creatorName" destination="GSj-SH-3c9" id="pO4-eG-oRc"/>
-                <outlet property="deliveryFee" destination="Pyw-3w-OGa" id="Eax-XO-Ip1"/>
-                <outlet property="numOfPeople" destination="1i6-Mo-fTc" id="eGF-a4-NPp"/>
-                <outlet property="orderTime" destination="aXT-am-J6f" id="Pfe-xO-Nrg"/>
-                <outlet property="restaurantName" destination="hTz-pr-3zl" id="afZ-fj-iEE"/>
+                <outlet property="deliveryFee" destination="ogl-aT-XWn" id="CCG-fu-8g2"/>
+                <outlet property="numOfPeople" destination="2yX-me-Ld3" id="hp9-cZ-Ije"/>
+                <outlet property="orderTime" destination="oZO-Sc-rih" id="ltr-2e-Mbz"/>
+                <outlet property="restaurantName" destination="ZaZ-La-HR5" id="CP7-SH-2cX"/>
                 <outlet property="viewWrapper" destination="gyz-8o-lPA" id="GdZ-3i-Lph"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="233.88305847076464"/>
