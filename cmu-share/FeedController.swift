@@ -62,6 +62,10 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
         cell.deliveryFee.text  = "\(orderObj.cent) $";
+        cell.selectionStyle = .none;
+        cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
+        cell.viewWrapper.layer.borderWidth = 0.25;
+        cell.viewWrapper.layer.cornerRadius = 5;
         return cell;
     }
     
