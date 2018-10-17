@@ -68,9 +68,9 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.viewWrapper.layer.cornerRadius = 5;
         
         cell.viewWrapper.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.viewWrapper.layer.shadowOpacity = 0.5
+        cell.viewWrapper.layer.shadowOpacity = 0.8
         cell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
-        cell.viewWrapper.layer.shadowRadius = 1
+        cell.viewWrapper.layer.shadowRadius = 4
         return cell;
     }
     
