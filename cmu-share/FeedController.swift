@@ -64,8 +64,13 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.deliveryFee.text  = "\(orderObj.cent) $";
         cell.selectionStyle = .none;
         cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
-        cell.viewWrapper.layer.borderWidth = 0.25;
+        cell.viewWrapper.layer.borderWidth = 0.3;
         cell.viewWrapper.layer.cornerRadius = 5;
+        
+        cell.viewWrapper.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.viewWrapper.layer.shadowOpacity = 0.5
+        cell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
+        cell.viewWrapper.layer.shadowRadius = 1
         return cell;
     }
     
