@@ -15,17 +15,22 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var ref: DatabaseReference!
     var orderList = [Order]();
+    var currentUId: String!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        setCurrentUserId()
         loadOrders()
         // Do any additional setup after loading the view.
         
         let feedCellNib = UINib(nibName:"FeedTableViewCell", bundle: nil)
         tableView.register(feedCellNib, forCellReuseIdentifier: "feedCell")
-        
-        
+    }
+    
+    func setCurrentUserId() {
+        let user = Auth.auth().currentUser;
+        currentUId = user!.uid;
     }
     
     @IBAction func prototypeAction(_ sender: UIButton) {
@@ -71,6 +76,16 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.viewWrapper.layer.shadowOpacity = 0.8
         cell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
         cell.viewWrapper.layer.shadowRadius = 4
+        
+        if(self.currentUId != nil && orderObj.creator == self.currentUId!) {
+            cell.joinButton.isEnabled = false;
+            cell.joinButton.backgroundColor = UIColor.lightGray;
+            cell.joinButton.titleLabel!.textColor = UIColor.white;
+        } else {
+            cell.joinButton.isEnabled = true;
+            cell.joinButton.backgroundColor = UIColor.red;
+            cell.joinButton.titleLabel!.textColor = UIColor.white;
+        }
         return cell;
     }
     
