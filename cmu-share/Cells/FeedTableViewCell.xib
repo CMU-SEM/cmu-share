@@ -71,6 +71,10 @@
                                     <constraint firstAttribute="height" constant="27" id="zba-Ky-g3C"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="nL7-tp-9c7">
+                                <rect key="frame" x="10" y="99" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people-g" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-Mj-qPm">
                                 <rect key="frame" x="10" y="137" width="33" height="33"/>
                                 <constraints>
@@ -98,10 +102,17 @@
                                     <constraint firstAttribute="height" constant="1" id="ZAn-Zu-cOz"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="nL7-tp-9c7">
-                                <rect key="frame" x="10" y="99" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bU-bL-jvb">
+                                <rect key="frame" x="195" y="157" width="73" height="26"/>
+                                <color key="backgroundColor" red="0.81295126676559448" green="0.32019490003585815" blue="0.19602206349372864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Bax-sW-X5y"/>
+                                    <constraint firstAttribute="height" constant="26" id="Jiu-fe-x0D"/>
+                                </constraints>
+                                <state key="normal" title="Join">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -136,8 +147,10 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="gyz-8o-lPA" secondAttribute="trailing" constant="10" id="Sgb-JG-UK4"/>
+                    <constraint firstAttribute="trailing" secondItem="8bU-bL-jvb" secondAttribute="trailing" constant="42" id="UfT-Sx-Rk0"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="XBb-SU-W88"/>
                     <constraint firstAttribute="bottom" secondItem="gyz-8o-lPA" secondAttribute="bottom" constant="10" id="cjI-Pb-DmW"/>
+                    <constraint firstAttribute="bottom" secondItem="8bU-bL-jvb" secondAttribute="bottom" constant="30.5" id="p37-xz-r0Z"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vYI-Nl-1uT"/>
                 </constraints>
             </tableViewCellContentView>
