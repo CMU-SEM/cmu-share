@@ -17,6 +17,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var numOfPeople: UILabel!
     @IBOutlet weak var deliveryFee: UILabel!
 
+    @IBOutlet weak var joinButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
