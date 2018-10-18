@@ -61,7 +61,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
-        cell.deliveryFee.text  = "\(orderObj.cent) $";
+        cell.deliveryFee.text  = "\(orderObj.dollar).\(orderObj.cent) $";
         cell.selectionStyle = .none;
         cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
         cell.viewWrapper.layer.borderWidth = 0.3;
