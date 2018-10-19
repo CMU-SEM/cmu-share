@@ -99,6 +99,6 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
         print("Heart", sender, tappedIndexPath)
         
-        self.performSegue(withIdentifier: "FeedToCreateSegue", sender: nil)
+        self.performSegue(withIdentifier: "feedToJoinSegue", sender: nil)
     }
 }
