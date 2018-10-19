@@ -423,9 +423,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-oQ-6cC">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-oQ-6cC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="osB-bm-ImG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Txv-Ne-vcx">
@@ -437,82 +436,83 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbz-8F-kEK" userLabel="Food Item">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbz-8F-kEK" userLabel="Food Item">
                                 <rect key="frame" x="20" y="115" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-1D-NQe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-1D-NQe">
                                 <rect key="frame" x="20" y="170" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-C9-cCk">
-                                <rect key="frame" x="20" y="218" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGQ-hL-V9V" userLabel="Quatity Text">
-                                <rect key="frame" x="124" y="165" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dk8-bf-amA" userLabel="Size Text">
-                                <rect key="frame" x="79" y="213" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrg-0E-fig" userLabel="Food Item">
-                                <rect key="frame" x="20" y="298" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efe-rz-jXn">
-                                <rect key="frame" x="20" y="353" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTV-2J-oH8">
-                                <rect key="frame" x="20" y="401" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPA-Ij-7be" userLabel="Quatity Text">
-                                <rect key="frame" x="124" y="348" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjC-zp-ULL" userLabel="Size Text">
-                                <rect key="frame" x="79" y="396" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-M3-MM4">
-                                <rect key="frame" x="157" y="669" width="101" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="111" id="frQ-dS-iO5"/>
+                                    <constraint firstAttribute="height" constant="21" id="bi1-7R-flk"/>
+                                    <constraint firstAttribute="width" constant="96" id="iTy-VU-vvx"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-C9-cCk">
+                                <rect key="frame" x="20" y="218" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OHQ-xk-x4r"/>
+                                    <constraint firstAttribute="width" constant="58" id="hno-w0-1Cg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGQ-hL-V9V" userLabel="Quatity Text">
+                                <rect key="frame" x="124" y="165" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dk8-bf-amA" userLabel="Size Text">
+                                <rect key="frame" x="79" y="213" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrg-0E-fig" userLabel="Food Item">
+                                <rect key="frame" x="20" y="298" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efe-rz-jXn">
+                                <rect key="frame" x="20" y="353" width="96" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bUk-iJ-y3y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTV-2J-oH8">
+                                <rect key="frame" x="20" y="401" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NcL-Gt-WdZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPA-Ij-7be" userLabel="Quatity Text">
+                                <rect key="frame" x="124" y="348" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjC-zp-ULL" userLabel="Size Text">
+                                <rect key="frame" x="79" y="396" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-M3-MM4">
+                                <rect key="frame" x="157" y="669" width="100" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
@@ -527,14 +527,54 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IGQ-hL-V9V" firstAttribute="trailing" secondItem="HPA-Ij-7be" secondAttribute="trailing" id="0MF-VU-1TW"/>
+                            <constraint firstItem="Q4y-1D-NQe" firstAttribute="top" secondItem="lbz-8F-kEK" secondAttribute="bottom" constant="25" id="2JO-H6-qSV"/>
+                            <constraint firstItem="Dk8-bf-amA" firstAttribute="trailing" secondItem="rjC-zp-ULL" secondAttribute="trailing" id="5LE-Lv-qFs"/>
+                            <constraint firstItem="hrg-0E-fig" firstAttribute="leading" secondItem="Efe-rz-jXn" secondAttribute="leading" id="7VH-PS-VyZ"/>
+                            <constraint firstItem="nTV-2J-oH8" firstAttribute="top" secondItem="Efe-rz-jXn" secondAttribute="bottom" constant="27" id="CGh-JT-zwN"/>
+                            <constraint firstItem="2YV-C9-cCk" firstAttribute="leading" secondItem="hrg-0E-fig" secondAttribute="leading" id="EgI-TW-ilM"/>
+                            <constraint firstItem="2YV-C9-cCk" firstAttribute="centerY" secondItem="Dk8-bf-amA" secondAttribute="centerY" id="Egm-L7-0mS"/>
+                            <constraint firstItem="Efe-rz-jXn" firstAttribute="leading" secondItem="nTV-2J-oH8" secondAttribute="leading" id="Fsh-Ns-Mld"/>
+                            <constraint firstItem="lbz-8F-kEK" firstAttribute="leading" secondItem="Q4y-1D-NQe" secondAttribute="leading" id="Iu0-Y7-stx"/>
+                            <constraint firstItem="lbz-8F-kEK" firstAttribute="top" secondItem="ndm-oQ-6cC" secondAttribute="bottom" constant="27" id="K17-QF-eb6"/>
+                            <constraint firstItem="IGQ-hL-V9V" firstAttribute="top" secondItem="lbz-8F-kEK" secondAttribute="bottom" constant="20" id="MEq-n6-Y8P"/>
+                            <constraint firstItem="ndm-oQ-6cC" firstAttribute="top" secondItem="i9X-pl-nDw" secondAttribute="top" id="OPq-IW-Q3Q"/>
+                            <constraint firstItem="Ug1-M3-MM4" firstAttribute="leading" secondItem="i9X-pl-nDw" secondAttribute="leading" constant="157" id="OVO-F4-WdI"/>
+                            <constraint firstItem="hrg-0E-fig" firstAttribute="top" secondItem="2YV-C9-cCk" secondAttribute="bottom" constant="59" id="PRw-WC-RNc"/>
+                            <constraint firstItem="nTV-2J-oH8" firstAttribute="centerY" secondItem="rjC-zp-ULL" secondAttribute="centerY" id="RIj-5i-aNE"/>
+                            <constraint firstItem="Dk8-bf-amA" firstAttribute="leading" secondItem="rjC-zp-ULL" secondAttribute="leading" id="TCh-Lj-Qqe"/>
+                            <constraint firstItem="Efe-rz-jXn" firstAttribute="top" secondItem="hrg-0E-fig" secondAttribute="bottom" constant="25" id="WQ4-Kk-o5E"/>
+                            <constraint firstItem="Dk8-bf-amA" firstAttribute="leading" secondItem="2YV-C9-cCk" secondAttribute="trailing" constant="1" id="ZBo-hs-ENg"/>
+                            <constraint firstItem="2YV-C9-cCk" firstAttribute="trailing" secondItem="nTV-2J-oH8" secondAttribute="trailing" id="bgL-Nq-Rah"/>
+                            <constraint firstItem="HPA-Ij-7be" firstAttribute="leading" secondItem="Efe-rz-jXn" secondAttribute="trailing" constant="8" symbolic="YES" id="bmN-pB-7ZN"/>
+                            <constraint firstItem="Efe-rz-jXn" firstAttribute="centerY" secondItem="HPA-Ij-7be" secondAttribute="centerY" id="cse-9f-fdZ"/>
+                            <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="Dk8-bf-amA" secondAttribute="trailing" constant="238" id="dOf-3I-I2f"/>
+                            <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="IGQ-hL-V9V" secondAttribute="trailing" constant="193" id="dRD-GS-E52"/>
+                            <constraint firstItem="ndm-oQ-6cC" firstAttribute="centerX" secondItem="Ug1-M3-MM4" secondAttribute="centerX" id="e6K-Ob-fTa"/>
+                            <constraint firstItem="HPA-Ij-7be" firstAttribute="top" secondItem="hrg-0E-fig" secondAttribute="bottom" constant="20" id="eW6-Us-Ghl"/>
+                            <constraint firstItem="ndm-oQ-6cC" firstAttribute="leading" secondItem="im8-QJ-oop" secondAttribute="leading" id="eYn-7u-h2c"/>
+                            <constraint firstAttribute="trailing" secondItem="ndm-oQ-6cC" secondAttribute="trailing" id="elV-TP-BBY"/>
+                            <constraint firstItem="2YV-C9-cCk" firstAttribute="top" secondItem="Q4y-1D-NQe" secondAttribute="bottom" constant="27" id="gxI-fu-YfO"/>
+                            <constraint firstItem="lbz-8F-kEK" firstAttribute="leading" secondItem="im8-QJ-oop" secondAttribute="leadingMargin" id="jMX-TP-eMo"/>
+                            <constraint firstItem="rjC-zp-ULL" firstAttribute="top" secondItem="Efe-rz-jXn" secondAttribute="bottom" constant="22" id="mXd-ac-wkC"/>
+                            <constraint firstItem="i9X-pl-nDw" firstAttribute="bottom" secondItem="Ug1-M3-MM4" secondAttribute="bottom" constant="157" id="mXh-7D-eAS"/>
+                            <constraint firstItem="Q4y-1D-NQe" firstAttribute="centerY" secondItem="IGQ-hL-V9V" secondAttribute="centerY" id="r7I-Rh-eur"/>
+                            <constraint firstItem="IGQ-hL-V9V" firstAttribute="leading" secondItem="HPA-Ij-7be" secondAttribute="leading" id="raW-ja-ZJb"/>
+                            <constraint firstItem="Dk8-bf-amA" firstAttribute="top" secondItem="Q4y-1D-NQe" secondAttribute="bottom" constant="22" id="tWU-hq-zMz"/>
+                            <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="lbz-8F-kEK" secondAttribute="trailing" constant="106" id="u2L-Oi-Udk"/>
+                            <constraint firstItem="Q4y-1D-NQe" firstAttribute="leading" secondItem="2YV-C9-cCk" secondAttribute="leading" id="u97-uM-rn1"/>
+                            <constraint firstItem="lbz-8F-kEK" firstAttribute="trailing" secondItem="hrg-0E-fig" secondAttribute="trailing" id="yV0-Wg-Whe"/>
+                            <constraint firstItem="IGQ-hL-V9V" firstAttribute="leading" secondItem="Q4y-1D-NQe" secondAttribute="trailing" constant="8" symbolic="YES" id="yc0-Ef-N7v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i9X-pl-nDw"/>
                     </view>
                     <connections>
-                        <outlet property="cancel" destination="Txv-Ne-vcx" id="zGe-Cu-17I"/>
-                        <outlet property="foodItemName" destination="lbz-8F-kEK" id="BFC-mJ-wq3"/>
+                        <outlet property="cancelButton" destination="Txv-Ne-vcx" id="Vsp-3P-FCY"/>
+                        <outlet property="foodItemName1" destination="lbz-8F-kEK" id="69m-HK-5w9"/>
                         <outlet property="foodItemName2" destination="hrg-0E-fig" id="M4x-bo-wlp"/>
+                        <outlet property="quantity1" destination="IGQ-hL-V9V" id="ivK-ao-0sy"/>
                         <outlet property="quantity2" destination="HPA-Ij-7be" id="WoR-n4-sCe"/>
-                        <outlet property="quantityText" destination="IGQ-hL-V9V" id="yrP-zz-nk3"/>
                         <outlet property="size1" destination="Dk8-bf-amA" id="jSS-6i-f3p"/>
                         <outlet property="size2" destination="rjC-zp-ULL" id="kzi-Hp-igi"/>
                         <segue destination="ZVS-8P-S8A" kind="show" identifier="joinToFeedSegue" id="Ecs-HO-jdm"/>

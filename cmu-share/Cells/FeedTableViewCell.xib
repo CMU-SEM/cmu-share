@@ -113,7 +113,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="joinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pv0-q5-YcK"/>
+                                    <action selector="joinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sou-IW-eXR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
             <connections>
                 <outlet property="creatorName" destination="GSj-SH-3c9" id="pO4-eG-oRc"/>
                 <outlet property="deliveryFee" destination="ogl-aT-XWn" id="CCG-fu-8g2"/>
-                <outlet property="joinButton" destination="8bU-bL-jvb" id="PQy-Rv-YwX"/>
+                <outlet property="joinButton" destination="8bU-bL-jvb" id="7zX-4i-AFE"/>
                 <outlet property="numOfPeople" destination="2yX-me-Ld3" id="hp9-cZ-Ije"/>
                 <outlet property="orderTime" destination="oZO-Sc-rih" id="ltr-2e-Mbz"/>
                 <outlet property="restaurantName" destination="ZaZ-La-HR5" id="CP7-SH-2cX"/>
@@ -171,10 +171,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="22" height="22"/>
-        <image name="dollar-1" width="22" height="22"/>
-        <image name="food" width="22" height="22"/>
-        <image name="icon-design-users-1x" width="22" height="22"/>
-        <image name="people-g" width="22" height="22"/>
+        <image name="clock" width="45" height="45"/>
+        <image name="dollar-1" width="45" height="45"/>
+        <image name="food" width="45" height="45"/>
+        <image name="icon-design-users-1x" width="45" height="45"/>
+        <image name="people-g" width="45" height="45"/>
     </resources>
 </document>
