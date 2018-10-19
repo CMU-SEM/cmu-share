@@ -405,6 +405,30 @@
                     <view key="view" contentMode="scaleToFill" id="thF-24-6bl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LAs-X3-UEl">
+                                <rect key="frame" x="147" y="77" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uni-s5-P2K">
+                                <rect key="frame" x="-25" y="112" width="439" height="701"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzG-CF-iW2">
+                                        <rect key="frame" x="8" y="25" width="431" height="651"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <segue destination="1eu-lf-e48" kind="embed" id="WEL-bU-WV4"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0m3-XO-QhE"/>
                     </view>
@@ -412,7 +436,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6K-0l-qDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="938"/>
+            <point key="canvasLocation" x="1792.753623188406" y="937.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IaO-1u-Ept">
+            <objects>
+                <viewController id="1eu-lf-e48" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dop-0z-JgM">
+                        <rect key="frame" x="0.0" y="0.0" width="431" height="651"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qS4-Pv-bCE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNt-r1-ShS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="1616"/>
         </scene>
         <!--Join Order Controller-->
         <scene sceneID="yI8-Af-unF">
@@ -839,12 +878,25 @@
             </objects>
             <point key="canvasLocation" x="961" y="134"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="tGf-GQ-3sa">
+            <objects>
+                <viewController id="7la-W7-KY7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ag-gh-sVq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G95-uh-HUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
-        <image name="AccountIcon" width="15" height="15"/>
-        <image name="AddIcon" width="33" height="33"/>
-        <image name="CartIcon" width="15" height="15"/>
-        <image name="FeedIcon" width="15" height="15"/>
+        <image name="AccountIcon" width="45" height="45"/>
+        <image name="AddIcon" width="100" height="100"/>
+        <image name="CartIcon" width="45" height="45"/>
+        <image name="FeedIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="neY-bi-aI2"/>
