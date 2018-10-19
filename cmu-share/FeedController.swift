@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-class feedController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class feedController: UIViewController, UITableViewDelegate, UITableViewDataSource, FeedCellDelegate {
+    
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,9 +55,9 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return orderList.count;
+        return orderList.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,11 +87,18 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.joinButton.backgroundColor = UIColor.red;
             cell.joinButton.titleLabel!.textColor = UIColor.white;
         }
+        
+        cell.delegate = self;
         return cell;
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
     }
-
+    
+    func didTapJoin(_ sender: FeedTableViewCell) {
+        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
+        print("Heart", sender, tappedIndexPath)
+        
+        self.performSegue(withIdentifier: "FeedToCreateSegue", sender: nil)
+    }
 }
