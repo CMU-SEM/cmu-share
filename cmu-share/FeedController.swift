@@ -97,7 +97,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func didTapJoin(_ sender: FeedTableViewCell) {
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
-        print("Heart", sender, tappedIndexPath)
+        print(sender, tappedIndexPath)
         
         self.performSegue(withIdentifier: "feedToJoinSegue", sender: nil)
     }

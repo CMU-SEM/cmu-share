@@ -39,7 +39,6 @@ class Order: NSObject {
         self.name = dict["restaurantName"] as! String
         self.detail = dict["detail"] as! String
         self.creator = dict["creator_id"] as! String
-        self.name = dict["restaurantName"] as! String
         self.detail = dict["detail"] as! String
         self.uid = uid
         self.hr = dict["hr"] as! Int
