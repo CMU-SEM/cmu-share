@@ -112,6 +112,9 @@
                                 <state key="normal" title="Join">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="joinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pv0-q5-YcK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,10 +171,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="45" height="45"/>
-        <image name="dollar-1" width="45" height="45"/>
-        <image name="food" width="45" height="45"/>
-        <image name="icon-design-users-1x" width="45" height="45"/>
-        <image name="people-g" width="45" height="45"/>
+        <image name="clock" width="22" height="22"/>
+        <image name="dollar-1" width="22" height="22"/>
+        <image name="food" width="22" height="22"/>
+        <image name="icon-design-users-1x" width="22" height="22"/>
+        <image name="people-g" width="22" height="22"/>
     </resources>
 </document>
