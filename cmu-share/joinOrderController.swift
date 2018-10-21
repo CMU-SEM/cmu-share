@@ -67,8 +67,23 @@ class joinOrderController: UIViewController {
     
     @IBAction func onClickJoin(_ sender: Any) {
         let joinOrderRef = ref.child("joinOrder").childByAutoId();
-     
+        let uid = joinOrderRef.key!;
+        let joinerId = userInformation.uid;
+        let joinerDisplayName = userInformation.firstName;
+        let foodItem1Val = foodItemName1.text!;
+        let foodItem2Val = foodItemName2.text!;
+        let quantity1Val = self.quantity1.text!;
+        let quantity2Val = self.quantity2.text!;
+        let size1Val = self.size1.text!;
+        let size2Val = self.size2.text!;
+        
+        let joinOrder = JoinOrder(uid: uid, orderId: orderId, joinerId: joinerId, joinerDisplayName: joinerDisplayName, foodItem1: foodItem1Val, quantity1: quantity1Val, size1: size1Val, foodItem2: foodItem2Val, quantity2: quantity2Val, size2: size2Val);
+        
+        joinOrderRef.setValue(joinOrder.toDataDict()) { (error, ref) in
+            print(error)
+        }
     }
+    
     
     func getUserInformation() {
         let user = Auth.auth().currentUser

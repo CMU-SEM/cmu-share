@@ -14,14 +14,14 @@ class JoinOrder: NSObject {
     var joinerId: String;
     var joinerDisplayName: String;
     var foodItem1: String;
-    var quantity1: Int;
+    var quantity1: String;
     var size1:String;
     var foodItem2:String;
-    var quantity2:Int;
+    var quantity2:String;
     var size2:String;
     
     
-    init(uid: String, orderId: String, joinerId: String, joinerDisplayName: String, foodItem1: String, quantity1: Int, size1: String, foodItem2:String, quantity2:Int, size2: String) {
+    init(uid: String, orderId: String, joinerId: String, joinerDisplayName: String, foodItem1: String, quantity1: String, size1: String, foodItem2:String, quantity2:String, size2: String) {
         self.uid = uid;
         self.orderId = orderId;
         self.joinerId = joinerId;
@@ -41,8 +41,8 @@ class JoinOrder: NSObject {
         self.joinerDisplayName = dict["joinerDisplayName"] as! String
         self.foodItem1 = dict["foodItem1"] as! String
         self.foodItem2 = dict["foodItem2"] as! String
-        self.quantity1 = dict["quantity1"] as! Int
-        self.quantity2 = dict["quantity2"] as! Int
+        self.quantity1 = dict["quantity1"] as! String
+        self.quantity2 = dict["quantity2"] as! String
         self.size1 = dict["size1"] as! String
         self.size2 = dict["size2"] as! String
     }
