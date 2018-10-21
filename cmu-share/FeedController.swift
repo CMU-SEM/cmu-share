@@ -15,8 +15,9 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var ref: DatabaseReference!
-    var orderList = [Order]();
-    var currentUId: String!;
+    var orderList = [Order]()
+    var currentUId: String!
+    var orderId: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,8 +95,15 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func didTapJoin(_ sender: FeedTableViewCell) {
         guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
-        print(sender, tappedIndexPath)
         
+        // get order clicked
+        let order = self.orderList[tappedIndexPath.row] as Order;
+        orderId = order.uid
         self.performSegue(withIdentifier: "feedToJoinSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let joinOrderController = segue.destination as! joinOrderController
+        joinOrderController.orderId = orderId
     }
 }

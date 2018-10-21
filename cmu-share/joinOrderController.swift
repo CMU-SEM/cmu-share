@@ -21,6 +21,7 @@ class joinOrderController: UIViewController {
     
     var ref: DatabaseReference!
     var displayName: String!
+    var orderId: String! // order id to be joined
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
@@ -31,19 +32,7 @@ class joinOrderController: UIViewController {
         
         foodItemName1.placeholder = "Food Item 1"
         foodItemName2.placeholder = "Food Item 2"
-
-        // Do any additional setup after loading the view.
+        
+        print(orderId)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
