@@ -23,7 +23,6 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref = Database.database().reference()
         setCurrentUserId()
         loadOrders()
-        // Do any additional setup after loading the view.
         
         let feedCellNib = UINib(nibName:"FeedTableViewCell", bundle: nil)
         tableView.register(feedCellNib, forCellReuseIdentifier: "feedCell")
@@ -34,30 +33,28 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         currentUId = user!.uid;
     }
     
-    @IBAction func prototypeAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "FeedToPrototypeSegue", sender: self)
-    }
     @IBAction func createAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "FeedToCreateSegue", sender: self)
     }
     
-    
     func loadOrders() {
         ref.child("orders").observe(DataEventType.value) { (snapshot) in
             self.orderList = []
-            var postDic = snapshot.value as? [String: AnyObject]
+            let postDic = snapshot.value as? [String: AnyObject]
             if(postDic != nil) {
                 for (uid, item) in postDic! {
                     let order = Order(dict: item as! [String : AnyObject], uid: uid)
                     self.orderList.append(order);
                 }
-                self.tableView.reloadData()
+                DispatchQueue.main.async{
+                    self.tableView.reloadData()
+                }
             }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderList.count;
+        return orderList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

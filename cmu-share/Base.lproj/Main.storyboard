@@ -401,52 +401,67 @@
         <!--Order Management-->
         <scene sceneID="uzH-M9-m53">
             <objects>
-                <viewController id="5hZ-f1-SjH" sceneMemberID="viewController">
+                <viewController id="5hZ-f1-SjH" customClass="OrdersController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thF-24-6bl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-0V-bHs" userLabel="createOrder" customClass="createOrder">
-                                <rect key="frame" x="0.0" y="119" width="414" height="694"/>
-                                <connections>
-                                    <segue destination="KAb-EM-ihz" kind="embed" id="Qxx-bK-1cP"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-H0-8Ga" userLabel="joinedOrder" customClass="joinedOrder">
-                                <rect key="frame" x="0.0" y="119" width="414" height="694"/>
-                                <connections>
-                                    <segue destination="nTl-xh-Rls" kind="embed" id="xwx-Gf-ddN"/>
-                                </connections>
-                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LAs-X3-UEl">
-                                <rect key="frame" x="73" y="65" width="268" height="29"/>
+                                <rect key="frame" x="20" y="65" width="374" height="29"/>
                                 <segments>
                                     <segment title="Created Orders"/>
                                     <segment title="Joined Orders"/>
                                 </segments>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="5hZ-f1-SjH" eventType="valueChanged" id="BMB-3C-AXJ"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="roM-HX-3Ww">
+                                <rect key="frame" x="0.0" y="118" width="414" height="695"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5hZ-f1-SjH" id="RLd-p8-xWW"/>
+                                    <outlet property="delegate" destination="5hZ-f1-SjH" id="VBN-DW-6UV"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jTi-0V-bHs" firstAttribute="top" secondItem="thF-24-6bl" secondAttribute="top" constant="119" id="CiC-iE-u22"/>
-                            <constraint firstItem="0m3-XO-QhE" firstAttribute="trailing" secondItem="LAs-X3-UEl" secondAttribute="trailing" constant="73" id="Fmr-Wm-G5h"/>
-                            <constraint firstItem="jTi-0V-bHs" firstAttribute="bottom" secondItem="Xks-H0-8Ga" secondAttribute="bottom" id="Lcy-Ba-D8t"/>
-                            <constraint firstItem="jTi-0V-bHs" firstAttribute="leading" secondItem="Xks-H0-8Ga" secondAttribute="leading" id="dPB-T7-8K9"/>
-                            <constraint firstItem="LAs-X3-UEl" firstAttribute="leading" secondItem="0m3-XO-QhE" secondAttribute="leading" constant="73" id="dhg-Hn-cVJ"/>
-                            <constraint firstItem="0m3-XO-QhE" firstAttribute="trailing" secondItem="jTi-0V-bHs" secondAttribute="trailing" id="jmV-og-X8a"/>
-                            <constraint firstItem="0m3-XO-QhE" firstAttribute="bottom" secondItem="Xks-H0-8Ga" secondAttribute="bottom" id="nH7-EL-vDD"/>
-                            <constraint firstItem="0m3-XO-QhE" firstAttribute="trailing" secondItem="Xks-H0-8Ga" secondAttribute="trailing" id="onQ-pW-tHF"/>
-                            <constraint firstItem="Xks-H0-8Ga" firstAttribute="top" secondItem="LAs-X3-UEl" secondAttribute="bottom" constant="26" id="qA4-Ht-Pj1"/>
-                            <constraint firstItem="jTi-0V-bHs" firstAttribute="top" secondItem="LAs-X3-UEl" secondAttribute="bottom" constant="26" id="vrW-yT-eVW"/>
-                            <constraint firstItem="jTi-0V-bHs" firstAttribute="leading" secondItem="thF-24-6bl" secondAttribute="leading" id="xj8-Yc-Wyu"/>
+                            <constraint firstItem="roM-HX-3Ww" firstAttribute="bottom" secondItem="0m3-XO-QhE" secondAttribute="bottom" id="2fY-Fm-SDQ"/>
+                            <constraint firstItem="LAs-X3-UEl" firstAttribute="top" secondItem="0m3-XO-QhE" secondAttribute="top" constant="21" id="AM9-eU-OqX"/>
+                            <constraint firstItem="LAs-X3-UEl" firstAttribute="trailing" secondItem="thF-24-6bl" secondAttribute="trailingMargin" id="Cda-4N-eMo"/>
+                            <constraint firstItem="roM-HX-3Ww" firstAttribute="centerX" secondItem="LAs-X3-UEl" secondAttribute="centerX" id="evj-l6-fny"/>
+                            <constraint firstItem="roM-HX-3Ww" firstAttribute="leading" secondItem="thF-24-6bl" secondAttribute="leading" id="lap-co-wtS"/>
+                            <constraint firstItem="roM-HX-3Ww" firstAttribute="top" secondItem="LAs-X3-UEl" secondAttribute="bottom" constant="25" id="mra-yn-I0L"/>
+                            <constraint firstItem="LAs-X3-UEl" firstAttribute="leading" secondItem="thF-24-6bl" secondAttribute="leadingMargin" id="wAU-iD-Bco"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0m3-XO-QhE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Order Management" image="CartIcon" id="d3j-27-aLY"/>
+                    <connections>
+                        <outlet property="tableView" destination="roM-HX-3Ww" id="zbU-DE-iPa"/>
+                        <segue destination="Zj8-XK-FGF" kind="show" identifier="OrderToStatusSegue" id="pHA-J8-nz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6K-0l-qDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.753623188406" y="937.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ba6-7O-iZH">
+            <objects>
+                <viewController id="Zj8-XK-FGF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIe-Oe-afY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iJe-9w-uJe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXx-7e-IAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="1712"/>
         </scene>
         <!--Join Order Controller-->
         <scene sceneID="yI8-Af-unF">
@@ -613,12 +628,12 @@
                         <outlet property="quantity2" destination="HPA-Ij-7be" id="WoR-n4-sCe"/>
                         <outlet property="size1" destination="Dk8-bf-amA" id="jSS-6i-f3p"/>
                         <outlet property="size2" destination="rjC-zp-ULL" id="kzi-Hp-igi"/>
-                        <segue destination="ZVS-8P-S8A" kind="show" identifier="joinToFeedSegue" id="Ecs-HO-jdm"/>
+                        <segue destination="Wab-j6-40E" kind="show" identifier="joinToFeedSegue" id="Q1E-eg-1Yw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkZ-Nu-5pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2579.7101449275365" y="948.88392857142856"/>
+            <point key="canvasLocation" x="2672" y="938"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Xj6-cT-55Q">
@@ -873,58 +888,16 @@
             </objects>
             <point key="canvasLocation" x="961" y="134"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tGf-GQ-3sa">
-            <objects>
-                <viewController id="7la-W7-KY7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Ag-gh-sVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Qjm-3a-6Sz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G95-uh-HUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Joined Orders-->
-        <scene sceneID="aur-5h-esa">
-            <objects>
-                <viewController title="Joined Orders" id="KAb-EM-ihz" customClass="OrdersController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Bq-1e-eVb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bj7-R3-i3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2090" y="1582"/>
-        </scene>
-        <!--Created Orders-->
-        <scene sceneID="q4h-Y7-hgH">
-            <objects>
-                <viewController title="Created Orders" id="nTl-xh-Rls" customClass="OrdersController" customModule="cmu_share" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8rq-jA-8a2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.35392631120000001" green="1" blue="0.77055824809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w21-5Q-T09" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1410" y="1594"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="AccountIcon" width="45" height="45"/>
-        <image name="AddIcon" width="100" height="100"/>
-        <image name="CartIcon" width="45" height="45"/>
-        <image name="FeedIcon" width="45" height="45"/>
+        <image name="AccountIcon" width="15" height="15"/>
+        <image name="AddIcon" width="33" height="33"/>
+        <image name="CartIcon" width="15" height="15"/>
+        <image name="FeedIcon" width="15" height="15"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="neY-bi-aI2"/>
-        <segue reference="Ecs-HO-jdm"/>
+        <segue reference="I5H-Wy-jGy"/>
+        <segue reference="Q1E-eg-1Yw"/>
         <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
 </document>

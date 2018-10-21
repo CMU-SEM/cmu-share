@@ -52,10 +52,10 @@ class createOrderController: UIViewController {
                 "creatorName" : displayName!,
                 "restaurantName" : restaurantNameText.text!,
                 "detail" : menuText.text!,
-                "hr" : Int(hourText.text!),
-                "min" : Int(minText.text!),
-                "dollar" : Int(dollarText.text!),
-                "cent" : Int(centText.text!),
+                "hr" : Int(hourText.text!)!,
+                "min" : Int(minText.text!)!,
+                "dollar" : Int(dollarText.text!)!,
+                "cent" : Int(centText.text!)!,
                 "joiner_count" : 0
                 ] as [String: Any]
             
