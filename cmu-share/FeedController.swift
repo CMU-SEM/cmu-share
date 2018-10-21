@@ -103,7 +103,9 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let joinOrderController = segue.destination as! joinOrderController
-        joinOrderController.orderId = orderId
+        if(segue.identifier! == "feedToJoinSegue") {
+            let joinOrderController = segue.destination as! joinOrderController
+            joinOrderController.orderId = orderId
+        }
     }
 }
