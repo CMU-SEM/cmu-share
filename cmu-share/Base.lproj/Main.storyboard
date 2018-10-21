@@ -526,7 +526,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Dk8-bf-amA" secondAttribute="trailing" constant="207" id="3G7-nv-OFg"/>
                                     <constraint firstItem="Q4y-1D-NQe" firstAttribute="top" secondItem="dfb-A5-bLe" secondAttribute="top" constant="85" id="3HP-d9-Ohr"/>
@@ -582,6 +582,7 @@
                         <outlet property="foodItemName1" destination="lbz-8F-kEK" id="69m-HK-5w9"/>
                         <outlet property="quantity1" destination="IGQ-hL-V9V" id="ivK-ao-0sy"/>
                         <outlet property="size1" destination="Dk8-bf-amA" id="jSS-6i-f3p"/>
+                        <outlet property="viewWrapper" destination="dfb-A5-bLe" id="fE9-3A-HVx"/>
                         <segue destination="Wab-j6-40E" kind="show" identifier="joinToFeedSegue" id="Q1E-eg-1Yw"/>
                     </connections>
                 </viewController>
