@@ -526,7 +526,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Dk8-bf-amA" secondAttribute="trailing" constant="207" id="3G7-nv-OFg"/>
                                     <constraint firstItem="Q4y-1D-NQe" firstAttribute="top" secondItem="dfb-A5-bLe" secondAttribute="top" constant="85" id="3HP-d9-Ohr"/>
@@ -572,9 +572,68 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-vn-xkA" userLabel="View Second Item Wrapper">
+                                <rect key="frame" x="8" y="365" width="398" height="192"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgZ-2l-Pzp" userLabel="Food Item 2">
+                                        <rect key="frame" x="33" y="27" width="291" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gku-0z-92P">
+                                        <rect key="frame" x="33" y="86" width="96" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="EAd-Co-Smh"/>
+                                            <constraint firstAttribute="height" constant="21" id="ncz-b3-gRu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJX-kF-eOl">
+                                        <rect key="frame" x="33" y="128" width="58" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="2ny-nD-I45"/>
+                                            <constraint firstAttribute="width" constant="58" id="nAc-3t-lcn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1m-BV-PI8" userLabel="Quantity Text 2">
+                                        <rect key="frame" x="137" y="81" width="104" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-v4-pho" userLabel="Size Text 2">
+                                        <rect key="frame" x="99" y="123" width="97" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gku-0z-92P" firstAttribute="leading" secondItem="iFb-vn-xkA" secondAttribute="leading" constant="33" id="2V1-vS-OKc"/>
+                                    <constraint firstItem="gku-0z-92P" firstAttribute="top" secondItem="iFb-vn-xkA" secondAttribute="top" constant="86" id="9g6-oh-DSq"/>
+                                    <constraint firstItem="Xe9-v4-pho" firstAttribute="top" secondItem="iFb-vn-xkA" secondAttribute="top" constant="123" id="CgR-pP-d6x"/>
+                                    <constraint firstItem="Xe9-v4-pho" firstAttribute="leading" secondItem="iFb-vn-xkA" secondAttribute="leading" constant="99" id="GyM-2o-Hhi"/>
+                                    <constraint firstItem="TJX-kF-eOl" firstAttribute="top" secondItem="iFb-vn-xkA" secondAttribute="top" constant="128" id="K2i-yF-Uz3"/>
+                                    <constraint firstAttribute="trailing" secondItem="u1m-BV-PI8" secondAttribute="trailing" constant="157" id="N6r-mQ-eFv"/>
+                                    <constraint firstItem="TJX-kF-eOl" firstAttribute="leading" secondItem="iFb-vn-xkA" secondAttribute="leading" constant="33" id="PdH-jH-oCO"/>
+                                    <constraint firstAttribute="height" constant="192" id="Sgm-eN-P32"/>
+                                    <constraint firstItem="u1m-BV-PI8" firstAttribute="leading" secondItem="iFb-vn-xkA" secondAttribute="leading" constant="137" id="TbD-U4-3zT"/>
+                                    <constraint firstItem="u1m-BV-PI8" firstAttribute="top" secondItem="iFb-vn-xkA" secondAttribute="top" constant="81" id="VyQ-Ui-3Ha"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xe9-v4-pho" secondAttribute="trailing" constant="202" id="tlU-Ir-sYe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="iFb-vn-xkA" firstAttribute="top" secondItem="dfb-A5-bLe" secondAttribute="bottom" constant="77" id="1Kf-2C-lCr"/>
                             <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="dfb-A5-bLe" secondAttribute="trailing" constant="8" id="2sI-dy-RAx"/>
                             <constraint firstItem="dfb-A5-bLe" firstAttribute="top" secondItem="ndm-oQ-6cC" secondAttribute="bottom" constant="8" id="5un-VA-OiV"/>
                             <constraint firstItem="Ug1-M3-MM4" firstAttribute="leading" secondItem="i9X-pl-nDw" secondAttribute="leading" constant="132" id="7Xu-ba-fg4"/>
@@ -583,8 +642,10 @@
                             <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="Ug1-M3-MM4" secondAttribute="trailing" constant="132" id="e1b-HS-DKv"/>
                             <constraint firstItem="ndm-oQ-6cC" firstAttribute="leading" secondItem="im8-QJ-oop" secondAttribute="leading" id="eYn-7u-h2c"/>
                             <constraint firstAttribute="trailing" secondItem="ndm-oQ-6cC" secondAttribute="trailing" id="elV-TP-BBY"/>
+                            <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="iFb-vn-xkA" secondAttribute="trailing" constant="8" id="es5-YB-KWa"/>
                             <constraint firstItem="dfb-A5-bLe" firstAttribute="leading" secondItem="i9X-pl-nDw" secondAttribute="leading" constant="8" id="fME-j2-Xjn"/>
                             <constraint firstItem="i9X-pl-nDw" firstAttribute="trailing" secondItem="19H-hx-iYg" secondAttribute="trailing" constant="8" id="qjr-aL-7Js"/>
+                            <constraint firstItem="iFb-vn-xkA" firstAttribute="leading" secondItem="i9X-pl-nDw" secondAttribute="leading" constant="8" id="wKs-Nd-UDc"/>
                             <constraint firstItem="i9X-pl-nDw" firstAttribute="bottom" secondItem="Ug1-M3-MM4" secondAttribute="bottom" constant="80" id="wcy-t1-3os"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i9X-pl-nDw"/>
@@ -592,8 +653,12 @@
                     <connections>
                         <outlet property="cancelButton" destination="Txv-Ne-vcx" id="Vsp-3P-FCY"/>
                         <outlet property="foodItemName1" destination="lbz-8F-kEK" id="69m-HK-5w9"/>
+                        <outlet property="foodItemName2" destination="KgZ-2l-Pzp" id="glx-Va-ZU2"/>
                         <outlet property="quantity1" destination="IGQ-hL-V9V" id="ivK-ao-0sy"/>
+                        <outlet property="quantity2" destination="u1m-BV-PI8" id="ZWR-Kz-I8H"/>
+                        <outlet property="secondViewWrapper" destination="iFb-vn-xkA" id="ccA-cX-Yyf"/>
                         <outlet property="size1" destination="Dk8-bf-amA" id="jSS-6i-f3p"/>
+                        <outlet property="size2" destination="Xe9-v4-pho" id="NMV-5j-MjX"/>
                         <outlet property="viewWrapper" destination="dfb-A5-bLe" id="fE9-3A-HVx"/>
                         <segue destination="Wab-j6-40E" kind="show" identifier="joinToFeedSegue" id="Q1E-eg-1Yw"/>
                     </connections>

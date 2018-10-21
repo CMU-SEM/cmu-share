@@ -17,6 +17,12 @@ class joinOrderController: UIViewController {
     @IBOutlet weak var size1: UITextField!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
+    
+    @IBOutlet weak var secondViewWrapper: UIView!
+    @IBOutlet weak var foodItemName2: UITextField!
+    @IBOutlet weak var quantity2: UITextField!
+    @IBOutlet weak var size2: UITextField!
+    
     var ref: DatabaseReference!
     var displayName: String!
     var orderId: String! // order id to be joined
@@ -28,6 +34,7 @@ class joinOrderController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleViewWrapper(viewWrapper: self.viewWrapper);
+        styleViewWrapper(viewWrapper: self.secondViewWrapper);
     }
     
     func styleViewWrapper(viewWrapper: UIView) {
