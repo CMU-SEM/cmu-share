@@ -34,12 +34,17 @@ class joinOrderController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
+       initializeViewStyle()
+    }
+    
+    func initializeViewStyle() {
+        self.foodItemName1.placeholder = "Food Item 1";
+        self.foodItemName2.placeholder = "Food Item 2";
         styleViewWrapper(viewWrapper: self.viewWrapper);
         styleViewWrapper(viewWrapper: self.secondViewWrapper);
         self.secondViewWrapper.isHidden = true;
     }
-    
     @IBAction func onClickAddMoreItem(_ sender: Any) {
         self.secondViewWrapper.isHidden = false;
         self.addMoreBtn.isEnabled = false;
