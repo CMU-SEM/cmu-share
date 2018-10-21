@@ -66,6 +66,11 @@ class joinOrderController: UIViewController {
     }
     
     @IBAction func onClickJoin(_ sender: Any) {
+        let joinOrderUid = createJoinOrderInFirebase();
+        updatePersonCount();
+    }
+    
+    func createJoinOrderInFirebase() -> String {
         let joinOrderRef = ref.child("joinOrder").childByAutoId();
         let uid = joinOrderRef.key!;
         let joinerId = userInformation.uid;
@@ -81,6 +86,20 @@ class joinOrderController: UIViewController {
         
         joinOrderRef.setValue(joinOrder.toDataDict()) { (error, ref) in
             print(error)
+        }
+        return uid;
+    }
+    
+    func updatePersonCount() {
+        ref.child("orders").child(orderId).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as! [String: AnyObject]
+            let order = Order(dict:value, uid: self.orderId)
+            
+            self.ref.child("orders").child(self.orderId).updateChildValues(["joiner_count": (order.joinerCount+1)]);
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
     
