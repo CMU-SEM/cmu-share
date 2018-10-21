@@ -26,7 +26,7 @@ class joinOrderController: UIViewController {
     @IBOutlet weak var addMoreBtn: UIButton!
     
     var ref: DatabaseReference!
-    var displayName: String!
+    var userInformation: User!
     var orderId: String! // order id to be joined
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
@@ -35,7 +35,9 @@ class joinOrderController: UIViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
+       ref = Database.database().reference();
        initializeViewStyle()
+       getUserInformation()
     }
     
     func initializeViewStyle() {
@@ -61,5 +63,24 @@ class joinOrderController: UIViewController {
         viewWrapper.layer.shadowOpacity = 0.8
         viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
         viewWrapper.layer.shadowRadius = 4
+    }
+    
+    @IBAction func onClickJoin(_ sender: Any) {
+        let joinOrderRef = ref.child("joinOrder").childByAutoId();
+     
+    }
+    
+    func getUserInformation() {
+        let user = Auth.auth().currentUser
+        let creator_id = user!.uid
+        
+        ref.child("users").child(creator_id).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as! [String: AnyObject]
+            self.userInformation = User(dict:value, uid: creator_id);
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }
