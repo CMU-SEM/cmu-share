@@ -23,6 +23,8 @@ class joinOrderController: UIViewController {
     @IBOutlet weak var quantity2: UITextField!
     @IBOutlet weak var size2: UITextField!
     
+    @IBOutlet weak var addMoreBtn: UIButton!
+    
     var ref: DatabaseReference!
     var displayName: String!
     var orderId: String! // order id to be joined
@@ -35,6 +37,14 @@ class joinOrderController: UIViewController {
         super.viewDidLoad()
         styleViewWrapper(viewWrapper: self.viewWrapper);
         styleViewWrapper(viewWrapper: self.secondViewWrapper);
+        self.secondViewWrapper.isHidden = true;
+    }
+    
+    @IBAction func onClickAddMoreItem(_ sender: Any) {
+        self.secondViewWrapper.isHidden = false;
+        self.addMoreBtn.isEnabled = false;
+        self.addMoreBtn.backgroundColor = UIColor.lightGray;
+        self.addMoreBtn.titleLabel!.textColor = UIColor.white;
     }
     
     func styleViewWrapper(viewWrapper: UIView) {
