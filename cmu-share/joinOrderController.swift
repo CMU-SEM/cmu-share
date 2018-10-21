@@ -66,8 +66,42 @@ class joinOrderController: UIViewController {
     }
     
     @IBAction func onClickJoin(_ sender: Any) {
-        let joinOrderUid = createJoinOrderInFirebase();
-        updatePersonCount();
+        if(validate()) {
+            let joinOrderUid = createJoinOrderInFirebase();
+            updatePersonCount();
+            let alert = UIAlertController(title: "Success", message: "Order Joined Successfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func validate()-> Bool{
+        let foodItem1Val = foodItemName1.text!;
+        let foodItem2Val = foodItemName2.text!;
+        let quantity1Val = self.quantity1.text!;
+        let quantity2Val = self.quantity2.text!;
+        let size1Val = self.size1.text!;
+        let size2Val = self.size2.text!;
+        
+        var result = true;
+        if(foodItem1Val == "" || quantity1Val == "" || size1Val == "") {
+            result = false;
+        }
+        
+        if(!addMoreBtn.isEnabled && (foodItem2Val == "" || quantity2Val == "" || size2Val == "")) {
+            result = false;
+        }
+        
+        
+        if(!result) {
+            let alert = UIAlertController(title: "Error", message: "Mandatory fields are required", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false;
+        }
+        return true;
     }
     
     func createJoinOrderInFirebase() -> String {
