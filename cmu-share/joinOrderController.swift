@@ -14,9 +14,6 @@ class joinOrderController: UIViewController {
     @IBOutlet weak var foodItemName1: UITextField!
     @IBOutlet weak var quantity1: UITextField!
     @IBOutlet weak var size1: UITextField!
-    @IBOutlet weak var foodItemName2: UITextField!
-    @IBOutlet weak var quantity2: UITextField!
-    @IBOutlet weak var size2: UITextField!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var ref: DatabaseReference!
@@ -29,10 +26,5 @@ class joinOrderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        foodItemName1.placeholder = "Food Item 1"
-        foodItemName2.placeholder = "Food Item 2"
-        
-        print(orderId)
     }
 }
