@@ -64,13 +64,12 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // calculate the current delivery fee share
         let sharedFee = (orderObj.dollar * 10 + orderObj.cent)/orderObj.joinerCount
-        cell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $";
         
+        cell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $";
         cell.creatorName.text = orderObj.creatorName;
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
-        cell.deliveryFee.text  = "\(orderObj.dollar).\(orderObj.cent) $";
         cell.selectionStyle = .none;
         cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
         cell.viewWrapper.layer.borderWidth = 0.3;
