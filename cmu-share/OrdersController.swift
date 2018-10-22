@@ -20,11 +20,14 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var currentUId: String!
     var selectedSegment = 0
     
+    let CREATE_ORDER_TAB_SEGMENT_ID = 0;
+    let JOIN_ORDER_TAB_SEGMENT_ID = 1;
+    
     @IBAction func switchAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            selectedSegment = 0
+            selectedSegment = CREATE_ORDER_TAB_SEGMENT_ID
         }else{
-            selectedSegment = 1
+            selectedSegment = JOIN_ORDER_TAB_SEGMENT_ID
         }
         DispatchQueue.main.async{
             self.tableView.reloadData()
@@ -88,7 +91,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (selectedSegment == 0) {
+        if (selectedSegment == CREATE_ORDER_TAB_SEGMENT_ID) {
             return createOrderList.count
         }else{
             return joinOrderList.count
@@ -96,7 +99,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (selectedSegment == 0) {
+        if (selectedSegment == CREATE_ORDER_TAB_SEGMENT_ID) {
             let createCell = tableView.dequeueReusableCell(withIdentifier: "createCell", for: indexPath) as! CreateTableViewCell
             let orderObj = self.createOrderList[indexPath.row] as Order
             createCell.creatorName.text = orderObj.creatorName
@@ -144,7 +147,11 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+         if (selectedSegment == CREATE_ORDER_TAB_SEGMENT_ID) {
+            return 250.0
+         } else {
+            return 460.0
+        }
     }
     
     func didTapClose(_ sender: CreateTableViewCell) {
