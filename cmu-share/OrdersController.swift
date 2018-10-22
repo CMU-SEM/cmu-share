@@ -133,6 +133,18 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
             joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
             joinCell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $"
+            
+            joinCell.statusLabel.text = "\(curOrder.status)"
+            joinCell.placeLabel.text = "\(curOrder.place)"
+            
+            joinCell.foodItem1.text = "\(orderObj.foodItem1)"
+            joinCell.quantity1.text = "\(orderObj.quantity1)"
+            joinCell.size1.text = "\(orderObj.size1)"
+            
+            joinCell.foodItem2.text = orderObj.foodItem2 == "" ? "N/A" : orderObj.foodItem2;
+            joinCell.quantity2.text = orderObj.quantity2 == "" ? "N/A" : orderObj.quantity2;
+            joinCell.size2.text = orderObj.size2 == "" ? "N/A" : orderObj.size2;
+            
             joinCell.selectionStyle = .none
             joinCell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor
             joinCell.viewWrapper.layer.borderWidth = 0.3
