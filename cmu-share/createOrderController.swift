@@ -56,7 +56,9 @@ class createOrderController: UIViewController {
                 "min" : Int(minText.text!)!,
                 "dollar" : Int(dollarText.text!)!,
                 "cent" : Int(centText.text!)!,
-                "joiner_count" : 0
+                "joiner_count" : 0,
+                "status" : "open",
+                "place" : "N/A"
                 ] as [String: Any]
             
             orderRef.setValue(orderObj) { (error, ref) in
