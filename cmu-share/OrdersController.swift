@@ -14,8 +14,9 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     
     var ref: DatabaseReference!
-    var joinOrderList = [Order]()
+    var joinOrderList = [JoinOrder]()
     var createOrderList = [Order]()
+    var joinOrderDetailList = [Order]()
     var currentUId: String!
     var selectedSegment = 0
     
@@ -50,13 +51,36 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func loadOrders() {
         ref.child("orders").observe(DataEventType.value) { (snapshot) in
             self.createOrderList = []
-            self.joinOrderList = []
             let postDic = snapshot.value as? [String: AnyObject]
             if(postDic != nil) {
                 for (uid, item) in postDic! {
                     let order = Order(dict: item as! [String : AnyObject], uid: uid)
                     if (self.currentUId != nil && order.creator == self.currentUId!) {
                         self.createOrderList.append(order);
+                    }
+                }
+            }
+        }
+        ref.child("joinOrder").observe(DataEventType.value) { (snapshot) in
+            self.joinOrderList = []
+            self.joinOrderDetailList = []
+            let postDic = snapshot.value as? [String: AnyObject]
+            if(postDic != nil) {
+                for (uid, item) in postDic! {
+                    let joinOrder = JoinOrder(dict: item as! [String : AnyObject], uid: uid)
+                    if (self.currentUId != nil && joinOrder.joinerId == self.currentUId!) {
+                        self.joinOrderList.append(joinOrder);
+                        self.ref.child("orders").observe(DataEventType.value) { (snapshot) in
+                            let postDic = snapshot.value as? [String: AnyObject]
+                            if(postDic != nil) {
+                                for (uid, item) in postDic! {
+                                    let this_order = Order(dict: item as! [String : AnyObject], uid: uid)
+                                    if (self.currentUId != nil && joinOrder.orderId == this_order.uid) {
+                                        self.joinOrderDetailList.append(this_order);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -93,13 +117,16 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             createCell.delegate = self;
             return createCell;
         }else{
+            print(joinOrderList.count)
             let joinCell = tableView.dequeueReusableCell(withIdentifier: "joinCell", for: indexPath) as! JoinTableViewCell
-            let orderObj = self.joinOrderList[indexPath.row] as Order
-            joinCell.creatorName.text = orderObj.creatorName
-            joinCell.restaurantName.text = orderObj.name
-            joinCell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)"
-            joinCell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)"
-            joinCell.deliveryFee.text  = "\(orderObj.dollar).\(orderObj.cent) $"
+            let orderObj = self.joinOrderList[indexPath.row] as JoinOrder
+            let curOrder = self.joinOrderDetailList[indexPath.row] as Order
+            
+            joinCell.creatorName.text = curOrder.creatorName
+            joinCell.restaurantName.text = curOrder.name
+            joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
+            joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
+            joinCell.deliveryFee.text  = "\(curOrder.dollar).\(curOrder.cent) $"
             joinCell.selectionStyle = .none
             joinCell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor
             joinCell.viewWrapper.layer.borderWidth = 0.3
