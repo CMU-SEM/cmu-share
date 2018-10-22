@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="KGk-i7-Jjw" customClass="JoinTableViewCell" customModule="cmu_share" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="464" id="KGk-i7-Jjw" customClass="JoinTableViewCell" customModule="cmu_share" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="464"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="223.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="463.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-8o-lPA">
-                        <rect key="frame" x="10" y="10" width="300" height="203.5"/>
+                        <rect key="frame" x="10" y="10" width="300" height="443.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expected Order Time : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXT-am-J6f">
                                 <rect key="frame" x="47" y="104" width="149" height="21"/>
@@ -102,14 +102,43 @@
                                     <constraint firstAttribute="height" constant="1" id="ZAn-Zu-cOz"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Order Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-K6-x1z">
+                                <rect key="frame" x="47" y="182" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42V-gy-5IJ">
+                                <rect key="frame" x="47" y="217" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-mC-Kqu">
+                                <rect key="frame" x="10" y="263" width="280" height="162"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Items Ordered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc4-cK-frn">
+                                        <rect key="frame" x="20" y="15" width="129" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75225335622080869" green="0.75225335622080869" blue="0.75225335622080869" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="42V-gy-5IJ" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="47" id="178-mE-Vu4"/>
                             <constraint firstItem="ZaZ-La-HR5" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="67" id="1S3-KN-V2d"/>
                             <constraint firstItem="RK1-Mj-qPm" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="137" id="1zc-PB-Vuq"/>
+                            <constraint firstItem="hfB-mC-Kqu" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="10" id="36K-j2-z4P"/>
                             <constraint firstItem="GSj-SH-3c9" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="15" id="4Uw-ro-nHH"/>
                             <constraint firstItem="X6G-Zy-GP5" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="64" id="6Tz-3t-57D"/>
                             <constraint firstItem="Obd-AV-yn1" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="49" id="9Y9-JK-72q"/>
+                            <constraint firstAttribute="trailing" secondItem="hfB-mC-Kqu" secondAttribute="trailing" constant="10" id="9kE-X3-oTQ"/>
+                            <constraint firstItem="42V-gy-5IJ" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="217" id="Bvw-wR-R4s"/>
                             <constraint firstItem="aXT-am-J6f" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="104" id="ERk-OS-YdW"/>
                             <constraint firstItem="GSj-SH-3c9" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="52" id="H0e-dJ-uWh"/>
                             <constraint firstItem="ZaZ-La-HR5" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="128" id="Hxn-0C-9gw"/>
@@ -119,9 +148,13 @@
                             <constraint firstItem="A57-sg-PfA" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="10" id="RTS-4S-ULF"/>
                             <constraint firstAttribute="trailing" secondItem="A57-sg-PfA" secondAttribute="trailing" constant="8" id="Rgg-aH-bIC"/>
                             <constraint firstItem="AJd-Ub-dWB" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="8" id="T5w-5A-6Zo"/>
+                            <constraint firstItem="6vv-K6-x1z" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="182" id="Tyg-Ub-wOA"/>
                             <constraint firstItem="Obd-AV-yn1" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="10" id="UXQ-N7-ztF"/>
                             <constraint firstItem="2yX-me-Ld3" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="145" id="WJa-h9-7Fl"/>
                             <constraint firstItem="ogl-aT-XWn" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="18" id="XaR-cs-caY"/>
+                            <constraint firstItem="6vv-K6-x1z" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="47" id="cCU-Ow-vyk"/>
+                            <constraint firstAttribute="trailing" secondItem="6vv-K6-x1z" secondAttribute="trailing" constant="160" id="cUD-qn-9bA"/>
+                            <constraint firstItem="hfB-mC-Kqu" firstAttribute="top" secondItem="42V-gy-5IJ" secondAttribute="bottom" constant="29" id="h1S-w7-ZAd"/>
                             <constraint firstItem="hTz-pr-3zl" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="67" id="keX-5r-m4i"/>
                             <constraint firstAttribute="trailing" secondItem="ogl-aT-XWn" secondAttribute="trailing" constant="49" id="kh9-6h-U8Y"/>
                             <constraint firstItem="AJd-Ub-dWB" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="8" id="lUx-at-aJ7"/>
@@ -150,14 +183,14 @@
                 <outlet property="restaurantName" destination="ZaZ-La-HR5" id="CP7-SH-2cX"/>
                 <outlet property="viewWrapper" destination="gyz-8o-lPA" id="GdZ-3i-Lph"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="233.88305847076464"/>
+            <point key="canvasLocation" x="137.59999999999999" y="341.82908545727139"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="22" height="22"/>
-        <image name="dollar-1" width="22" height="22"/>
-        <image name="food" width="22" height="22"/>
-        <image name="icon-design-users-1x" width="22" height="22"/>
-        <image name="people-g" width="22" height="22"/>
+        <image name="clock" width="45" height="45"/>
+        <image name="dollar-1" width="45" height="45"/>
+        <image name="food" width="45" height="45"/>
+        <image name="icon-design-users-1x" width="45" height="45"/>
+        <image name="people-g" width="45" height="45"/>
     </resources>
 </document>
