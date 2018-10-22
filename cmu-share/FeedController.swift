@@ -61,6 +61,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedTableViewCell;
         let orderObj = self.orderList[indexPath.row] as Order;
+        
         cell.creatorName.text = orderObj.creatorName;
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)";
