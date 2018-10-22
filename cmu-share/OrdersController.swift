@@ -122,11 +122,14 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             let orderObj = self.joinOrderList[indexPath.row] as JoinOrder
             let curOrder = self.joinOrderDetailList[indexPath.row] as Order
             
+            // calculate the current delivery fee share
+            let sharedFee = (curOrder.dollar * 10 + curOrder.cent)/curOrder.joinerCount
+            
             joinCell.creatorName.text = curOrder.creatorName
             joinCell.restaurantName.text = curOrder.name
             joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
             joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
-            joinCell.deliveryFee.text  = "\(curOrder.dollar).\(curOrder.cent) $"
+            joinCell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $"
             joinCell.selectionStyle = .none
             joinCell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor
             joinCell.viewWrapper.layer.borderWidth = 0.3

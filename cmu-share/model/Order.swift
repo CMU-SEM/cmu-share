@@ -44,7 +44,6 @@ class Order: NSObject {
         self.detail = dict["detail"] as! String
         self.creator = dict["creator_id"] as! String
         self.detail = dict["detail"] as! String
-        self.uid = uid
         self.hr = dict["hr"] as! Int
         self.min = dict["min"] as! Int
         self.dollar = dict["dollar"] as! Int
