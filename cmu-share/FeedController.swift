@@ -63,7 +63,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let orderObj = self.orderList[indexPath.row] as Order;
         
         // calculate the current delivery fee share
-        let sharedFee = (orderObj.dollar * 10 + orderObj.cent)/orderObj.joinerCount
+        let sharedFee = (orderObj.dollar * 10 + orderObj.cent)/(orderObj.joinerCount+1)
         
         cell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $";
         cell.creatorName.text = orderObj.creatorName;
