@@ -6,8 +6,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "CMU-Share.png",
       "scale" : "3x"
     },
     {
@@ -86,8 +87,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ios-marketing",
       "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "CMU-Share-1.png",
       "scale" : "1x"
     }
   ],
