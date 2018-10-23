@@ -19,6 +19,7 @@
 		52A2D909217BFCE700176A65 /* CreateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A2D905217BFCE700176A65 /* CreateTableViewCell.xib */; };
 		52A2D90A217BFCE700176A65 /* JoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A2D906217BFCE700176A65 /* JoinTableViewCell.xib */; };
 		52A2D90C217C021A00176A65 /* OrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2D90B217C021A00176A65 /* OrdersController.swift */; };
+		52D185E6217E97C1000894B9 /* OrderDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D185E5217E97C1000894B9 /* OrderDetailController.swift */; };
 		52DC3EED217407C800DF8D1A /* createOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3EEC217407C800DF8D1A /* createOrderController.swift */; };
 		52DC3EF121740AFF00DF8D1A /* feedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC3EF021740AFF00DF8D1A /* feedController.swift */; };
 		623C6E3E21656CA90099C1F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 623C6E3D21656CA90099C1F9 /* GoogleService-Info.plist */; };
@@ -66,6 +67,7 @@
 		52A2D905217BFCE700176A65 /* CreateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTableViewCell.xib; sourceTree = "<group>"; };
 		52A2D906217BFCE700176A65 /* JoinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinTableViewCell.xib; sourceTree = "<group>"; };
 		52A2D90B217C021A00176A65 /* OrdersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersController.swift; sourceTree = "<group>"; };
+		52D185E5217E97C1000894B9 /* OrderDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailController.swift; sourceTree = "<group>"; };
 		52DC3EEC217407C800DF8D1A /* createOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createOrderController.swift; sourceTree = "<group>"; };
 		52DC3EF021740AFF00DF8D1A /* feedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedController.swift; sourceTree = "<group>"; };
 		60EA678F1FD8696F207DB899 /* Pods_cmu_share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmu_share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				6278DBD12162D66200D75581 /* Main.storyboard */,
 				52DC3EF021740AFF00DF8D1A /* feedController.swift */,
 				52DC3EEC217407C800DF8D1A /* createOrderController.swift */,
+				52D185E5217E97C1000894B9 /* OrderDetailController.swift */,
 				31186E3121797FE700EE9027 /* joinOrderController.swift */,
 				526B5E93216D572E004B6DD4 /* profileController.swift */,
 				52A2D90B217C021A00176A65 /* OrdersController.swift */,
@@ -481,6 +484,7 @@
 			files = (
 				52A2D907217BFCE700176A65 /* CreateTableViewCell.swift in Sources */,
 				31186E3221797FE700EE9027 /* joinOrderController.swift in Sources */,
+				52D185E6217E97C1000894B9 /* OrderDetailController.swift in Sources */,
 				52DC3EF121740AFF00DF8D1A /* feedController.swift in Sources */,
 				62C49E02216971C50063E091 /* Order.swift in Sources */,
 				52A2D90C217C021A00176A65 /* OrdersController.swift in Sources */,

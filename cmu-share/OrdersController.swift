@@ -20,8 +20,9 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var currentUId: String!
     var selectedSegment = 0
     
-    let CREATE_ORDER_TAB_SEGMENT_ID = 0;
-    let JOIN_ORDER_TAB_SEGMENT_ID = 1;
+    let CREATE_ORDER_TAB_SEGMENT_ID = 0
+    let JOIN_ORDER_TAB_SEGMENT_ID = 1
+    var orderId: String!
     
     @IBAction func switchAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -168,5 +169,12 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func didTapClose(_ sender: CreateTableViewCell) {
         self.performSegue(withIdentifier: "OrderToStatusSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier! == "OrderToStatusSegue") {
+            let OrderDetailController = segue.destination as! OrderDetailController
+            OrderDetailController.orderId = orderId
+        }
     }
 }
