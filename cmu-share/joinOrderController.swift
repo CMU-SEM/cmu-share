@@ -68,7 +68,7 @@ class joinOrderController: UIViewController {
     @IBAction func onClickJoin(_ sender: Any) {
         if(validate()) {
             let joinOrderUid = createJoinOrderInFirebase();
-            updatePersonCount();
+            verifyStatusAndUpdatePersonCount(joinOrderUid: joinOrderUid);
             let alert = UIAlertController(title: "Success", message: "Order Joined Successfully", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
                 self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
@@ -124,13 +124,23 @@ class joinOrderController: UIViewController {
         return uid;
     }
     
-    func updatePersonCount() {
+    func verifyStatusAndUpdatePersonCount(joinOrderUid: String) {
         ref.child("orders").child(orderId).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as! [String: AnyObject]
             let order = Order(dict:value, uid: self.orderId)
             
-            self.ref.child("orders").child(self.orderId).updateChildValues(["joiner_count": (order.joinerCount+1)]);
+            if(order.status != "open") {
+                let alert = UIAlertController(title: "Success", message: "This order is closed", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                    
+                    self.ref.child("joinOrder").child(joinOrderUid).removeValue();
+                    self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                self.ref.child("orders").child(self.orderId).updateChildValues(["joiner_count": (order.joinerCount+1)]);
+            }
             // ...
         }) { (error) in
             print(error.localizedDescription)

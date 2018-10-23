@@ -17,31 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-hF-KJQ">
-                                <rect key="frame" x="18" y="183" width="338" height="301"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-hF-KJQ">
+                                <rect key="frame" x="100.5" y="197" width="174" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="WDw-nx-VAj"/>
+                                    <constraint firstAttribute="width" constant="174" id="gGJ-hB-eoI"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roE-xg-cZN">
-                                <rect key="frame" x="99" y="467" width="177" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roE-xg-cZN">
+                                <rect key="frame" x="100" y="358" width="177" height="67"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
                                 <color key="textColor" red="0.999099195" green="0.14839485290000001" blue="0.001437587314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TartansLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BBu-Gj-Jds">
-                                <rect key="frame" x="152" y="544" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IIILogo" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-4Y-Ry8">
-                                <rect key="frame" x="286" y="544" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CMU Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5u5-zA-S7V">
-                                <rect key="frame" x="18" y="544" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="top" secondItem="G6C-hF-KJQ" secondAttribute="bottom" constant="-12" id="25T-bo-qWU"/>
+                            <constraint firstItem="G6C-hF-KJQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="KLB-8q-aTQ"/>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dRx-0X-kXU"/>
+                            <constraint firstItem="G6C-hF-KJQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ucb-dV-vc8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -51,9 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CMU Logo" width="300" height="300"/>
-        <image name="IIILogo" width="652.5" height="634"/>
         <image name="LaunchScreen" width="512" height="512"/>
-        <image name="TartansLogo" width="76" height="76"/>
     </resources>
 </document>
