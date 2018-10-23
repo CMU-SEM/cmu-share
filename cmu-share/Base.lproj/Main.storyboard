@@ -43,7 +43,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-rh-2HA">
                                 <rect key="frame" x="100.33333333333331" y="84" width="174" height="47"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
-                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99909919500350952" green="0.14839485287666321" blue="0.0014375873142853379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Don't have an account? " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xgZ-nn-0ct">
@@ -933,7 +933,7 @@
         <image name="FeedIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q1E-eg-1Yw"/>
+        <segue reference="IgV-Hj-Wog"/>
         <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
 </document>
