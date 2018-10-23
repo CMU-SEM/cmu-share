@@ -65,6 +65,8 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 }
             }
         }
+        self.createOrderList = self.createOrderList.sorted(by: { $0.uid > $1.uid })
+        
         ref.child("joinOrder").observe(DataEventType.value) { (snapshot) in
             self.joinOrderList = []
             self.joinOrderDetailList = []
