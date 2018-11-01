@@ -61,13 +61,11 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedTableViewCell;
-        let orderObj = self.orderList[indexPath.row] as Order;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedTableViewCell
+        let orderObj = self.orderList[indexPath.row] as Order
         
-        // calculate the current delivery fee share
-        let sharedFee = (orderObj.dollar * 10 + orderObj.cent)/(orderObj.joinerCount+1)
-        
-        cell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $";
+        // calculate shared delivery fee
+        cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $";
         cell.creatorName.text = orderObj.creatorName;
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)";
