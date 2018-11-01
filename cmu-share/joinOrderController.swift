@@ -30,7 +30,13 @@ class joinOrderController: UIViewController {
     var orderId: String! // order id to be joined
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
+        // alert of progress loss
+        let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+            action in self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -38,6 +44,13 @@ class joinOrderController: UIViewController {
        ref = Database.database().reference();
        initializeViewStyle()
        getUserInformation()
+        
+        foodItemName1.placeholder = "* Required"
+        foodItemName2.placeholder = "* Required"
+        quantity1.placeholder = "* Required"
+        quantity2.placeholder = "* Required"
+        size1.placeholder = "* Required"
+        size2.placeholder = "* Required"
     }
     
     func initializeViewStyle() {
@@ -85,21 +98,18 @@ class joinOrderController: UIViewController {
         let size1Val = self.size1.text!;
         let size2Val = self.size2.text!;
         
-        var result = true;
-        if(foodItem1Val == "" || quantity1Val == "" || size1Val == "") {
-            result = false;
-        }
-        
-        if(!addMoreBtn.isEnabled && (foodItem2Val == "" || quantity2Val == "" || size2Val == "")) {
-            result = false;
-        }
-        
-        
-        if(!result) {
+        // check if any field empty
+        if(foodItem1Val == "" || quantity1Val == "" || size1Val == "") || (!addMoreBtn.isEnabled && (foodItem2Val == "" || quantity2Val == "" || size2Val == "")) {
             let alert = UIAlertController(title: "Error", message: "Mandatory fields are required", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return false;
+        }
+        // check if quantity valid
+        else if Int(quantity1Val) == nil || (!addMoreBtn.isEnabled && (Int(quantity2Val)) == nil) {
+            let alert = UIAlertController(title: "Error", message: "Quantity Invalid", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         return true;
     }

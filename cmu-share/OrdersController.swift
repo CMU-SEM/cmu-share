@@ -109,7 +109,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             createCell.restaurantName.text = orderObj.name
             createCell.orderTime.text  = "\(orderObj.hr) : \(orderObj.min)"
             createCell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)"
-            createCell.deliveryFee.text  = "\(orderObj.dollar).\(orderObj.cent) $"
+            createCell.deliveryFee.text  = "\(orderObj.fee) $"
             createCell.selectionStyle = .none
             createCell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor
             createCell.viewWrapper.layer.borderWidth = 0.3
@@ -128,14 +128,11 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             let orderObj = self.joinOrderList[indexPath.row] as JoinOrder
             let curOrder = self.joinOrderDetailList[indexPath.row] as Order
             
-            // calculate the current delivery fee share
-            let sharedFee = (curOrder.dollar * 10 + curOrder.cent)/curOrder.joinerCount
-            
             joinCell.creatorName.text = curOrder.creatorName
             joinCell.restaurantName.text = curOrder.name
             joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
             joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
-            joinCell.deliveryFee.text  = "\(sharedFee/10).\(sharedFee - sharedFee/10) $"
+            joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount))/100))$"
             
             joinCell.statusLabel.text = "\(curOrder.status)"
             joinCell.placeLabel.text = "\(curOrder.place)"

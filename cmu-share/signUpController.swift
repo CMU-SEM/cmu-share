@@ -64,7 +64,6 @@ class signUpController: UIViewController {
                     let alert = UIAlertController(title: "Congrats", message: "Sign up is complete! Now you can Sign In.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
                         action in self.performSegue(withIdentifier: "backToSignInSegue", sender: self)
-                        
                     }))
                     self.present(alert, animated: true, completion: nil)
                     
