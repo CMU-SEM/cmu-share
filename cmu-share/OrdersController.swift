@@ -65,7 +65,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 }
             }
         }
-        self.createOrderList = self.createOrderList.sorted(by: { $0.uid > $1.uid })
+        self.createOrderList = self.createOrderList.sorted(by: { $0.hr > $1.hr })
         
         ref.child("joinOrder").observe(DataEventType.value) { (snapshot) in
             self.joinOrderList = []
@@ -167,6 +167,11 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func didTapClose(_ sender: CreateTableViewCell) {
+        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
+        
+        // get order clicked
+        let order = self.createOrderList[tappedIndexPath.row] as Order;
+        orderId = order.uid
         self.performSegue(withIdentifier: "OrderToStatusSegue", sender: nil)
     }
     

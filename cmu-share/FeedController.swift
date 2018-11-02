@@ -48,7 +48,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.orderList.append(order);
                 }
                 
-                self.orderList = self.orderList.sorted(by: { $0.uid > $1.uid })
+                self.orderList = self.orderList.sorted(by: { $0.hr < $1.hr })
                 DispatchQueue.main.async{
                     self.tableView.reloadData()
                 }
