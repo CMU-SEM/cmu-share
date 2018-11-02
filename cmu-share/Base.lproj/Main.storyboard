@@ -565,6 +565,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQW-XV-BAI">
+                                <rect key="frame" x="245.00000000000003" y="619" width="35.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-dP-VtU">
                                 <rect key="frame" x="91" y="514" width="82" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -580,22 +586,29 @@
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeAction:" destination="Zj8-XK-FGF" eventType="touchUpInside" id="MZi-u9-OQo"/>
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSR-Po-ipa"/>
                                     <action selector="onClickJoin:" destination="6SL-kc-vsN" eventType="touchUpInside" id="CUC-9n-BP6"/>
                                     <action selector="submitAction:" destination="FzY-dd-4nx" eventType="touchUpInside" id="6bC-w2-pmp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQW-XV-BAI">
-                                <rect key="frame" x="245.00000000000003" y="619" width="35.333333333333343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W7-Xd-gj6">
+                                <rect key="frame" x="245" y="689" width="119" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpL-k5-p3S">
+                                <rect key="frame" x="245" y="654" width="119" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -610,12 +623,15 @@
                             <constraint firstItem="iJe-9w-uJe" firstAttribute="bottom" secondItem="WCs-03-Zmg" secondAttribute="bottom" constant="80" id="AeZ-mU-oK5"/>
                             <constraint firstItem="PCa-4E-qCe" firstAttribute="top" secondItem="E3x-dP-VtU" secondAttribute="bottom" constant="18" id="Hmm-Nw-Uhb"/>
                             <constraint firstItem="I60-qQ-Aau" firstAttribute="leading" secondItem="E3x-dP-VtU" secondAttribute="leading" id="JiV-nI-UZB"/>
+                            <constraint firstItem="GpL-k5-p3S" firstAttribute="leading" secondItem="6e0-nI-rBT" secondAttribute="leading" id="Kn0-qO-Gex"/>
                             <constraint firstItem="LUB-WN-Ceb" firstAttribute="centerX" secondItem="H9b-Zo-wPx" secondAttribute="centerX" id="Qb1-WE-VYI"/>
                             <constraint firstItem="WCs-03-Zmg" firstAttribute="top" secondItem="Hap-ma-Q6m" secondAttribute="bottom" constant="40" id="Qtz-Ge-vC7"/>
                             <constraint firstItem="Ros-Is-w34" firstAttribute="top" secondItem="zx1-yn-VQ3" secondAttribute="bottom" constant="18" id="Six-yR-5lp"/>
                             <constraint firstItem="K73-Jj-xaz" firstAttribute="top" secondItem="I60-qQ-Aau" secondAttribute="bottom" constant="18" id="UCE-9y-TgZ"/>
                             <constraint firstItem="Hap-ma-Q6m" firstAttribute="top" secondItem="K73-Jj-xaz" secondAttribute="bottom" constant="18" id="Xfb-ci-rtK"/>
+                            <constraint firstItem="GpL-k5-p3S" firstAttribute="top" secondItem="K73-Jj-xaz" secondAttribute="top" id="YvA-KI-dxO"/>
                             <constraint firstItem="kLx-n8-8Dh" firstAttribute="leading" secondItem="ODS-hV-BJU" secondAttribute="leading" id="a3B-3g-Vuu"/>
+                            <constraint firstItem="iJe-9w-uJe" firstAttribute="trailing" secondItem="2W7-Xd-gj6" secondAttribute="trailing" constant="50" id="aLP-Ph-bVb"/>
                             <constraint firstItem="I60-qQ-Aau" firstAttribute="top" secondItem="Ros-Is-w34" secondAttribute="bottom" constant="18" id="bE7-4W-HeO"/>
                             <constraint firstItem="zx1-yn-VQ3" firstAttribute="leading" secondItem="PCa-4E-qCe" secondAttribute="trailing" constant="5" id="cbY-ig-ZAo"/>
                             <constraint firstItem="Hap-ma-Q6m" firstAttribute="leading" secondItem="E3x-dP-VtU" secondAttribute="leading" id="dl9-dM-kRG"/>
@@ -625,12 +641,15 @@
                             <constraint firstItem="6e0-nI-rBT" firstAttribute="leading" secondItem="zx1-yn-VQ3" secondAttribute="leading" id="iNC-kf-3jF"/>
                             <constraint firstItem="iJe-9w-uJe" firstAttribute="bottom" secondItem="LUB-WN-Ceb" secondAttribute="bottom" constant="150" id="juC-CY-azm"/>
                             <constraint firstItem="ODS-hV-BJU" firstAttribute="leading" secondItem="xXL-id-W0u" secondAttribute="leading" id="kHY-M5-L1J"/>
+                            <constraint firstItem="2W7-Xd-gj6" firstAttribute="top" secondItem="Hap-ma-Q6m" secondAttribute="top" id="kgl-84-n5O"/>
                             <constraint firstItem="6L1-7C-Erx" firstAttribute="leading" secondItem="E3x-dP-VtU" secondAttribute="leading" id="kip-3y-Yjp"/>
+                            <constraint firstItem="iJe-9w-uJe" firstAttribute="trailing" secondItem="GpL-k5-p3S" secondAttribute="trailing" constant="50" id="kmf-Nd-XnO"/>
                             <constraint firstItem="xXL-id-W0u" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="50" id="lMb-HS-WGD"/>
                             <constraint firstItem="H9b-Zo-wPx" firstAttribute="top" secondItem="eQ3-x0-6ia" secondAttribute="bottom" constant="5" id="oPv-bU-HgM"/>
                             <constraint firstItem="Ros-Is-w34" firstAttribute="leading" secondItem="6e0-nI-rBT" secondAttribute="leading" id="qdg-il-KRq"/>
                             <constraint firstItem="eQ3-x0-6ia" firstAttribute="leading" secondItem="kLx-n8-8Dh" secondAttribute="leading" id="spw-qc-NL0"/>
                             <constraint firstItem="WCs-03-Zmg" firstAttribute="centerX" secondItem="iJe-9w-uJe" secondAttribute="centerX" id="wME-YF-eGG"/>
+                            <constraint firstItem="2W7-Xd-gj6" firstAttribute="leading" secondItem="6e0-nI-rBT" secondAttribute="leading" id="wlw-bz-6JG"/>
                             <constraint firstItem="zx1-yn-VQ3" firstAttribute="leading" secondItem="6e0-nI-rBT" secondAttribute="leading" id="xjL-aQ-rxQ"/>
                             <constraint firstItem="E3x-dP-VtU" firstAttribute="leading" secondItem="xXL-id-W0u" secondAttribute="trailing" constant="10" id="zY4-I6-a6u"/>
                         </constraints>
@@ -640,7 +659,9 @@
                         <outlet property="feeLabel" destination="DQW-XV-BAI" id="UGP-aG-nAa"/>
                         <outlet property="numJoinerLabel" destination="Ros-Is-w34" id="nyf-CY-dqH"/>
                         <outlet property="orderTimeLabel" destination="zx1-yn-VQ3" id="7pR-24-VPB"/>
+                        <outlet property="placeField" destination="2W7-Xd-gj6" id="NW7-EG-Rdk"/>
                         <outlet property="restaurantNameLabel" destination="6e0-nI-rBT" id="MNU-uh-HWS"/>
+                        <outlet property="statusField" destination="GpL-k5-p3S" id="j1i-Xp-oMJ"/>
                         <outlet property="tableView" destination="MwM-kR-3Dr" id="ImL-4k-dDu"/>
                         <segue destination="Wab-j6-40E" kind="show" identifier="detailToOrderSegue" id="4Yp-ei-s7q"/>
                     </connections>

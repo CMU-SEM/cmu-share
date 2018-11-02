@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     @IBAction func signUpAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

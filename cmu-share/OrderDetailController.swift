@@ -14,6 +14,8 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     var joinOrderList = [JoinOrder]()
     var currentUId: String!
     var orderId: String!
+    var order: Order!
+    var selectedStatus: String?
     
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var orderTimeLabel: UILabel!
@@ -21,21 +23,80 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var feeLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var statusField: UITextField!
+    @IBOutlet weak var placeField: UITextField!
     
+    let status = ["Processing",
+                  "On The Way",
+                  "Delivered"]
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         setCurrentUserId()
         loadOrders()
-
+        createStatusPicker()
+        createToolbar()
+        
         let detailCellNib = UINib(nibName:"DetailTableViewCell", bundle: nil)
         tableView.register(detailCellNib, forCellReuseIdentifier: "detailCell")
     }
-
-    @IBAction func cancelAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(OrderDetailController.dismissKeyboard))
+        
+        // change color
+        toolBar.barTintColor = .white
+        toolBar.tintColor = .red
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        statusField.inputAccessoryView = toolBar
     }
     
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    @IBAction func cancelAction(_ sender: Any) {
+        // alert of progress loss
+        let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+            action in self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func closeAction(_ sender: Any) {
+        // check if any blank is empty
+        if statusField.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Current Status is Required", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if statusField.text == "Delivered" && placeField.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Place of Pickup Required", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            // success message
+            let alert = UIAlertController(title: "Congrats", message: "Order Updated Successfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+                action in self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)}))
+            self.present(alert, animated: true, completion: nil)
+            
+            // update order status and place
+            if (order.status == "open") {
+                ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!])
+            }else{
+            ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!,
+                                                                  "place" : placeField.text!])
+            }
+        }
+    }
     func setCurrentUserId() {
         let user = Auth.auth().currentUser
         currentUId = user!.uid
@@ -46,13 +107,16 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
             let postDic = snapshot.value as? [String: AnyObject]
             if(postDic != nil) {
                 for (uid, item) in postDic! {
-                    let order = Order(dict: item as! [String : AnyObject], uid: uid)
-                    print(order.uid)
-                    if (self.currentUId != nil && order.uid == self.orderId) {
-                        self.restaurantNameLabel.text = order.name
-                        self.orderTimeLabel.text = "\(order.hr) : \(order.min)"
-                        self.numJoinerLabel.text = String(order.joinerCount)
-                        self.feeLabel.text = String(order.fee)
+                    let cur_order = Order(dict: item as! [String : AnyObject], uid: uid)
+                    if (self.currentUId != nil && cur_order.uid == self.orderId) {
+                        self.order = cur_order
+                        self.restaurantNameLabel.text = self.order.name
+                        self.orderTimeLabel.text = "\(self.order.hr) : \(self.order.min)"
+                        self.numJoinerLabel.text = String(self.order.joinerCount)
+                        self.feeLabel.text = String(self.order.fee)
+                        // set current value in textfield
+                        self.statusField.text = self.order.status
+                        self.placeField.text = self.order.place
                         break
                     }
                 }
@@ -107,5 +171,31 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
+    }
+    
+    func createStatusPicker() {
+        let statusPicker = UIPickerView()
+        statusPicker.delegate = self
+        
+        statusField.inputView = statusPicker
+    }
+}
+
+extension OrderDetailController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return status.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return status[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedStatus = status[row]
+        statusField.text = selectedStatus
     }
 }
