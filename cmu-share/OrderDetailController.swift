@@ -77,7 +77,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else if statusField.text == "Delivered" && placeField.text == "" {
+        else if statusField.text == "Delivered" && (placeField.text == "N/A" || placeField.text == "") {
             let alert = UIAlertController(title: "Error", message: "Place of Pickup Required", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
