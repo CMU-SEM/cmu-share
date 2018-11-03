@@ -30,9 +30,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }else{
             selectedSegment = JOIN_ORDER_TAB_SEGMENT_ID
         }
-        DispatchQueue.main.async{
-            self.tableView.reloadData()
-        }
+        loadOrders()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +62,10 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                     }
                 }
             }
+            self.createOrderList = self.createOrderList.sorted(by: { $0.hr > $1.hr })
+            self.tableView.reloadData()
         }
-        self.createOrderList = self.createOrderList.sorted(by: { $0.hr > $1.hr })
+       
         
         ref.child("joinOrder").observe(DataEventType.value) { (snapshot) in
             self.joinOrderList = []
@@ -90,6 +90,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                     }
                 }
             }
+            self.tableView.reloadData()
         }
     }
     
