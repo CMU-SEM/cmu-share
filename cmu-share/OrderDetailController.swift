@@ -27,6 +27,8 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var placeField: UITextField!
     @IBOutlet weak var closeButton: UIButton!
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     let status = ["Processing",
                   "On The Way",
                   "Delivered"]
@@ -59,6 +61,8 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         
         statusField.inputAccessoryView = toolBar
     }
+    
+  
     
     @objc func dismissKeyboard(){
         view.endEditing(true)

@@ -548,7 +548,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MwM-kR-3Dr">
-                                <rect key="frame" x="0.0" y="88" width="375" height="387"/>
+                                <rect key="frame" x="0.0" y="90" width="359" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Zj8-XK-FGF" id="VPW-9W-D9F"/>
@@ -696,6 +696,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-d3-BQq">
+                                <rect key="frame" x="0.0" y="478" width="375" height="0.33333333333331439"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.25" id="h5T-Xv-thU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -714,22 +721,25 @@
                             <constraint firstItem="zx1-yn-VQ3" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="211" id="Do0-NU-P86"/>
                             <constraint firstItem="MwM-kR-3Dr" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" id="EQS-ru-zVP"/>
                             <constraint firstItem="xXL-id-W0u" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="16" id="F3S-fu-VTb"/>
-                            <constraint firstItem="iJe-9w-uJe" firstAttribute="trailing" secondItem="MwM-kR-3Dr" secondAttribute="trailing" id="FWw-3P-ibR"/>
+                            <constraint firstItem="iJe-9w-uJe" firstAttribute="trailing" secondItem="MwM-kR-3Dr" secondAttribute="trailing" constant="16" id="FWw-3P-ibR"/>
                             <constraint firstItem="zx1-yn-VQ3" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="64" id="Fuv-BT-exR"/>
                             <constraint firstItem="iJe-9w-uJe" firstAttribute="bottom" secondItem="WCs-03-Zmg" secondAttribute="bottom" constant="9.5" id="LM1-Zk-z7J"/>
                             <constraint firstItem="Hap-ma-Q6m" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="57" id="M4K-l8-8kE"/>
                             <constraint firstItem="E3x-dP-VtU" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="57" id="MCf-L8-Gl6"/>
                             <constraint firstItem="Nb7-SY-RZm" firstAttribute="top" secondItem="iJe-9w-uJe" secondAttribute="top" id="MkX-uS-OLT"/>
                             <constraint firstItem="ODS-hV-BJU" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="16" id="NaT-Jm-ehT"/>
+                            <constraint firstItem="iJe-9w-uJe" firstAttribute="trailing" secondItem="yeZ-d3-BQq" secondAttribute="trailing" id="OJ9-Bk-l2v"/>
                             <constraint firstItem="Hap-ma-Q6m" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="204" id="OsH-tx-xPB"/>
+                            <constraint firstItem="yeZ-d3-BQq" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" id="P8e-hl-C7g"/>
                             <constraint firstItem="ODS-hV-BJU" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="57" id="QuD-V0-Lad"/>
                             <constraint firstItem="2W7-Xd-gj6" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="197" id="S7R-NX-V45"/>
                             <constraint firstItem="DQW-XV-BAI" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="211" id="TlX-u4-aAo"/>
                             <constraint firstItem="Ros-Is-w34" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="99" id="Wu1-y9-0OK"/>
-                            <constraint firstItem="MwM-kR-3Dr" firstAttribute="top" secondItem="iJe-9w-uJe" secondAttribute="top" constant="44" id="a55-6p-xNn"/>
+                            <constraint firstItem="MwM-kR-3Dr" firstAttribute="top" secondItem="iJe-9w-uJe" secondAttribute="top" constant="46" id="a55-6p-xNn"/>
                             <constraint firstItem="H9b-Zo-wPx" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="16" id="bB5-Jw-iaw"/>
                             <constraint firstItem="K73-Jj-xaz" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="169" id="brh-1v-GSf"/>
                             <constraint firstItem="8E5-yy-imW" firstAttribute="centerX" secondItem="Nb7-SY-RZm" secondAttribute="centerX" id="buV-Qw-Xb0"/>
+                            <constraint firstItem="yeZ-d3-BQq" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="3" id="diM-S6-htm"/>
                             <constraint firstItem="I60-qQ-Aau" firstAttribute="top" secondItem="MwM-kR-3Dr" secondAttribute="bottom" constant="134" id="eie-xh-C8H"/>
                             <constraint firstItem="2W7-Xd-gj6" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="211" id="jJu-Ag-NOa"/>
                             <constraint firstItem="eQ3-x0-6ia" firstAttribute="leading" secondItem="iJe-9w-uJe" secondAttribute="leading" constant="16" id="jNZ-Fq-0qh"/>
@@ -752,6 +762,7 @@
                     <connections>
                         <outlet property="closeButton" destination="WCs-03-Zmg" id="64z-8x-fQQ"/>
                         <outlet property="feeLabel" destination="DQW-XV-BAI" id="UGP-aG-nAa"/>
+                        <outlet property="navigationBar" destination="Nb7-SY-RZm" id="MHU-sk-hmP"/>
                         <outlet property="numJoinerLabel" destination="Ros-Is-w34" id="nyf-CY-dqH"/>
                         <outlet property="orderTimeLabel" destination="zx1-yn-VQ3" id="7pR-24-VPB"/>
                         <outlet property="placeField" destination="2W7-Xd-gj6" id="NW7-EG-Rdk"/>
@@ -1218,7 +1229,7 @@
         <image name="sand-box" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="neY-bi-aI2"/>
+        <segue reference="4Yp-ei-s7q"/>
         <segue reference="01J-jx-X1N"/>
     </inferredMetricsTieBreakers>
 </document>
