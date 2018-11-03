@@ -30,9 +30,11 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     let status = ["Processing",
                   "On The Way",
                   "Delivered"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
         setCurrentUserId()
         loadOrders()
         createStatusPicker()
@@ -41,6 +43,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         let detailCellNib = UINib(nibName:"DetailTableViewCell", bundle: nil)
         tableView.register(detailCellNib, forCellReuseIdentifier: "detailCell")
     }
+    
     func createToolbar() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -169,14 +172,6 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         cell.size2.text = joinerObj.size2 == "" ? "N/A" : joinerObj.size2;
         
         cell.selectionStyle = .none;
-        cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
-        cell.viewWrapper.layer.borderWidth = 0.3;
-        cell.viewWrapper.layer.cornerRadius = 5;
-        
-        cell.viewWrapper.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.viewWrapper.layer.shadowOpacity = 0.8
-        cell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
-        cell.viewWrapper.layer.shadowRadius = 4
         
         return cell;
     }
