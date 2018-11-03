@@ -35,7 +35,9 @@
                         <constraints>
                             <constraint firstItem="roE-xg-cZN" firstAttribute="top" secondItem="G6C-hF-KJQ" secondAttribute="bottom" constant="-12" id="25T-bo-qWU"/>
                             <constraint firstItem="G6C-hF-KJQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="KLB-8q-aTQ"/>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="centerX" secondItem="G6C-hF-KJQ" secondAttribute="centerX" id="a8V-U0-E8u"/>
                             <constraint firstItem="roE-xg-cZN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dRx-0X-kXU"/>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="firstBaseline" secondItem="G6C-hF-KJQ" secondAttribute="baseline" constant="55" symbolType="layoutAnchor" id="qaC-dT-3An"/>
                             <constraint firstItem="G6C-hF-KJQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ucb-dV-vc8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
