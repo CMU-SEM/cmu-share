@@ -167,16 +167,25 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         cell.quantity1.text = "\(joinerObj.quantity1)"
         cell.size1.text = "\(joinerObj.size1)"
         
-        cell.foodItem2.text = joinerObj.foodItem2 == "" ? "N/A" : joinerObj.foodItem2;
-        cell.quantity2.text = joinerObj.quantity2 == "" ? "N/A" : joinerObj.quantity2;
-        cell.size2.text = joinerObj.size2 == "" ? "N/A" : joinerObj.size2;
-        
+        if(joinerObj.foodItem2 != "") {
+            cell.viewWrapper.isHidden = false;
+            cell.foodItem2.text =  joinerObj.foodItem2;
+            cell.quantity2.text = joinerObj.quantity2;
+            cell.size2.text = joinerObj.size2;
+        } else {
+            cell.viewWrapper.isHidden = true;
+        }
         cell.selectionStyle = .none;
         
         return cell;
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+        let joinerObj = self.joinOrderList[indexPath.row] as JoinOrder
+        if(joinerObj.foodItem2 != "") {
+            return 113.5
+        }else {
+            return 75
+        }
     }
     
     func createStatusPicker() {
