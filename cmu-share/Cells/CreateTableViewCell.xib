@@ -117,6 +117,21 @@
                                     <action selector="closeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Eh3-Vt-MYa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-n2-Fk3" userLabel="Update Button">
+                                <rect key="frame" x="176" y="157" width="91" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="2KV-xQ-sNW"/>
+                                    <constraint firstAttribute="height" constant="26" id="A8v-xK-MJI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d6W-Ng-sA4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -142,6 +157,7 @@
                             <constraint firstItem="AJd-Ub-dWB" firstAttribute="top" secondItem="gyz-8o-lPA" secondAttribute="top" constant="8" id="lUx-at-aJ7"/>
                             <constraint firstItem="hTz-pr-3zl" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="47" id="mgf-pK-NJs"/>
                             <constraint firstItem="2yX-me-Ld3" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="46" id="nIE-WD-kCT"/>
+                            <constraint firstAttribute="trailing" secondItem="cSS-n2-Fk3" secondAttribute="trailing" constant="33" id="nST-1q-X3u"/>
                             <constraint firstItem="RK1-Mj-qPm" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="10" id="t3L-CI-PRr"/>
                             <constraint firstItem="aXT-am-J6f" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="47" id="teK-ct-CT5"/>
                             <constraint firstItem="X6G-Zy-GP5" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="12" id="vSa-Gb-EdO"/>
@@ -154,6 +170,7 @@
                     <constraint firstAttribute="trailing" secondItem="8bU-bL-jvb" secondAttribute="trailing" constant="42" id="UfT-Sx-Rk0"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="XBb-SU-W88"/>
                     <constraint firstAttribute="bottom" secondItem="gyz-8o-lPA" secondAttribute="bottom" constant="10" id="cjI-Pb-DmW"/>
+                    <constraint firstAttribute="bottom" secondItem="cSS-n2-Fk3" secondAttribute="bottom" constant="30.5" id="k7j-Qo-gzP"/>
                     <constraint firstAttribute="bottom" secondItem="8bU-bL-jvb" secondAttribute="bottom" constant="30.5" id="p37-xz-r0Z"/>
                     <constraint firstItem="gyz-8o-lPA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vYI-Nl-1uT"/>
                 </constraints>
@@ -172,10 +189,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="22" height="22"/>
-        <image name="dollar-1" width="22" height="22"/>
-        <image name="food" width="22" height="22"/>
-        <image name="icon-design-users-1x" width="22" height="22"/>
-        <image name="people-g" width="22" height="22"/>
+        <image name="clock" width="45" height="45"/>
+        <image name="dollar-1" width="45" height="45"/>
+        <image name="food" width="45" height="45"/>
+        <image name="icon-design-users-1x" width="45" height="45"/>
+        <image name="people-g" width="45" height="45"/>
     </resources>
 </document>
