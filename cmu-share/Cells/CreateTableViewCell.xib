@@ -128,9 +128,6 @@
                                 <state key="normal" title="Update">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="closeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d6W-Ng-sA4"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,6 +180,7 @@
                 <outlet property="numOfPeople" destination="2yX-me-Ld3" id="hp9-cZ-Ije"/>
                 <outlet property="orderTime" destination="oZO-Sc-rih" id="ltr-2e-Mbz"/>
                 <outlet property="restaurantName" destination="ZaZ-La-HR5" id="CP7-SH-2cX"/>
+                <outlet property="updateButton" destination="cSS-n2-Fk3" id="QEz-zv-tbj"/>
                 <outlet property="viewWrapper" destination="gyz-8o-lPA" id="GdZ-3i-Lph"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="233.88305847076464"/>

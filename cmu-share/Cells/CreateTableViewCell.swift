@@ -20,6 +20,7 @@ class CreateTableViewCell: UITableViewCell {
     @IBOutlet weak var numOfPeople: UILabel!
     @IBOutlet weak var deliveryFee: UILabel!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var updateButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

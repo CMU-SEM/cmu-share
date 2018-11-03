@@ -120,6 +120,14 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             createCell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
             createCell.viewWrapper.layer.shadowRadius = 4
             
+            if(orderObj.status == "open") {
+                createCell.updateButton.isHidden = true;
+                createCell.closeButton.isHidden = false;
+            } else {
+                createCell.updateButton.isHidden = false;
+                createCell.closeButton.isHidden = true;
+            }
+            
             createCell.delegate = self;
             return createCell;
         }else{
