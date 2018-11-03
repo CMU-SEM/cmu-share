@@ -25,6 +25,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var statusField: UITextField!
     @IBOutlet weak var placeField: UITextField!
+    @IBOutlet weak var closeButton: UIButton!
     
     let status = ["Processing",
                   "On The Way",
@@ -71,7 +72,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func closeAction(_ sender: Any) {
         // check if any blank is empty
-        if statusField.text == "" {
+        if statusField.text == "Closed" {
             let alert = UIAlertController(title: "Error", message: "Current Status is Required", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -82,18 +83,28 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            // success message
-            let alert = UIAlertController(title: "Congrats", message: "Order Updated Successfully", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
-                action in self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)}))
-            self.present(alert, animated: true, completion: nil)
-            
-            // update order status and place
-            if (order.status == "open") {
-                ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!])
+            if statusField.text == "open" {
+                // success message
+                let alert = UIAlertController(title: "Congrats", message: "Order Closed Successfully", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+                    action in self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)}))
+                self.present(alert, animated: true, completion: nil)
+                
+                ref.child("orders").child(orderId).updateChildValues(["status": "Closed"])
             }else{
-            ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!,
-                                                                  "place" : placeField.text!])
+                // success message
+                let alert = UIAlertController(title: "Congrats", message: "Order Updated Successfully", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+                    action in self.performSegue(withIdentifier: "detailToOrderSegue", sender: self)}))
+                self.present(alert, animated: true, completion: nil)
+                
+                // update order status and place
+                if (order.status != "Delivered") {
+                    ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!])
+                }else{
+                    ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!,
+                                                                          "place" : placeField.text!])
+                }
             }
         }
     }
@@ -139,7 +150,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return joinOrderList.count
     }
@@ -148,7 +159,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailTableViewCell
         let joinerObj = self.joinOrderList[indexPath.row] as JoinOrder
         
-        
+        cell.joinerName.text = "\(joinerObj.joinerDisplayName)"
         cell.foodItem1.text = "\(joinerObj.foodItem1)"
         cell.quantity1.text = "\(joinerObj.quantity1)"
         cell.size1.text = "\(joinerObj.size1)"
