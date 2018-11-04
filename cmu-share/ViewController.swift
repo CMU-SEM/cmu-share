@@ -16,6 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        emailText.placeholder = "Email";
+        emailText.keyboardType = .emailAddress;
+        passwordText.placeholder = "Password";
+        
+        self.hideKeyboardWhenTappedAround();
+    }
+    
     @IBAction func logInAction(_ sender: UIButton) {
         if emailText.text != "" && passwordText.text != ""{
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
@@ -40,10 +50,5 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        emailText.placeholder = "Email";
-        passwordText.placeholder = "Password";
-    }
+
 }
