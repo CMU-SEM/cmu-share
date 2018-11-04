@@ -31,7 +31,7 @@ class joinOrderController: UIViewController {
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         // alert of progress loss
-        let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Caution", message: "Your current progress may be lost.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
             action in self.performSegue(withIdentifier: "joinToFeedSegue", sender: self)
         }))
