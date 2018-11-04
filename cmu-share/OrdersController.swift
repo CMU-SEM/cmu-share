@@ -121,18 +121,16 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             createCell.viewWrapper.layer.shadowOffset = CGSize(width: -1, height: 1)
             createCell.viewWrapper.layer.shadowRadius = 4
             
-            if(orderObj.status == "open") {
-                createCell.updateButton.isHidden = true;
-                createCell.closeButton.isHidden = false;
+
+            if(orderObj.status == Order.STATUS_OPEN) {
+                createCell.closeButton.setTitle("Close", for: .normal)
             } else {
-                createCell.updateButton.isHidden = false;
-                createCell.closeButton.isHidden = true;
+               createCell.closeButton.setTitle("Update", for: .normal)
             }
             
             createCell.delegate = self;
             return createCell;
         }else{
-            print(joinOrderList.count)
             let joinCell = tableView.dequeueReusableCell(withIdentifier: "joinCell", for: indexPath) as! JoinTableViewCell
             let orderObj = self.joinOrderList[indexPath.row] as JoinOrder
             let curOrder = self.joinOrderDetailList[indexPath.row] as Order

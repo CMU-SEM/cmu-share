@@ -73,7 +73,7 @@ class createOrderController: UIViewController {
                 "min" : Int(minText.text!)!,
                 "fee" : Double(feeText.text!)!,
                 "joiner_count" : 0,
-                "status" : "open",
+                "status" : Order.STATUS_OPEN,
                 "place" : "N/A"
                 ] as [String: Any]
             

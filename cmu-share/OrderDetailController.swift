@@ -29,9 +29,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     
-    let status = ["Processing",
-                  "On The Way",
-                  "Delivered"]
+    let status: [String] = Order.STATUS_LIST;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,18 +77,18 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func closeAction(_ sender: Any) {
         // check if any blank is empty
-        if statusField.text == "Closed" {
+        if statusField.text == Order.STATUS_CLOSE {
             let alert = UIAlertController(title: "Error", message: "Current Status is Required", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else if statusField.text == "Delivered" && (placeField.text == "N/A" || placeField.text == "") {
+        else if statusField.text == Order.STATUS_DELIVERED && (placeField.text == "N/A" || placeField.text == "") {
             let alert = UIAlertController(title: "Error", message: "Place of Pickup Required", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            if statusField.text == "open" {
+            if statusField.text == Order.STATUS_OPEN {
                 // success message
                 let alert = UIAlertController(title: "Congrats", message: "Order Closed Successfully", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
@@ -106,7 +104,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
                 self.present(alert, animated: true, completion: nil)
                 
                 // update order status and place
-                if (order.status != "Delivered") {
+                if (order.status != Order.STATUS_DELIVERED) {
                     ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!])
                 }else{
                     ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!,
@@ -135,6 +133,12 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
                         // set current value in textfield
                         self.statusField.text = self.order.status
                         self.placeField.text = self.order.place
+                        
+                        if(self.order.status == Order.STATUS_OPEN) {
+                            self.closeButton.setTitle("Close", for: .normal)
+                        } else {
+                            self.closeButton.setTitle("Update", for: .normal)
+                        }
                         break
                     }
                 }
@@ -157,6 +161,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return joinOrderList.count
@@ -195,7 +200,6 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     func createStatusPicker() {
         let statusPicker = UIPickerView()
         statusPicker.delegate = self
-        
         statusField.inputView = statusPicker
     }
 }

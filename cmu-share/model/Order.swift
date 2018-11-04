@@ -9,6 +9,15 @@
 import UIKit
 
 class Order: NSObject {
+    static var STATUS_OPEN: String = "open";
+    static var STATUS_CLOSE: String = "close";
+    static var STATUS_PLACED: String = "Placed";
+    static var STATUS_PROCESS: String = "Processing";
+    static var STATUS_ON_THE_WAY: String = "On The Way";
+    static var STATUS_DELIVERED: String = "Delivered";
+    
+    static var STATUS_LIST :[String] = [Order.STATUS_PROCESS, Order.STATUS_ON_THE_WAY, Order.STATUS_DELIVERED];
+    
     var uid: String
     var creator: String
     var creatorName: String
