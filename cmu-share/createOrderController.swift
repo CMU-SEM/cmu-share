@@ -21,6 +21,29 @@ class createOrderController: UIViewController {
     var ref: DatabaseReference!
     var displayName: String!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ref = Database.database().reference()
+        updateDisplayName()
+        setPlaceHolder()
+        setKeyboardType()
+        StatusUpdateUtil.observeUpdate(_vc: self);
+    }
+    
+    func setPlaceHolder() {
+        restaurantNameText.placeholder = "* Restaurant Name"
+        menuText.placeholder = "* Your Menu"
+        hourText.placeholder = "* Hour"
+        minText.placeholder = "* Min"
+        feeText.placeholder = "* Delivery Fee"
+    }
+    
+    func setKeyboardType() {
+        hourText.keyboardType = UIKeyboardType.decimalPad
+        minText.keyboardType = UIKeyboardType.decimalPad
+        feeText.keyboardType = UIKeyboardType.decimalPad
+    }
+    
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         // alert of progress loss
         let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
@@ -82,18 +105,6 @@ class createOrderController: UIViewController {
                 print("error")
             }
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        restaurantNameText.placeholder = "* Restaurant Name"
-        menuText.placeholder = "* Your Menu"
-        hourText.placeholder = "* Req"
-        minText.placeholder = "* Req"
-        feeText.placeholder = "* Required"
-        
-        ref = Database.database().reference()
-        updateDisplayName()
-        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
     func updateDisplayName() {

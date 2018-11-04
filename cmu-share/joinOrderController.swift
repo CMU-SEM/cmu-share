@@ -44,14 +44,17 @@ class joinOrderController: UIViewController {
        ref = Database.database().reference();
        initializeViewStyle()
        getUserInformation()
-        
+       setPlaceHolder()
+       StatusUpdateUtil.observeUpdate(_vc: self);
+    }
+    
+    func setPlaceHolder() {
         foodItemName1.placeholder = "* Required"
         foodItemName2.placeholder = "* Required"
         quantity1.placeholder = "* Required"
         quantity2.placeholder = "* Required"
         size1.placeholder = "* Required"
         size2.placeholder = "* Required"
-        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
     func initializeViewStyle() {
