@@ -20,6 +20,7 @@ class profileController: UIViewController {
     @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        StatusUpdateUtil.observeUpdate(_vc: self);
         // Do any additional setup after loading the view.
         var ref: DatabaseReference!
         ref = Database.database().reference();

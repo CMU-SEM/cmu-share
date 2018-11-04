@@ -93,6 +93,7 @@ class createOrderController: UIViewController {
         
         ref = Database.database().reference()
         updateDisplayName()
+        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
     func updateDisplayName() {

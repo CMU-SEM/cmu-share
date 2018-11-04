@@ -37,6 +37,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
         ref = Database.database().reference()
         setCurrentUserId()
         loadOrders()
+        StatusUpdateUtil.observeUpdate(_vc: self);
         
         let createCellNib = UINib(nibName:"CreateTableViewCell", bundle: nil)
         tableView.register(createCellNib, forCellReuseIdentifier: "createCell")

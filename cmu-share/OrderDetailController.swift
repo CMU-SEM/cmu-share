@@ -42,6 +42,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         
         let detailCellNib = UINib(nibName:"DetailTableViewCell", bundle: nil)
         tableView.register(detailCellNib, forCellReuseIdentifier: "detailCell")
+        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
     func createToolbar() {

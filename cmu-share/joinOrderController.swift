@@ -51,6 +51,7 @@ class joinOrderController: UIViewController {
         quantity2.placeholder = "* Required"
         size1.placeholder = "* Required"
         size2.placeholder = "* Required"
+        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
     func initializeViewStyle() {
