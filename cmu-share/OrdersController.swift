@@ -133,17 +133,17 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }else{
             let joinCell = tableView.dequeueReusableCell(withIdentifier: "joinCell", for: indexPath) as! JoinTableViewCell
             let orderObj = self.joinOrderList[indexPath.row] as JoinOrder
-            let curOrder = self.joinOrderDetailList[indexPath.row] as Order
-            
-            joinCell.creatorName.text = curOrder.creatorName
-            joinCell.restaurantName.text = curOrder.name
-            joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
-            joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
-            joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount))/100))$"
-            
-            joinCell.statusLabel.text = "\(curOrder.status)"
-            joinCell.placeLabel.text = "\(curOrder.place)"
-            
+            if(self.joinOrderDetailList.count > indexPath.row) {
+                let curOrder = self.joinOrderDetailList[indexPath.row] as Order
+                
+                joinCell.creatorName.text = curOrder.creatorName
+                joinCell.restaurantName.text = curOrder.name
+                joinCell.orderTime.text  = "\(curOrder.hr) : \(curOrder.min)"
+                joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
+                joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount))/100))$"
+                joinCell.statusLabel.text = "\(curOrder.status)"
+                joinCell.placeLabel.text = "\(curOrder.place)"
+            }
             joinCell.foodItem1.text = "\(orderObj.foodItem1)"
             joinCell.quantity1.text = "\(orderObj.quantity1)"
             joinCell.size1.text = "\(orderObj.size1)"
