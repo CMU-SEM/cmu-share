@@ -20,6 +20,7 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var quantity2: UILabel!
     @IBOutlet weak var size2: UILabel!
     
+    @IBOutlet weak var phone: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,29 +9,31 @@
 import UIKit
 
 class JoinOrder: NSObject {
-    var uid: String;
-    var orderId: String;
-    var joinerId: String;
-    var joinerDisplayName: String;
-    var foodItem1: String;
-    var quantity1: String;
-    var size1:String;
-    var foodItem2:String;
-    var quantity2:String;
-    var size2:String;
+    var uid: String
+    var orderId: String
+    var joinerId: String
+    var joinerDisplayName: String
+    var foodItem1: String
+    var quantity1: String
+    var size1:String
+    var foodItem2:String
+    var quantity2:String
+    var size2:String
+    var phone:String
     
     
-    init(uid: String, orderId: String, joinerId: String, joinerDisplayName: String, foodItem1: String, quantity1: String, size1: String, foodItem2:String, quantity2:String, size2: String) {
-        self.uid = uid;
-        self.orderId = orderId;
-        self.joinerId = joinerId;
-        self.joinerDisplayName = joinerDisplayName;
-        self.foodItem1 = foodItem1;
-        self.foodItem2 = foodItem2;
-        self.quantity1 = quantity1;
-        self.quantity2 = quantity2;
-        self.size1 = size1;
-        self.size2 = size2;
+    init(uid: String, orderId: String, joinerId: String, joinerDisplayName: String, foodItem1: String, quantity1: String, size1: String, foodItem2:String, quantity2:String, size2: String, phone:String) {
+        self.uid = uid
+        self.orderId = orderId
+        self.joinerId = joinerId
+        self.joinerDisplayName = joinerDisplayName
+        self.foodItem1 = foodItem1
+        self.foodItem2 = foodItem2
+        self.quantity1 = quantity1
+        self.quantity2 = quantity2
+        self.size1 = size1
+        self.size2 = size2
+        self.phone = phone
     }
     
     init(dict: [String: AnyObject], uid:String) {
@@ -45,6 +47,7 @@ class JoinOrder: NSObject {
         self.quantity2 = dict["quantity2"] as! String
         self.size1 = dict["size1"] as! String
         self.size2 = dict["size2"] as! String
+        self.phone = dict["phone"] as! String
     }
     
     func toDataDict() -> [String: Any] {
@@ -57,7 +60,8 @@ class JoinOrder: NSObject {
             "quantity1": self.quantity1,
             "quantity2" : self.quantity2,
             "size1": self.size1,
-            "size2": self.size2
+            "size2": self.size2,
+            "phone": self.phone
         ];
     }
 }

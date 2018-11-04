@@ -46,7 +46,10 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if(postDic != nil) {
                 for (uid, item) in postDic! {
                     let order = Order(dict: item as! [String : AnyObject], uid: uid)
-                    self.orderList.append(order);
+                    // only show open orders
+                    if (order.status == "open") {
+                        self.orderList.append(order);
+                    }
                 }
                 
                 self.orderList = self.orderList.sorted(by: { $0.hr < $1.hr })
@@ -69,7 +72,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $";
         cell.creatorName.text = orderObj.creatorName;
         cell.restaurantName.text = orderObj.name;
-        cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min))";
+        cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min)) - \(orderObj.date)";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
         cell.selectionStyle = .none;
         cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;

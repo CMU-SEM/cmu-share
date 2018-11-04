@@ -86,6 +86,11 @@ class createOrderController: UIViewController {
             let user = Auth.auth().currentUser
             let creator_id = user?.uid
             
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd/yyyy"
+            let result = formatter.string(from: date)
+            
             // create order profile
             let orderObj = [
                 "orderId": orderRef.key!,
@@ -98,7 +103,8 @@ class createOrderController: UIViewController {
                 "fee" : Double(feeText.text!)!,
                 "joiner_count" : 0,
                 "status" : Order.STATUS_OPEN,
-                "place" : "N/A"
+                "place" : "N/A",
+                "date" : result
                 ] as [String: Any]
             
             orderRef.setValue(orderObj) { (error, ref) in
@@ -129,6 +135,10 @@ class createOrderController: UIViewController {
         
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneac))
         toolbar.setItems([doneBtn], animated: true)
+        // change color
+        toolbar.barTintColor = .white
+        toolbar.tintColor = .red
+        
         hourText.inputAccessoryView = toolbar
         
         hourText.inputView = datePicker

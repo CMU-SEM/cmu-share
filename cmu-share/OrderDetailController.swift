@@ -172,6 +172,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         cell.foodItem1.text = "\(joinerObj.foodItem1)"
         cell.quantity1.text = "\(joinerObj.quantity1)"
         cell.size1.text = "\(joinerObj.size1)"
+        cell.phone.text = "\(joinerObj.phone)"
         
         if(joinerObj.foodItem2 != "") {
             cell.viewWrapper.isHidden = false;
