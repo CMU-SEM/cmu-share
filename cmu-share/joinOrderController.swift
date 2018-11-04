@@ -41,20 +41,28 @@ class joinOrderController: UIViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
+       self.hideKeyboardWhenTappedAround()
        ref = Database.database().reference();
        initializeViewStyle()
        getUserInformation()
        setPlaceHolder()
+       setKeyboard()
        StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
+    
+    func setKeyboard() {
+        quantity1.keyboardType = .decimalPad
+        quantity2.keyboardType = .decimalPad
+    }
+    
     func setPlaceHolder() {
-        foodItemName1.placeholder = "* Required"
-        foodItemName2.placeholder = "* Required"
-        quantity1.placeholder = "* Required"
-        quantity2.placeholder = "* Required"
-        size1.placeholder = "* Required"
-        size2.placeholder = "* Required"
+        foodItemName1.placeholder = "Required"
+        foodItemName2.placeholder = "Required"
+        quantity1.placeholder = "Required"
+        quantity2.placeholder = "Required"
+        size1.placeholder = "Required"
+        size2.placeholder = "Required"
     }
     
     func initializeViewStyle() {

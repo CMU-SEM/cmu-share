@@ -37,7 +37,7 @@ class createOrderController: UIViewController {
     func setPlaceHolder() {
         restaurantNameText.placeholder = "* Restaurant Name"
         menuText.placeholder = "* Your Menu"
-        hourText.placeholder = "* Hour"
+        hourText.placeholder = "* Time "
         feeText.placeholder = "* Delivery Fee"
     }
     
