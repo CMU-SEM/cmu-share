@@ -11,22 +11,26 @@ import Firebase
 
 class createOrderController: UIViewController {
 
+    var datePicker = UIDatePicker();
     @IBOutlet weak var restaurantNameText: UITextField!
     @IBOutlet weak var menuText: UITextField!
     @IBOutlet weak var hourText: UITextField!
-    @IBOutlet weak var minText: UITextField!
     @IBOutlet weak var feeText: UITextField!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var ref: DatabaseReference!
     var displayName: String!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
         ref = Database.database().reference()
         updateDisplayName()
         setPlaceHolder()
         setKeyboardType()
+        createDatePicker()
         StatusUpdateUtil.observeUpdate(_vc: self);
     }
     
@@ -34,19 +38,16 @@ class createOrderController: UIViewController {
         restaurantNameText.placeholder = "* Restaurant Name"
         menuText.placeholder = "* Your Menu"
         hourText.placeholder = "* Hour"
-        minText.placeholder = "* Min"
         feeText.placeholder = "* Delivery Fee"
     }
     
     func setKeyboardType() {
-        hourText.keyboardType = UIKeyboardType.decimalPad
-        minText.keyboardType = UIKeyboardType.decimalPad
         feeText.keyboardType = UIKeyboardType.decimalPad
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         // alert of progress loss
-        let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Caution", message: "Your current progress may be lost.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
             action in self.performSegue(withIdentifier: "CreateToFeedSegue", sender: self)
         }))
@@ -56,14 +57,13 @@ class createOrderController: UIViewController {
     
     @IBAction func submitAction(_ sender: UIButton) {
         // check if any blank is empty
-        if restaurantNameText.text == "" || menuText.text == "" || hourText.text == ""
-            || minText.text == "" || feeText.text == "" {
-            let alert = UIAlertController(title: "Error", message: "Mandatory Fields Are Required", preferredStyle: .alert)
+        if restaurantNameText.text == "" || menuText.text == ""  {
+            let alert = UIAlertController(title: "Error", message: "Restaurant and Menu are required.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         // check if order time valid
-        else if Int(hourText.text!) == nil || Int(minText.text!) == nil {
+        else if hourText.text == "" {
             let alert = UIAlertController(title: "Error", message: "Time Invalid", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -75,7 +75,7 @@ class createOrderController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            let alert = UIAlertController(title: "Congrats", message: "Order Created Successfully", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Congrats", message: "Order created successfully", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
                 action in self.performSegue(withIdentifier: "CreateToFeedSegue", sender: self)}))
             self.present(alert, animated: true, completion: nil)
@@ -87,14 +87,15 @@ class createOrderController: UIViewController {
             let creator_id = user?.uid
             
             // create order profile
+
             let orderObj = [
                 "orderId": orderRef.key!,
                 "creator_id" : creator_id!,
                 "creatorName" : displayName!,
                 "restaurantName" : restaurantNameText.text!,
                 "detail" : menuText.text!,
-                "hr" : Int(hourText.text!)!,
-                "min" : Int(minText.text!)!,
+                "hr" : datePicker.calendar.component(.hour, from: datePicker.date),
+                "min" : datePicker.calendar.component(.minute, from: datePicker.date),
                 "fee" : Double(feeText.text!)!,
                 "joiner_count" : 0,
                 "status" : Order.STATUS_OPEN,
@@ -119,5 +120,25 @@ class createOrderController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+    
+    func createDatePicker() {
+        datePicker.datePickerMode = .time;
+        
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit();
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneac))
+        toolbar.setItems([doneBtn], animated: true)
+        hourText.inputAccessoryView = toolbar
+        
+        hourText.inputView = datePicker
+    }
+    
+    @objc func doneac() {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "HH:mm"
+        hourText.text = "\(dateFormatterGet.string(from: datePicker.date))"
+        self.view.endEditing(true);
     }
 }

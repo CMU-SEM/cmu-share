@@ -61,11 +61,6 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         statusField.inputAccessoryView = toolBar
     }
     
-  
-    
-    @objc func dismissKeyboard(){
-        view.endEditing(true)
-    }
     @IBAction func cancelAction(_ sender: Any) {
         // alert of progress loss
         let alert = UIAlertController(title: "Caution", message: "Your Current Progress May Be Lost.", preferredStyle: .alert)
