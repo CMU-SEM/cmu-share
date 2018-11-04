@@ -44,11 +44,11 @@ class StatusUpdateUtil {
             if(postDic != nil) {
                 let order = Order(dict: postDic, uid: postDic["orderId"] as! String)
                 if(joinOrderList[order.uid] != nil) {
-                    print("Here!")
-//                    let alert = UIAlertController(title: "My Alert", message: "Order: \(order.name) is changed", preferredStyle: .alert)
-//                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-//                    }))
-//                    _vc.present(alert, animated: true, completion: nil)
+                    let msg = "Your order with \(order.creatorName) is updated! \nResturant: \(order.name) \n \nYou can see the update in Order Management";
+                    let alert = UIAlertController(title: "Order Update!", message: msg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    }))
+                  _vc.present(alert, animated: true, completion: nil)
                 }
             }
         }
