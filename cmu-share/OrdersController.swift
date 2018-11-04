@@ -169,7 +169,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
          if (selectedSegment == CREATE_ORDER_TAB_SEGMENT_ID) {
             return 250.0
          } else {
-            return 460.0
+            return 392.5
         }
     }
     
