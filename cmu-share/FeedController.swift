@@ -24,6 +24,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref = Database.database().reference()
         setCurrentUserId()
         loadOrders()
+        StatusUpdateUtil.observeUpdate(_vc: self);
         
         let feedCellNib = UINib(nibName:"FeedTableViewCell", bundle: nil)
         tableView.register(feedCellNib, forCellReuseIdentifier: "feedCell")

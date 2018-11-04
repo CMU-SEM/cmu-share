@@ -65,6 +65,7 @@ class createOrderController: UIViewController {
             
             // create order profile
             let orderObj = [
+                "orderId": orderRef.key!,
                 "creator_id" : creator_id!,
                 "creatorName" : displayName!,
                 "restaurantName" : restaurantNameText.text!,

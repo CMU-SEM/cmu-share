@@ -32,6 +32,7 @@
 		6278DBD82162D66300D75581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6278DBD62162D66300D75581 /* LaunchScreen.storyboard */; };
 		6278DBE32162D66300D75581 /* cmu_shareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBE22162D66300D75581 /* cmu_shareTests.swift */; };
 		6278DBEE2162D66300D75581 /* cmu_shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBED2162D66300D75581 /* cmu_shareUITests.swift */; };
+		627A238A218E9B57008864CF /* StatusUpdateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A2389218E9B57008864CF /* StatusUpdateUtil.swift */; };
 		6299AB41216964C700749972 /* RealtimeDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299AB40216964C700749972 /* RealtimeDBViewController.swift */; };
 		62A62A752176AEA90080227B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A62A732176AEA90080227B /* FeedTableViewCell.swift */; };
 		62A62A762176AEA90080227B /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A62A742176AEA90080227B /* FeedTableViewCell.xib */; };
@@ -89,6 +90,7 @@
 		6278DBE92162D66300D75581 /* cmu-shareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cmu-shareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6278DBED2162D66300D75581 /* cmu_shareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmu_shareUITests.swift; sourceTree = "<group>"; };
 		6278DBEF2162D66300D75581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		627A2389218E9B57008864CF /* StatusUpdateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusUpdateUtil.swift; sourceTree = "<group>"; };
 		6299AB40216964C700749972 /* RealtimeDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDBViewController.swift; sourceTree = "<group>"; };
 		62A62A732176AEA90080227B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		62A62A742176AEA90080227B /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		6278DBCC2162D66200D75581 /* cmu-share */ = {
 			isa = PBXGroup;
 			children = (
+				627A2388218E9B3E008864CF /* Helper */,
 				62A62A722176AE900080227B /* Cells */,
 				62C49E00216971980063E091 /* model */,
 				6299AB3F2169649E00749972 /* RealtimeDB */,
@@ -203,6 +206,14 @@
 				6278DBEF2162D66300D75581 /* Info.plist */,
 			);
 			path = "cmu-shareUITests";
+			sourceTree = "<group>";
+		};
+		627A2388218E9B3E008864CF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				627A2389218E9B57008864CF /* StatusUpdateUtil.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		6299AB3F2169649E00749972 /* RealtimeDB */ = {
@@ -494,6 +505,7 @@
 				31186E3221797FE700EE9027 /* joinOrderController.swift in Sources */,
 				52D185E6217E97C1000894B9 /* OrderDetailController.swift in Sources */,
 				52DC3EF121740AFF00DF8D1A /* feedController.swift in Sources */,
+				627A238A218E9B57008864CF /* StatusUpdateUtil.swift in Sources */,
 				62C49E02216971C50063E091 /* Order.swift in Sources */,
 				52A2D90C217C021A00176A65 /* OrdersController.swift in Sources */,
 				6278DBD02162D66200D75581 /* ViewController.swift in Sources */,
