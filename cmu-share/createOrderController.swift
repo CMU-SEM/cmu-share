@@ -87,7 +87,6 @@ class createOrderController: UIViewController {
             let creator_id = user?.uid
             
             // create order profile
-
             let orderObj = [
                 "orderId": orderRef.key!,
                 "creator_id" : creator_id!,

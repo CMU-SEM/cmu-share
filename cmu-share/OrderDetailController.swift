@@ -124,7 +124,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
                     if (self.currentUId != nil && cur_order.uid == self.orderId) {
                         self.order = cur_order
                         self.restaurantNameLabel.text = self.order.name
-                        self.orderTimeLabel.text = "\(self.order.hr) : \(self.order.min)"
+                        self.orderTimeLabel.text = "\(OrderTimeFomatter.format(hr: self.order.hr, min: self.order.min))"
                         self.numJoinerLabel.text = String(self.order.joinerCount)
                         self.feeLabel.text = String(self.order.fee)
                         // set current value in textfield

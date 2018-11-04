@@ -34,6 +34,7 @@
 		6278DBEE2162D66300D75581 /* cmu_shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278DBED2162D66300D75581 /* cmu_shareUITests.swift */; };
 		627A238A218E9B57008864CF /* StatusUpdateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A2389218E9B57008864CF /* StatusUpdateUtil.swift */; };
 		627A238D218EC660008864CF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A238C218EC660008864CF /* UIViewControllerExtension.swift */; };
+		627A238F218ED6B2008864CF /* OrderTimeFomatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A238E218ED6B2008864CF /* OrderTimeFomatter.swift */; };
 		6299AB41216964C700749972 /* RealtimeDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6299AB40216964C700749972 /* RealtimeDBViewController.swift */; };
 		62A62A752176AEA90080227B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A62A732176AEA90080227B /* FeedTableViewCell.swift */; };
 		62A62A762176AEA90080227B /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A62A742176AEA90080227B /* FeedTableViewCell.xib */; };
@@ -93,6 +94,7 @@
 		6278DBEF2162D66300D75581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627A2389218E9B57008864CF /* StatusUpdateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusUpdateUtil.swift; sourceTree = "<group>"; };
 		627A238C218EC660008864CF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		627A238E218ED6B2008864CF /* OrderTimeFomatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTimeFomatter.swift; sourceTree = "<group>"; };
 		6299AB40216964C700749972 /* RealtimeDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDBViewController.swift; sourceTree = "<group>"; };
 		62A62A732176AEA90080227B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		62A62A742176AEA90080227B /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				627A2389218E9B57008864CF /* StatusUpdateUtil.swift */,
+				627A238E218ED6B2008864CF /* OrderTimeFomatter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				6278DBCE2162D66200D75581 /* AppDelegate.swift in Sources */,
 				526B5E94216D572E004B6DD4 /* profileController.swift in Sources */,
 				52380209216559EB00F15C44 /* signUpController.swift in Sources */,
+				627A238F218ED6B2008864CF /* OrderTimeFomatter.swift in Sources */,
 				5210C1DD217424660028AC81 /* User.swift in Sources */,
 				62C49E042169735D0063E091 /* RealtimeDBTableViewCell.swift in Sources */,
 			);
