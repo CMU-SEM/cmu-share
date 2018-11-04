@@ -212,24 +212,65 @@
                                     <action selector="signUpAction:" destination="clf-kD-UD5" eventType="touchUpInside" id="bec-cz-9Za"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ku-GG-ZGF">
+                                <rect key="frame" x="54" y="196" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9d-0j-1qH">
+                                <rect key="frame" x="54" y="246" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-j4-KG5">
+                                <rect key="frame" x="54" y="296" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR0-1e-WUG">
+                                <rect key="frame" x="54" y="346" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITW-gQ-Y1f">
+                                <rect key="frame" x="54" y="396" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFr-UA-Eel">
+                                <rect key="frame" x="54" y="446" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.54322296380000001" green="0.15399122239999999" blue="0.12546294929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="wP3-63-Ko6" secondAttribute="trailing" constant="70" id="0I6-WV-RrZ"/>
                             <constraint firstItem="kXu-XX-t8q" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="80" id="7Z3-uy-f4x"/>
+                            <constraint firstItem="r9d-0j-1qH" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="202" id="7mV-Xj-Hfe"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="bottom" secondItem="Z9n-cf-7Vf" secondAttribute="bottom" constant="15" id="9Mx-1C-6aa"/>
                             <constraint firstItem="wP3-63-Ko6" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="9Uf-Us-deW"/>
                             <constraint firstItem="4aR-kx-C8H" firstAttribute="centerX" secondItem="o41-dA-AEP" secondAttribute="centerX" id="9bj-O2-laZ"/>
                             <constraint firstItem="4aR-kx-C8H" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="40" id="BCf-Xv-WZa"/>
+                            <constraint firstItem="rSL-j4-KG5" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="Bc4-4m-IiJ"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="pua-wX-Sdt" secondAttribute="trailing" constant="70" id="DqH-E0-jn1"/>
                             <constraint firstItem="Leu-It-bxL" firstAttribute="top" secondItem="JL1-N8-vt8" secondAttribute="bottom" constant="20" id="G8Z-cw-QvT"/>
                             <constraint firstItem="BKc-dA-SWS" firstAttribute="top" secondItem="pua-wX-Sdt" secondAttribute="bottom" constant="20" id="IQr-By-F4G"/>
                             <constraint firstItem="fBw-5e-lJP" firstAttribute="top" secondItem="J9z-da-L0Q" secondAttribute="bottom" constant="40" id="JTA-ub-ryk"/>
                             <constraint firstItem="JL1-N8-vt8" firstAttribute="top" secondItem="wP3-63-Ko6" secondAttribute="bottom" constant="20" id="JeM-WA-r27"/>
+                            <constraint firstItem="nR0-1e-WUG" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="N2R-hr-CoC"/>
                             <constraint firstItem="BKc-dA-SWS" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="NTN-Nc-2Fw"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="bottom" secondItem="kXu-XX-t8q" secondAttribute="bottom" constant="10" id="P6y-V0-sxA"/>
                             <constraint firstItem="pua-wX-Sdt" firstAttribute="top" secondItem="Leu-It-bxL" secondAttribute="bottom" constant="20" id="PYf-z7-coX"/>
+                            <constraint firstItem="ITW-gQ-Y1f" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="352" id="QZh-qj-cA3"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="fBw-5e-lJP" secondAttribute="trailing" constant="132" id="QwB-Qy-ECu"/>
+                            <constraint firstItem="ITW-gQ-Y1f" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="Rbl-aS-2mm"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="JL1-N8-vt8" secondAttribute="trailing" constant="70" id="Rtz-AE-Y5D"/>
                             <constraint firstItem="J9z-da-L0Q" firstAttribute="top" secondItem="BKc-dA-SWS" secondAttribute="bottom" constant="20" id="S4E-sJ-ysV"/>
                             <constraint firstItem="wP3-63-Ko6" firstAttribute="top" secondItem="4aR-kx-C8H" secondAttribute="bottom" constant="60" id="U4B-L1-apd"/>
@@ -237,11 +278,18 @@
                             <constraint firstItem="JL1-N8-vt8" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="Vyr-ku-JCt"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="J9z-da-L0Q" secondAttribute="trailing" constant="70" id="Yya-Ki-WuH"/>
                             <constraint firstItem="pua-wX-Sdt" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="Zh9-8v-3SP"/>
+                            <constraint firstItem="3Ku-GG-ZGF" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="fEz-kA-Ado"/>
                             <constraint firstItem="Leu-It-bxL" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="fYq-gz-x5e"/>
                             <constraint firstItem="fBw-5e-lJP" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="132" id="gME-Cg-dVf"/>
                             <constraint firstItem="J9z-da-L0Q" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="70" id="gWx-xw-5fM"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="Z9n-cf-7Vf" secondAttribute="trailing" constant="80" id="hZL-FW-iSE"/>
                             <constraint firstItem="o41-dA-AEP" firstAttribute="trailing" secondItem="BKc-dA-SWS" secondAttribute="trailing" constant="70" id="mPb-v9-zIr"/>
+                            <constraint firstItem="rSL-j4-KG5" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="252" id="mcM-jO-FrK"/>
+                            <constraint firstItem="UFr-UA-Eel" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="402" id="pql-H3-vOb"/>
+                            <constraint firstItem="UFr-UA-Eel" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="rS5-uD-YRX"/>
+                            <constraint firstItem="3Ku-GG-ZGF" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="152" id="uwU-g5-ZXJ"/>
+                            <constraint firstItem="nR0-1e-WUG" firstAttribute="top" secondItem="o41-dA-AEP" secondAttribute="top" constant="302" id="wtN-pM-uKB"/>
+                            <constraint firstItem="r9d-0j-1qH" firstAttribute="leading" secondItem="o41-dA-AEP" secondAttribute="leading" constant="54" id="ymH-NH-Weq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o41-dA-AEP"/>
                     </view>
@@ -1290,6 +1338,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="neY-bi-aI2"/>
-        <segue reference="4Qy-zI-mkQ"/>
+        <segue reference="01J-jx-X1N"/>
     </inferredMetricsTieBreakers>
 </document>

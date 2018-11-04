@@ -22,6 +22,26 @@ class signUpController: UIViewController {
     
     var ref: DatabaseReference!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setPlaceholder()
+        self.hideKeyboardWhenTappedAround()
+        
+        ref = Database.database().reference()
+    }
+    
+    func setPlaceholder() {
+        emailText.placeholder = "Email";
+        passwordText.placeholder = "Password";
+        confirmPasswordText.placeholder = "Confirm Password"
+        firstNameText.placeholder = "First Name"
+        lastNameText.placeholder = "Last Name"
+        mobileText.placeholder = "Mobile No."
+        
+        emailText.keyboardType = .emailAddress
+        mobileText.keyboardType = .decimalPad
+    }
+    
     @IBAction func logInAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "backToSignInSegue", sender: self)
     }
@@ -94,18 +114,7 @@ class signUpController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        emailText.placeholder = "* Email";
-        passwordText.placeholder = "* Password";
-        confirmPasswordText.placeholder = "* Confirm Password"
-        firstNameText.placeholder = "* First Name"
-        lastNameText.placeholder = "* Last Name"
-        mobileText.placeholder = "* Mobile No."
-
-        ref = Database.database().reference()
-    }
     
 
     /*
