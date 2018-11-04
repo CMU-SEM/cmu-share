@@ -91,7 +91,6 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                     }
                 }
             }
-            self.tableView.reloadData()
         }
     }
     
