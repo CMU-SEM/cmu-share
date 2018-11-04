@@ -33,6 +33,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         ref = Database.database().reference()
         
         setCurrentUserId()
