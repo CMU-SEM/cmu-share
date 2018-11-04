@@ -113,6 +113,11 @@
                                 <state key="normal" title="Join">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="joinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sou-IW-eXR"/>
                                 </connections>
@@ -172,10 +177,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="22" height="22"/>
-        <image name="dollar-1" width="22" height="22"/>
-        <image name="food" width="22" height="22"/>
-        <image name="icon-design-users-1x" width="22" height="22"/>
-        <image name="people-g" width="22" height="22"/>
+        <image name="clock" width="45" height="45"/>
+        <image name="dollar-1" width="45" height="45"/>
+        <image name="food" width="45" height="45"/>
+        <image name="icon-design-users-1x" width="45" height="45"/>
+        <image name="people-g" width="45" height="45"/>
     </resources>
 </document>

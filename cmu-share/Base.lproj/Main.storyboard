@@ -694,6 +694,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeAction:" destination="Zj8-XK-FGF" eventType="touchUpInside" id="MZi-u9-OQo"/>
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSR-Po-ipa"/>
@@ -808,7 +813,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-oQ-6cC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="351" height="44"/>
                                 <items>
                                     <navigationItem id="osB-bm-ImG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Txv-Ne-vcx">
@@ -821,10 +826,10 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-A5-bLe">
-                                <rect key="frame" x="8" y="96" width="359" height="192"/>
+                                <rect key="frame" x="8" y="96" width="335" height="192"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbz-8F-kEK" userLabel="Food Item">
-                                        <rect key="frame" x="30" y="26" width="249" height="30"/>
+                                        <rect key="frame" x="30" y="26" width="225" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -850,13 +855,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGQ-hL-V9V" userLabel="Quatity Text">
-                                        <rect key="frame" x="134" y="82" width="58" height="30"/>
+                                        <rect key="frame" x="134" y="82" width="34" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dk8-bf-amA" userLabel="Size Text">
-                                        <rect key="frame" x="96" y="127" width="56" height="30"/>
+                                        <rect key="frame" x="96" y="127" width="32" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -881,9 +886,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-M3-MM4">
-                                <rect key="frame" x="132" y="662" width="111" height="36"/>
+                                <rect key="frame" x="132" y="662" width="87" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="FCo-Iw-pAZ"/>
                                     <constraint firstAttribute="width" constant="150" id="T9Y-Ph-2qQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
@@ -893,6 +899,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ys3-Qe-0cj"/>
                                     <action selector="onClickJoin:" destination="6SL-kc-vsN" eventType="touchUpInside" id="zTQ-Fw-ED0"/>
@@ -900,7 +911,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19H-hx-iYg">
-                                <rect key="frame" x="216" y="311" width="151" height="30"/>
+                                <rect key="frame" x="192" y="311" width="151" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="151" id="lLn-q6-w35"/>
@@ -908,12 +919,17 @@
                                 <state key="normal" title="Add More Item ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClickAddMoreItem:" destination="6SL-kc-vsN" eventType="touchUpInside" id="YZo-hh-NO7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-vn-xkA" userLabel="View Second Item Wrapper">
-                                <rect key="frame" x="8" y="365" width="359" height="192"/>
+                                <rect key="frame" x="8" y="365" width="335" height="192"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgZ-2l-Pzp" userLabel="Food Item 2">
                                         <rect key="frame" x="33" y="27" width="291" height="30"/>
@@ -943,13 +959,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1m-BV-PI8" userLabel="Quantity Text 2">
-                                        <rect key="frame" x="137" y="81" width="65" height="30"/>
+                                        <rect key="frame" x="137" y="81" width="41" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-v4-pho" userLabel="Size Text 2">
-                                        <rect key="frame" x="99" y="123" width="58" height="30"/>
+                                        <rect key="frame" x="99" y="123" width="34" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1006,7 +1022,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkZ-Nu-5pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671.0144927536235" y="937.5"/>
+            <point key="canvasLocation" x="2669.5999999999999" y="936.94581280788179"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Xj6-cT-55Q">
@@ -1104,6 +1120,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKk-fk-hnE"/>
                                     <action selector="submitAction:" destination="FzY-dd-4nx" eventType="touchUpInside" id="UAG-eN-sRw"/>
@@ -1252,7 +1273,7 @@
         <image name="sand-box" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IgV-Hj-Wog"/>
-        <segue reference="01J-jx-X1N"/>
+        <segue reference="Q1E-eg-1Yw"/>
+        <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
 </document>
