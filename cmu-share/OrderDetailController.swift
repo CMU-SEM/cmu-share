@@ -60,7 +60,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
+                self.view.frame.origin.y = 0
             }
         }
     }
@@ -120,7 +120,7 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
                 self.present(alert, animated: true, completion: nil)
                 
                 // update order status and place
-                if (order.status != Order.STATUS_DELIVERED) {
+                if (statusField.text != Order.STATUS_DELIVERED) {
                     ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!])
                 }else{
                     ref.child("orders").child(orderId).updateChildValues(["status": statusField.text!,
