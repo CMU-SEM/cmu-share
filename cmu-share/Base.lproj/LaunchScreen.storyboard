@@ -24,8 +24,12 @@
                                     <constraint firstAttribute="width" constant="174" id="gGJ-hB-eoI"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roE-xg-cZN">
-                                <rect key="frame" x="100" y="358" width="177" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMU Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roE-xg-cZN">
+                                <rect key="frame" x="99" y="358" width="177" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Ak2-Ug-JGT"/>
+                                    <constraint firstAttribute="width" constant="177" id="Lqr-iN-yox"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
                                 <color key="textColor" red="0.999099195" green="0.14839485290000001" blue="0.001437587314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,12 +37,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="roE-xg-cZN" firstAttribute="top" secondItem="G6C-hF-KJQ" secondAttribute="bottom" constant="-12" id="25T-bo-qWU"/>
-                            <constraint firstItem="G6C-hF-KJQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="KLB-8q-aTQ"/>
-                            <constraint firstItem="roE-xg-cZN" firstAttribute="centerX" secondItem="G6C-hF-KJQ" secondAttribute="centerX" id="a8V-U0-E8u"/>
-                            <constraint firstItem="roE-xg-cZN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dRx-0X-kXU"/>
-                            <constraint firstItem="roE-xg-cZN" firstAttribute="firstBaseline" secondItem="G6C-hF-KJQ" secondAttribute="baseline" constant="55" symbolType="layoutAnchor" id="qaC-dT-3An"/>
-                            <constraint firstItem="G6C-hF-KJQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ucb-dV-vc8"/>
+                            <constraint firstItem="G6C-hF-KJQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9cy-6J-t0r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="G6C-hF-KJQ" secondAttribute="bottom" constant="-350" id="f5W-hX-E83"/>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="top" secondItem="G6C-hF-KJQ" secondAttribute="bottom" constant="-12" id="ibu-Zb-Ok1"/>
+                            <constraint firstItem="roE-xg-cZN" firstAttribute="centerX" secondItem="G6C-hF-KJQ" secondAttribute="centerX" id="q0o-0C-6A2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
