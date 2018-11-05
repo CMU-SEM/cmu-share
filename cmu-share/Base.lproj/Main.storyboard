@@ -439,43 +439,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-n5-xRm">
-                                <rect key="frame" x="50" y="104" width="75" height="18.666666666666671"/>
+                                <rect key="frame" x="50" y="138" width="75" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-PU-IqO">
-                                <rect key="frame" x="50" y="130.66666666666666" width="55.666666666666657" height="27.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBa-w0-1mu">
-                                <rect key="frame" x="49.999999999999993" y="178" width="73.333333333333314" height="18.666666666666657"/>
+                                <rect key="frame" x="49.999999999999993" y="216.66666666666666" width="73.333333333333314" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eW-mU-HZK">
-                                <rect key="frame" x="50" y="204.66666666666666" width="55.666666666666657" height="27.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nh-fN-5u1">
-                                <rect key="frame" x="50" y="251.99999999999997" width="37.333333333333343" height="18.666666666666657"/>
+                                <rect key="frame" x="50" y="295.33333333333331" width="37.333333333333343" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWV-ZQ-b8a">
-                                <rect key="frame" x="50" y="278.66666666666669" width="55.666666666666657" height="27.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Dd-4Cc">
-                                <rect key="frame" x="50" y="326" width="99" height="18.666666666666686"/>
+                                <rect key="frame" x="50" y="369.33333333333331" width="99" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -502,8 +484,51 @@
                                     <action selector="signOutAction:" destination="J2X-2E-6to" eventType="touchUpInside" id="l8C-Cc-TUT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slv-aD-vk4">
-                                <rect key="frame" x="50" y="352.66666666666669" width="55.666666666666657" height="27.333333333333314"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55G-CQ-OTZ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="pjN-8R-fnJ">
+                                        <barButtonItem key="rightBarButtonItem" title="Update" id="wgP-Qe-dqN">
+                                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="updateAction:" destination="J2X-2E-6to" id="U3w-UA-zR9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZB-Cd-Nrz">
+                                <rect key="frame" x="50" y="164.66666666666666" width="250" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bq9-m1-vx6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Jg-V2-wzI">
+                                <rect key="frame" x="50" y="243.33333333333337" width="250" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bBK-F5-pAF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4y3-7W-NsS">
+                                <rect key="frame" x="50" y="396" width="250" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="mab-Yv-EXD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZE-KG-m83">
+                                <rect key="frame" x="50" y="322" width="250" height="27.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="01b-bk-siM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -511,40 +536,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="slv-aD-vk4" firstAttribute="top" secondItem="G7Q-Dd-4Cc" secondAttribute="bottom" constant="8" id="1bV-pc-gSg"/>
-                            <constraint firstItem="2Nh-fN-5u1" firstAttribute="top" secondItem="5eW-mU-HZK" secondAttribute="bottom" constant="20" id="9Nf-7X-4ap"/>
-                            <constraint firstItem="5eW-mU-HZK" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="FDv-go-L2j"/>
+                            <constraint firstItem="jFc-n5-xRm" firstAttribute="top" secondItem="55G-CQ-OTZ" secondAttribute="bottom" constant="50" id="0vj-7J-Lby"/>
+                            <constraint firstItem="55G-CQ-OTZ" firstAttribute="top" secondItem="tb4-gJ-0Cv" secondAttribute="top" id="4IE-Lv-wXV"/>
+                            <constraint firstItem="1Jg-V2-wzI" firstAttribute="top" secondItem="tBa-w0-1mu" secondAttribute="bottom" constant="8" id="5qG-cI-kab"/>
+                            <constraint firstItem="55G-CQ-OTZ" firstAttribute="trailing" secondItem="tb4-gJ-0Cv" secondAttribute="trailing" id="6r3-FG-Xw6"/>
+                            <constraint firstItem="4y3-7W-NsS" firstAttribute="top" secondItem="G7Q-Dd-4Cc" secondAttribute="bottom" constant="8" id="DL3-FU-Iu9"/>
                             <constraint firstItem="2Nh-fN-5u1" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="K0y-hu-UVe"/>
                             <constraint firstItem="jFc-n5-xRm" firstAttribute="leading" secondItem="tb4-gJ-0Cv" secondAttribute="leading" constant="50" id="Lmh-mg-KY5"/>
-                            <constraint firstItem="5eW-mU-HZK" firstAttribute="top" secondItem="tBa-w0-1mu" secondAttribute="bottom" constant="8" id="Pr6-TD-QMf"/>
+                            <constraint firstItem="55G-CQ-OTZ" firstAttribute="leading" secondItem="tb4-gJ-0Cv" secondAttribute="leading" id="Q2C-Y7-749"/>
                             <constraint firstItem="G7Q-Dd-4Cc" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="QQT-ue-Pcn"/>
-                            <constraint firstItem="rQK-PU-IqO" firstAttribute="top" secondItem="jFc-n5-xRm" secondAttribute="bottom" constant="8" id="UoM-Dg-T2S"/>
+                            <constraint firstItem="2Nh-fN-5u1" firstAttribute="top" secondItem="1Jg-V2-wzI" secondAttribute="bottom" constant="20" id="XFk-Ik-sKk"/>
                             <constraint firstItem="glE-Jg-zbj" firstAttribute="centerX" secondItem="tb4-gJ-0Cv" secondAttribute="centerX" id="XhX-Fh-pUB"/>
-                            <constraint firstItem="slv-aD-vk4" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="adc-xl-hcI"/>
-                            <constraint firstItem="rQK-PU-IqO" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="c1x-ef-veg"/>
+                            <constraint firstItem="G7Q-Dd-4Cc" firstAttribute="top" secondItem="mZE-KG-m83" secondAttribute="bottom" constant="20" id="Xkq-7Z-Flx"/>
+                            <constraint firstItem="tBa-w0-1mu" firstAttribute="top" secondItem="WZB-Cd-Nrz" secondAttribute="bottom" constant="20" id="YKw-hb-NaH"/>
+                            <constraint firstItem="WZB-Cd-Nrz" firstAttribute="top" secondItem="jFc-n5-xRm" secondAttribute="bottom" constant="8" id="Zl7-zl-J9c"/>
+                            <constraint firstItem="4y3-7W-NsS" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="e31-EY-b0F"/>
                             <constraint firstItem="glE-Jg-zbj" firstAttribute="top" secondItem="tb4-gJ-0Cv" secondAttribute="bottom" constant="-187" id="e3N-Se-bdL"/>
-                            <constraint firstItem="GWV-ZQ-b8a" firstAttribute="top" secondItem="2Nh-fN-5u1" secondAttribute="bottom" constant="8" id="gyO-Lm-jPI"/>
-                            <constraint firstItem="jFc-n5-xRm" firstAttribute="top" secondItem="tb4-gJ-0Cv" secondAttribute="top" constant="60" id="pzd-fK-iH2"/>
+                            <constraint firstItem="mZE-KG-m83" firstAttribute="top" secondItem="2Nh-fN-5u1" secondAttribute="bottom" constant="8" id="hPi-Mv-yIc"/>
                             <constraint firstItem="tBa-w0-1mu" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="qqu-iq-niR"/>
-                            <constraint firstItem="GWV-ZQ-b8a" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="t9C-5Z-vmt"/>
-                            <constraint firstItem="tBa-w0-1mu" firstAttribute="top" secondItem="rQK-PU-IqO" secondAttribute="bottom" constant="20" id="wKD-kK-K6Z"/>
-                            <constraint firstItem="G7Q-Dd-4Cc" firstAttribute="top" secondItem="GWV-ZQ-b8a" secondAttribute="bottom" constant="20" id="z01-M3-mNS"/>
+                            <constraint firstItem="1Jg-V2-wzI" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="rIr-s8-Kri"/>
+                            <constraint firstItem="mZE-KG-m83" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="tiY-tR-6xM"/>
+                            <constraint firstItem="WZB-Cd-Nrz" firstAttribute="leading" secondItem="jFc-n5-xRm" secondAttribute="leading" id="uxJ-Qe-nNz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tb4-gJ-0Cv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="AccountIcon" id="mvy-gn-Ab1"/>
                     <connections>
-                        <outlet property="email" destination="GWV-ZQ-b8a" id="9zF-2k-76e"/>
-                        <outlet property="firstName" destination="rQK-PU-IqO" id="NhC-uF-Fh1"/>
-                        <outlet property="lastName" destination="5eW-mU-HZK" id="NUx-gU-URR"/>
-                        <outlet property="phoneNumber" destination="slv-aD-vk4" id="uaA-Q6-L5V"/>
-                        <outlet property="signOutButton" destination="glE-Jg-zbj" id="1jH-P5-IIQ"/>
+                        <outlet property="email" destination="mZE-KG-m83" id="0Ks-py-3U7"/>
+                        <outlet property="firstName" destination="WZB-Cd-Nrz" id="NAd-eg-DdM"/>
+                        <outlet property="lastName" destination="1Jg-V2-wzI" id="HDy-xV-KmI"/>
+                        <outlet property="phoneNumber" destination="4y3-7W-NsS" id="NN3-nt-rBA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ProfileToSignInSegue" id="4Qy-zI-mkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbW-Ss-7ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960.86956521739137" y="937.5"/>
+            <point key="canvasLocation" x="960.79999999999995" y="936.94581280788179"/>
         </scene>
         <!--Order Management-->
         <scene sceneID="uzH-M9-m53">
@@ -1420,7 +1447,7 @@
         <image name="sand-box" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DUC-cL-AgA"/>
+        <segue reference="4Yp-ei-s7q"/>
         <segue reference="4Qy-zI-mkQ"/>
     </inferredMetricsTieBreakers>
 </document>

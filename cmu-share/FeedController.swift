@@ -18,7 +18,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var orderList = [Order]()
     var currentUId: String!
     var orderId: String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()

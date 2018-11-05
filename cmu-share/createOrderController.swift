@@ -21,7 +21,6 @@ class createOrderController: UIViewController {
     var ref: DatabaseReference!
     var displayName: String!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
