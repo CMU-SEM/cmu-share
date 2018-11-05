@@ -20,6 +20,7 @@ class profileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround();
         StatusUpdateUtil.observeUpdate(_vc: self)
         ref = Database.database().reference()
         setCurrentUserId()
