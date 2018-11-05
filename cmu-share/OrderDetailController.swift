@@ -44,6 +44,25 @@ class OrderDetailController: UIViewController, UITableViewDelegate, UITableViewD
         let detailCellNib = UINib(nibName:"DetailTableViewCell", bundle: nil)
         tableView.register(detailCellNib, forCellReuseIdentifier: "detailCell")
         StatusUpdateUtil.observeUpdate(_vc: self);
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(OrderDetailController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(OrderDetailController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
     }
     
     func createToolbar() {
