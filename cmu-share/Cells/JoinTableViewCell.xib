@@ -214,7 +214,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN7-pH-2dE">
-                                <rect key="frame" x="92" y="217" width="36" height="17"/>
+                                <rect key="frame" x="92" y="217" width="177" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -278,7 +278,7 @@
                             <constraint firstItem="RK1-Mj-qPm" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="10" id="t3L-CI-PRr"/>
                             <constraint firstItem="aXT-am-J6f" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="47" id="teK-ct-CT5"/>
                             <constraint firstItem="X6G-Zy-GP5" firstAttribute="leading" secondItem="gyz-8o-lPA" secondAttribute="leading" constant="12" id="vSa-Gb-EdO"/>
-                            <constraint firstAttribute="trailing" secondItem="XN7-pH-2dE" secondAttribute="trailing" constant="172" id="yFv-1T-mfn"/>
+                            <constraint firstAttribute="trailing" secondItem="XN7-pH-2dE" secondAttribute="trailing" constant="31" id="xhN-Dc-2kU"/>
                         </constraints>
                     </view>
                 </subviews>
