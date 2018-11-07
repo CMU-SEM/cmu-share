@@ -111,7 +111,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             createCell.creatorName.text = orderObj.creatorName
             createCell.restaurantName.text = orderObj.name
             createCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min)) - \(orderObj.date)"
-            createCell.numOfPeople.text  = "\(orderObj.joinerCount+1) person(s)"
+            createCell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)"
             createCell.deliveryFee.text  = "\(orderObj.fee) $"
             createCell.selectionStyle = .none
             createCell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor
@@ -140,8 +140,8 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 joinCell.creatorName.text = curOrder.creatorName
                 joinCell.restaurantName.text = curOrder.name
                 joinCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: curOrder.hr, min: curOrder.min)) - \(curOrder.date)"
-                joinCell.numOfPeople.text  = "\(curOrder.joinerCount+1) person(s)"
-                joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount+1))/100))$"
+                joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
+                joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount))/100))$"
                 joinCell.statusLabel.text = "\(curOrder.status)"
                 joinCell.placeLabel.text = "\(curOrder.place)"
             }

@@ -100,7 +100,7 @@ class createOrderController: UIViewController {
                 "hr" : datePicker.calendar.component(.hour, from: datePicker.date),
                 "min" : datePicker.calendar.component(.minute, from: datePicker.date),
                 "fee" : Double(feeText.text!)!,
-                "joiner_count" : 0,
+                "joiner_count" : 1,
                 "status" : Order.STATUS_OPEN,
                 "place" : "N/A",
                 "date" : result
