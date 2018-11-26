@@ -85,11 +85,6 @@ class createOrderController: UIViewController {
             let user = Auth.auth().currentUser
             let creator_id = user?.uid
             
-            let date = Date()
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MM/dd/yyyy"
-            let result = formatter.string(from: date)
-            
             // create order profile
             let orderObj = [
                 "orderId": orderRef.key!,
@@ -103,7 +98,6 @@ class createOrderController: UIViewController {
                 "joiner_count" : 1,
                 "status" : Order.STATUS_OPEN,
                 "place" : "N/A",
-                "date" : result
                 ] as [String: Any]
             
             orderRef.setValue(orderObj) { (error, ref) in

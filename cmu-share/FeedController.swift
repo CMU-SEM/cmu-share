@@ -45,10 +45,19 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let postDic = snapshot.value as? [String: AnyObject]
             if(postDic != nil) {
                 for (uid, item) in postDic! {
+                    let date = Date()
+                    let calendar = Calendar.current
+                    let hour = calendar.component(.hour, from: date)
+                    let minutes = calendar.component(.minute, from: date)
                     let order = Order(dict: item as! [String : AnyObject], uid: uid)
                     // only show open orders
                     if (order.status == "open") {
-                        self.orderList.append(order);
+                        // close expired orders
+                        if (order.hr < hour || (order.hr == hour && order.min < minutes)) {
+                            order.status = "Closed"
+                        }else{
+                            self.orderList.append(order);
+                        }
                     }
                 }
                 
@@ -72,7 +81,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $";
         cell.creatorName.text = orderObj.creatorName;
         cell.restaurantName.text = orderObj.name;
-        cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min)) - \(orderObj.date)";
+        cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min))";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
         cell.selectionStyle = .none;
         cell.viewWrapper.layer.borderColor = UIColor.lightGray.cgColor;
