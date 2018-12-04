@@ -36,7 +36,7 @@ class signUpController: UIViewController {
         confirmPasswordText.placeholder = "Confirm Password"
         firstNameText.placeholder = "First Name"
         lastNameText.placeholder = "Last Name"
-        mobileText.placeholder = "Mobile No."
+        mobileText.placeholder = "Mobile No.: xxxxxxxxxx"
         
         emailText.keyboardType = .emailAddress
         mobileText.keyboardType = .decimalPad
