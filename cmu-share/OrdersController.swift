@@ -110,7 +110,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
             let orderObj = self.createOrderList[indexPath.row] as Order
             createCell.creatorName.text = orderObj.creatorName
             createCell.restaurantName.text = orderObj.name
-            createCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min)) - \(orderObj.date)"
+            createCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min))"
             createCell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)"
             createCell.deliveryFee.text  = "\(orderObj.fee) $"
             createCell.selectionStyle = .none
@@ -139,7 +139,7 @@ class OrdersController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 let curOrder = self.joinOrderDetailList[indexPath.row] as Order
                 joinCell.creatorName.text = curOrder.creatorName
                 joinCell.restaurantName.text = curOrder.name
-                joinCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: curOrder.hr, min: curOrder.min)) - \(curOrder.date)"
+                joinCell.orderTime.text  = "\(OrderTimeFomatter.format(hr: curOrder.hr, min: curOrder.min))"
                 joinCell.numOfPeople.text  = "\(curOrder.joinerCount) person(s)"
                 joinCell.deliveryFee.text  = "\(Double(round(100*curOrder.fee/Double(curOrder.joinerCount))/100))$"
                 joinCell.statusLabel.text = "\(curOrder.status)"

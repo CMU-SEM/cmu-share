@@ -78,8 +78,8 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let orderObj = self.orderList[indexPath.row] as Order
         
         // calculate shared delivery fee
-        cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $";
-        cell.creatorName.text = orderObj.creatorName;
+        cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $ / person(s)";
+     
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min))";
         cell.numOfPeople.text  = "\(orderObj.joinerCount) person(s)";
@@ -94,6 +94,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.viewWrapper.layer.shadowRadius = 4
         
         if(self.currentUId != nil && orderObj.creator == self.currentUId!) {
+            cell.creatorName.text = "\(orderObj.creatorName) (Owner)";
             cell.joinButton.isEnabled = false;
             cell.joinButton.backgroundColor = UIColor.lightGray;
             cell.joinButton.titleLabel!.textColor = UIColor.white;

@@ -1253,14 +1253,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Order Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-Go-9B9">
-                                <rect key="frame" x="62" y="239" width="225" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Order Time (Today):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-Go-9B9">
+                                <rect key="frame" x="62" y="239" width="248" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Fee:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyu-WC-lmd">
-                                <rect key="frame" x="61" y="344" width="225" height="20"/>
+                                <rect key="frame" x="61" y="344.66666666666669" width="225" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1302,7 +1302,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fgb-WZ-uiA">
-                                <rect key="frame" x="62" y="269" width="81" height="30"/>
+                                <rect key="frame" x="62" y="269.66666666666669" width="81" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="jt7-eC-ERz"/>
                                 </constraints>
@@ -1311,7 +1311,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-hd-DEd">
-                                <rect key="frame" x="78" y="372" width="185" height="30"/>
+                                <rect key="frame" x="78" y="372.66666666666669" width="185" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="eQ3-ET-Vwt"/>
                                     <constraint firstAttribute="width" constant="185" id="s1G-sC-9JJ"/>
@@ -1321,7 +1321,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oip-gg-Q1O">
-                                <rect key="frame" x="50" y="372" width="20" height="30.666666666666686"/>
+                                <rect key="frame" x="50" y="372.66666666666669" width="20" height="30.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="BpJ-KX-uEZ"/>
                                 </constraints>
@@ -1369,7 +1369,7 @@
                             <constraint firstItem="PCj-hd-DEd" firstAttribute="leading" secondItem="oip-gg-Q1O" secondAttribute="trailing" constant="8" id="7Fw-kh-0BG"/>
                             <constraint firstItem="Ijs-lT-Mde" firstAttribute="top" secondItem="Kof-vP-y3V" secondAttribute="top" constant="95" id="7W0-lf-EmI"/>
                             <constraint firstItem="Jun-um-h8Q" firstAttribute="leading" secondItem="Kof-vP-y3V" secondAttribute="leading" constant="63" id="BZ8-B8-ZaP"/>
-                            <constraint firstItem="Kof-vP-y3V" firstAttribute="trailing" secondItem="ANv-Go-9B9" secondAttribute="trailing" constant="88" id="Bhc-ug-tG0"/>
+                            <constraint firstItem="Kof-vP-y3V" firstAttribute="trailing" secondItem="ANv-Go-9B9" secondAttribute="trailing" constant="65" id="Bhc-ug-tG0"/>
                             <constraint firstItem="XLQ-Zs-kkI" firstAttribute="leading" secondItem="Kof-vP-y3V" secondAttribute="leading" id="CP4-OI-wr2"/>
                             <constraint firstItem="M8a-3X-2Gt" firstAttribute="centerX" secondItem="XLQ-Zs-kkI" secondAttribute="centerX" id="E8A-BZ-Dkl"/>
                             <constraint firstItem="Jun-um-h8Q" firstAttribute="top" secondItem="WT3-ub-1sO" secondAttribute="bottom" constant="8" id="F7v-mO-nCB"/>
