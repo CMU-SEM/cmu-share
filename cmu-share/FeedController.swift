@@ -78,7 +78,7 @@ class feedController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let orderObj = self.orderList[indexPath.row] as Order
         
         // calculate shared delivery fee
-        cell.deliveryFee.text  = "\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) $ / person(s)";
+        cell.deliveryFee.text  = "$\(Double(round(100*orderObj.fee/Double(orderObj.joinerCount+1))/100)) / person";
      
         cell.restaurantName.text = orderObj.name;
         cell.orderTime.text  = "\(OrderTimeFomatter.format(hr: orderObj.hr, min: orderObj.min))";
